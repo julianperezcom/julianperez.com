@@ -25,38 +25,22 @@ const appearances  = releases.filter((r: any) => r.releaseType === 'Appearance')
       <button class="tab-btn" onclick="switchDiscog('appearances', this)">Appearances</button>
     </div>
 
-    <!-- ORIGINALS (EP / Single / LP) — grid of release cards -->
-    <div id="discog-originals" class="discog-grid">
+    <!-- ORIGINALS — list rows -->
+    <div id="discog-originals" class="discog-list">
       {originals.length === 0 ? (
-        <div style="grid-column:1/-1;padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+        <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
           Próximamente
         </div>
       ) : (
         originals.map((r: any) => (
-          <div class="release-card">
-            <div class="release-cover">
-              {r.coverUrl ? (
-                <img src={r.coverUrl} alt={r.title} style="width:100%;height:100%;object-fit:cover;display:block;" />
-              ) : (
-                <div class="release-cover-label">{r.releaseType ?? 'Release'}</div>
-              )}
-              <div class="release-cover-hover">View</div>
-            </div>
-            <div class="release-year">{r.year}</div>
-            <div class="release-title">{r.title}</div>
-            <div class="release-type">{r.label}</div>
-            <div class="release-links">
+          <div class="discog-list-row">
+            <div class="discog-list-year">{r.year}</div>
+            <div class="discog-list-title">{r.title}</div>
+            <div class="discog-list-label">{r.label}</div>
+            <div class="discog-list-format">{r.releaseType}</div>
+            <div class="discog-list-links">
               {r.discogsUrl && (
-                <a href={r.discogsUrl} target="_blank" rel="noopener noreferrer" class="release-link">Discogs</a>
-              )}
-              {r.bandcampUrl && (
-                <a href={r.bandcampUrl} target="_blank" rel="noopener noreferrer" class="release-link">Bandcamp</a>
-              )}
-              {r.spotifyUrl && (
-                <a href={r.spotifyUrl} target="_blank" rel="noopener noreferrer" class="release-link">Spotify</a>
-              )}
-              {r.beatportUrl && (
-                <a href={r.beatportUrl} target="_blank" rel="noopener noreferrer" class="release-link">Beatport</a>
+                <a href={r.discogsUrl} target="_blank" rel="noopener noreferrer" class="discog-ext-link">Discogs ↗</a>
               )}
             </div>
           </div>
@@ -77,6 +61,11 @@ const appearances  = releases.filter((r: any) => r.releaseType === 'Appearance')
             <div class="discog-list-title">{r.title}</div>
             <div class="discog-list-label">{r.label}</div>
             <div class="discog-list-format">{r.releaseType}</div>
+            <div class="discog-list-links">
+              {r.discogsUrl && (
+                <a href={r.discogsUrl} target="_blank" rel="noopener noreferrer" class="discog-ext-link">Discogs ↗</a>
+              )}
+            </div>
           </div>
         ))
       )}
@@ -95,6 +84,11 @@ const appearances  = releases.filter((r: any) => r.releaseType === 'Appearance')
             <div class="discog-list-title">{r.title}</div>
             <div class="discog-list-label">{r.label}</div>
             <div class="discog-list-format">{r.releaseType}</div>
+            <div class="discog-list-links">
+              {r.discogsUrl && (
+                <a href={r.discogsUrl} target="_blank" rel="noopener noreferrer" class="discog-ext-link">Discogs ↗</a>
+              )}
+            </div>
           </div>
         ))
       )}
@@ -107,7 +101,7 @@ const appearances  = releases.filter((r: any) => r.releaseType === 'Appearance')
   function switchDiscog(tab: string, btn: HTMLElement) {
     document.querySelectorAll('#discography .tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    (document.getElementById('discog-originals') as HTMLElement).style.display   = tab === 'originals'   ? 'grid'  : 'none';
+    (document.getElementById('discog-originals') as HTMLElement).style.display   = tab === 'originals'   ? 'flex'  : 'none';
     (document.getElementById('discog-remixes') as HTMLElement).style.display     = tab === 'remixes'     ? 'flex'  : 'none';
     (document.getElementById('discog-appearances') as HTMLElement).style.display = tab === 'appearances' ? 'flex'  : 'none';
   }

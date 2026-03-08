@@ -358,6 +358,9 @@ nav a:hover { opacity: 1; }
 .discog-list-title { font-weight: 700; font-size: 0.82rem; color: var(--black); }
 .discog-list-label { font-size: 0.72rem; color: #888; }
 .discog-list-format { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; text-align: right; }
+.discog-list-links { margin-left: auto; padding-left: 16px; }
+.discog-ext-link { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; text-decoration: none; white-space: nowrap; }
+.discog-ext-link:hover { color: var(--black); }
 
 /* ── MUSIC / SETS & TRACKS ── */
 .music-tabs {
