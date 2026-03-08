@@ -18,28 +18,48 @@ function getYouTubeId(url: string): string | null {
 }
 
 const scSets = sets.filter((s: any) => s.soundcloudUrl)
-const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
 ---
 
-<!-- MUSIC: SETS & TRACKS -->
 <div id="music">
   <div class="section-wrap">
     <div class="section-eyebrow">Music</div>
     <div class="section-title">Sets &amp; Tracks</div>
-    <p class="section-sub">Mixes de DJ en directo y producciones originales.</p>
+    <p class="section-sub">Mixes, directo y producciones originales.</p>
 
     <div class="music-tabs">
-      <button class="tab-btn active" onclick="switchMusic('sets',this)">DJ Sets</button>
+      <button class="tab-btn active" onclick="switchMusic('sets',this)">DJ Sets &amp; Podcasts</button>
+      <button class="tab-btn" onclick="switchMusic('live',this)">Live Videos</button>
       <button class="tab-btn" onclick="switchMusic('tracks',this)">Tracks</button>
     </div>
 
-    <!-- SETS -->
+    <!-- ── DJ SETS & PODCASTS ── -->
     <div id="tab-sets">
 
-      <!-- SoundCloud sets -->
+      <!-- YouTube playlist embed -->
+      <div class="playlist-embed-wrap">
+        <div class="playlist-label">
+          <span style="color:#FF0000;">●</span> YouTube · DJ Sets &amp; Podcasts
+          <a href="https://www.youtube.com/playlist?list=PLLRxDKy3npviQXeQI5fRtp0FGNKJIfYNN"
+             target="_blank" rel="noopener noreferrer" class="playlist-ext">Ver playlist ↗</a>
+        </div>
+        <div class="yt-playlist-player">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLLRxDKy3npviQXeQI5fRtp0FGNKJIfYNN"
+            title="Julian Perez DJ Sets & Podcasts"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- SoundCloud individual sets -->
       {scSets.length > 0 && (
-        <div class="sets-source-label">
-          <span style="color:#FF5500;">●</span> SoundCloud
+        <div class="playlist-label" style="margin-top:48px;">
+          <span style="color:#FF5500;">●</span> SoundCloud · Sets &amp; Podcasts
+          <a href="https://soundcloud.com/julianperez/sets/sets-podcasts"
+             target="_blank" rel="noopener noreferrer" class="playlist-ext">Ver playlist ↗</a>
         </div>
       )}
       {scSets.map((set: any) => (
@@ -60,43 +80,36 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
           </div>
         </div>
       ))}
-
-      <!-- YouTube sets -->
-      {ytSets.length > 0 && (
-        <div class="sets-source-label" style="margin-top:40px;">
-          <span style="color:#FF0000;">●</span> YouTube
-        </div>
-      )}
-      {ytSets.map((set: any) => {
-        const vid = getYouTubeId(set.youtubeUrl)
-        return vid && (
-          <div class="embed-entry">
-            <div class="embed-meta">
-              <span class="embed-meta-title">{set.title}</span>
-              {set.venue && <span class="embed-meta-venue">{set.venue}</span>}
-            </div>
-            <div
-              class="embed-player yt-player"
-              data-src={`https://www.youtube.com/embed/${vid}?autoplay=1`}
-              style={`background-image:url(https://img.youtube.com/vi/${vid}/hqdefault.jpg)`}
-            >
-              <div class="embed-play-btn yt">
-                <span class="embed-play-icon yt-icon">▶</span>
-              </div>
-            </div>
-          </div>
-        )
-      })}
-
-      {sets.length === 0 && (
-        <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
-          Próximamente
-        </div>
-      )}
     </div>
 
-    <!-- TRACKS (YouTube Releases) -->
+    <!-- ── LIVE VIDEOS ── -->
+    <div id="tab-live" style="display:none;">
+      <div class="playlist-embed-wrap">
+        <div class="playlist-label">
+          <span style="color:#FF0000;">●</span> YouTube · Live Videos
+          <a href="https://www.youtube.com/playlist?list=PLLRxDKy3npvgR9aNV0vZJSYdLlA8nqzlV"
+             target="_blank" rel="noopener noreferrer" class="playlist-ext">Ver playlist ↗</a>
+        </div>
+        <div class="yt-playlist-player">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLLRxDKy3npvgR9aNV0vZJSYdLlA8nqzlV"
+            title="Julian Perez Live Videos"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TRACKS ── -->
     <div id="tab-tracks" style="display:none;">
+      <div class="playlist-label" style="margin-bottom:28px;">
+        <span style="color:#FF0000;">●</span> YouTube · Releases
+        <a href="https://www.youtube.com/@julianperezcom/releases"
+           target="_blank" rel="noopener noreferrer" class="playlist-ext">Ver canal ↗</a>
+      </div>
       {tracks.length === 0 ? (
         <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
           Próximamente
@@ -113,7 +126,7 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
                   style={vid ? `background-image:url(https://img.youtube.com/vi/${vid}/hqdefault.jpg)` : 'background:#111'}
                 >
                   <div class="embed-play-btn yt">
-                    <span class="embed-play-icon yt-icon">▶</span>
+                    <span class="yt-icon">▶</span>
                   </div>
                 </div>
                 <div class="track-title">{track.title}</div>
@@ -128,21 +141,44 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
 </div>
 
 <style>
-  .sets-source-label {
+  .playlist-label {
     font-size: 0.68rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #999;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
+  .playlist-ext {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: auto;
+    font-size: 0.65rem;
+  }
+  .playlist-ext:hover { color: var(--black); }
 
-  .embed-entry {
-    margin-bottom: 32px;
+  .playlist-embed-wrap { margin-bottom: 16px; }
+
+  /* 16:9 responsive YouTube playlist player */
+  .yt-playlist-player {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #111;
+  }
+  .yt-playlist-player iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 
+  /* SoundCloud individual sets */
+  .embed-entry { margin-bottom: 28px; }
   .embed-meta {
     display: flex;
     align-items: baseline;
@@ -150,29 +186,16 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
     margin-bottom: 8px;
     flex-wrap: wrap;
   }
-  .embed-meta-title {
-    font-weight: 700;
-    font-size: 0.88rem;
-  }
-  .embed-meta-venue {
-    font-size: 0.75rem;
-    color: #888;
-  }
-  .embed-meta-duration {
-    font-size: 0.72rem;
-    color: #aaa;
-    margin-left: auto;
-  }
+  .embed-meta-title { font-weight: 700; font-size: 0.88rem; }
+  .embed-meta-venue { font-size: 0.75rem; color: #888; }
+  .embed-meta-duration { font-size: 0.72rem; color: #aaa; margin-left: auto; }
 
-  /* Generic player container */
   .embed-player {
     width: 100%;
     cursor: pointer;
     position: relative;
     overflow: hidden;
   }
-
-  /* SoundCloud: fixed height, grey bg */
   .sc-player {
     height: 166px;
     background: #f2f2f2;
@@ -187,8 +210,6 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
     height: 100%;
     border: none;
   }
-
-  /* YouTube: 16:9 ratio, thumbnail bg */
   .yt-player {
     aspect-ratio: 16 / 9;
     background-size: cover;
@@ -205,7 +226,6 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
     border: none;
   }
 
-  /* Play buttons */
   .embed-play-btn {
     display: flex;
     align-items: center;
@@ -216,27 +236,13 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 600;
-    transition: opacity 0.15s;
     pointer-events: none;
   }
-  .embed-play-btn.sc {
-    background: #FF5500;
-    color: #fff;
-  }
-  .embed-play-btn.yt {
-    background: rgba(0,0,0,0.7);
-    color: #fff;
-  }
-  .embed-play-icon {
-    font-size: 0.9rem;
-  }
-  .yt-icon {
-    font-size: 1.4rem;
-    color: #FF0000;
-  }
-  .embed-player:hover .embed-play-btn {
-    opacity: 0.85;
-  }
+  .embed-play-btn.sc { background: #FF5500; color: #fff; }
+  .embed-play-btn.yt { background: rgba(0,0,0,0.65); color: #fff; }
+  .embed-play-icon { font-size: 0.9rem; }
+  .yt-icon { font-size: 1.6rem; color: #FF0000; }
+  .embed-player:hover .embed-play-btn { opacity: 0.85; }
 
   /* Tracks grid */
   .tracks-grid {
@@ -244,17 +250,8 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 28px;
   }
-  .track-card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .track-title {
-    font-size: 0.8rem;
-    font-weight: 600;
-    line-height: 1.35;
-    color: var(--black);
-  }
+  .track-card { display: flex; flex-direction: column; gap: 10px; }
+  .track-title { font-size: 0.8rem; font-weight: 600; line-height: 1.35; }
 </style>
 
 <script>
@@ -262,11 +259,12 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
     document.querySelectorAll('#music .tab-btn').forEach(b => b.classList.remove('active'))
     btn.classList.add('active');
     (document.getElementById('tab-sets') as HTMLElement).style.display   = tab === 'sets'   ? 'block' : 'none';
+    (document.getElementById('tab-live') as HTMLElement).style.display   = tab === 'live'   ? 'block' : 'none';
     (document.getElementById('tab-tracks') as HTMLElement).style.display = tab === 'tracks' ? 'block' : 'none'
   }
   (window as any).switchMusic = switchMusic
 
-  // Click-to-embed: replace play button with iframe on click
+  // Click-to-embed for SoundCloud sets and individual YT track cards
   document.querySelectorAll<HTMLElement>('.embed-player').forEach(player => {
     player.addEventListener('click', () => {
       const src = player.dataset.src
@@ -275,7 +273,6 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl && !s.soundcloudUrl)
       iframe.src = src
       iframe.allow = 'autoplay; encrypted-media; picture-in-picture'
       iframe.allowFullscreen = true
-      // Clear thumbnail/button, insert iframe
       player.innerHTML = ''
       player.style.backgroundImage = 'none'
       player.appendChild(iframe)
