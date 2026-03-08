@@ -36,13 +36,22 @@
     ).join('');
   }
 
-  buildGallery(document.getElementById('gallery-flyers'), FLYERS, 'flyers');
-  buildGallery(document.getElementById('gallery-dmt'), DMT, 'doingmything');
+  function shuffle(arr) {
+    const a = [...arr]
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]]
+    }
+    return a
+  }
+
+  buildGallery(document.getElementById('gallery-flyers'), shuffle(FLYERS), 'flyers');
+  buildGallery(document.getElementById('gallery-dmt'), shuffle(DMT), 'doingmything');
 
   function switchGallery(tab, btn) {
     document.querySelectorAll('#gallery .music-tabs .tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.getElementById('gallery-flyers').style.display = tab === 'flyers' ? 'block' : 'none';
-    document.getElementById('gallery-dmt').style.display = tab === 'dmt' ? 'block' : 'none';
+    document.getElementById('gallery-flyers').style.display = tab === 'flyers' ? '' : 'none';
+    document.getElementById('gallery-dmt').style.display = tab === 'dmt' ? '' : 'none';
   }
 </script>
