@@ -3,7 +3,6 @@ export interface BCItem {
   artist: string
   url: string
   imageUrl: string
-  images: string[]
   type: string
 }
 
@@ -26,28 +25,6 @@ function cleanTitle(raw: string): string {
   return t
 }
 
-async function fetchAlbumImages(url: string): Promise<string[]> {
-  try {
-    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } })
-    const html = await res.text()
-    const images: string[] = []
-    // Extract all <a class="popupImage"> hrefs (Bandcamp lightbox links)
-    const aTagRe = /<a[^>]*class="[^"]*popupImage[^"]*"[^>]*>/g
-    let m
-    while ((m = aTagRe.exec(html)) !== null) {
-      const hrefM = m[0].match(/href="([^"]+)"/)
-      if (hrefM) images.push(hrefM[1].replace(/_\d+\.jpg/, '_10.jpg'))
-    }
-    if (images.length === 0) {
-      // Fallback: main tralbum-art img
-      const m2 = html.match(/id="tralbum-art"[\s\S]{0,600}?<img[^>]+src="([^"]+)"/)
-      if (m2) images.push(m2[1].replace(/_\d+\.jpg/, '_10.jpg'))
-    }
-    return images
-  } catch {
-    return []
-  }
-}
 
 const ACCOUNTS = {
   jp:     'https://julianperez.bandcamp.com',
@@ -81,14 +58,8 @@ export async function fetchBandcampItems(account: keyof typeof ACCOUNTS): Promis
       const title = cleanTitle(titleM[1])
       const artist = account === 'jp' ? 'Julian Perez' : account === 'girada' ? 'Girada Unlimited' : 'Fathers & Sons'
 
-      items.push({ title, artist, url, imageUrl, images: [], type: 'release' })
+      items.push({ title, artist, url, imageUrl, type: 'release' })
     }
-
-    // Fetch per-album images in parallel
-    await Promise.all(items.map(async item => {
-      item.images = await fetchAlbumImages(item.url)
-      if (!item.imageUrl && item.images[0]) item.imageUrl = item.images[0]
-    }))
 
     return items
   } catch {

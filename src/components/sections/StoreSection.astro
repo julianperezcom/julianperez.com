@@ -37,31 +37,16 @@ try {
       <div class="store-loading">Próximamente</div>
     ) : (
       jpItems.map((item: any) => (
-        <div class="store-item">
-          <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-link">
-            <div class="store-cover">
-              <img class="store-main-img" src={item.imageUrl || (item.images[0] ?? '')} alt={item.title} />
-            </div>
-            <div class="store-info">
-              <div class="store-title">{item.title}</div>
-              {item.artist && <div class="store-label-name">{item.artist}</div>}
-              <div class="store-buy">Ver en Bandcamp ↗</div>
-            </div>
-          </a>
-          {item.images.length > 1 && (
-            <div class="store-thumbs">
-              {item.images.map((img: string, i: number) => (
-                <img
-                  class={`store-thumb${i === 0 ? ' active' : ''}`}
-                  src={img}
-                  alt=""
-                  data-full={img}
-                  onclick="storeThumbClick(event,this)"
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item">
+          <div class="store-cover">
+            <img src={item.imageUrl} alt={item.title} />
+          </div>
+          <div class="store-info">
+            <div class="store-title">{item.title}</div>
+            {item.artist && <div class="store-label-name">{item.artist}</div>}
+            <div class="store-buy">Ver en Bandcamp ↗</div>
+          </div>
+        </a>
       ))
     )}
   </div>
@@ -72,31 +57,16 @@ try {
       <div class="store-loading">Próximamente</div>
     ) : (
       giradaItems.map((item: any) => (
-        <div class="store-item">
-          <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-link">
-            <div class="store-cover">
-              <img class="store-main-img" src={item.imageUrl || (item.images[0] ?? '')} alt={item.title} />
-            </div>
-            <div class="store-info">
-              <div class="store-title">{item.title}</div>
-              {item.artist && <div class="store-label-name">{item.artist}</div>}
-              <div class="store-buy">Ver en Bandcamp ↗</div>
-            </div>
-          </a>
-          {item.images.length > 1 && (
-            <div class="store-thumbs">
-              {item.images.map((img: string, i: number) => (
-                <img
-                  class={`store-thumb${i === 0 ? ' active' : ''}`}
-                  src={img}
-                  alt=""
-                  data-full={img}
-                  onclick="storeThumbClick(event,this)"
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item">
+          <div class="store-cover">
+            <img src={item.imageUrl} alt={item.title} />
+          </div>
+          <div class="store-info">
+            <div class="store-title">{item.title}</div>
+            {item.artist && <div class="store-label-name">{item.artist}</div>}
+            <div class="store-buy">Ver en Bandcamp ↗</div>
+          </div>
+        </a>
       ))
     )}
   </div>
@@ -107,31 +77,16 @@ try {
       <div class="store-loading">Próximamente</div>
     ) : (
       fasItems.map((item: any) => (
-        <div class="store-item">
-          <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-link">
-            <div class="store-cover">
-              <img class="store-main-img" src={item.imageUrl || (item.images[0] ?? '')} alt={item.title} />
-            </div>
-            <div class="store-info">
-              <div class="store-title">{item.title}</div>
-              {item.artist && <div class="store-label-name">{item.artist}</div>}
-              <div class="store-buy">Ver en Bandcamp ↗</div>
-            </div>
-          </a>
-          {item.images.length > 1 && (
-            <div class="store-thumbs">
-              {item.images.map((img: string, i: number) => (
-                <img
-                  class={`store-thumb${i === 0 ? ' active' : ''}`}
-                  src={img}
-                  alt=""
-                  data-full={img}
-                  onclick="storeThumbClick(event,this)"
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item">
+          <div class="store-cover">
+            <img src={item.imageUrl} alt={item.title} />
+          </div>
+          <div class="store-info">
+            <div class="store-title">{item.title}</div>
+            {item.artist && <div class="store-label-name">{item.artist}</div>}
+            <div class="store-buy">Ver en Bandcamp ↗</div>
+          </div>
+        </a>
       ))
     )}
   </div>
@@ -145,34 +100,12 @@ try {
 
 <style>
   .store-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .store-link {
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-  .store-thumbs {
-    display: flex;
-    gap: 4px;
-    margin-top: 4px;
-    flex-wrap: wrap;
-  }
-  .store-thumb {
-    width: 36px;
-    height: 36px;
-    object-fit: cover;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.15s;
-    border: 1.5px solid transparent;
-  }
-  .store-thumb:hover { opacity: 0.85; }
-  .store-thumb.active { opacity: 1; border-color: var(--black); }
 </style>
 
 <script>
@@ -200,17 +133,5 @@ try {
     updateBcLink(tab)
   }
 
-  function storeThumbClick(e: Event, thumb: HTMLImageElement) {
-    e.preventDefault()
-    e.stopPropagation()
-    const item = (thumb as HTMLElement).closest('.store-item')
-    if (!item) return
-    const mainImg = item.querySelector('.store-main-img') as HTMLImageElement | null
-    if (mainImg && thumb.dataset.full) mainImg.src = thumb.dataset.full
-    item.querySelectorAll('.store-thumb').forEach(t => t.classList.remove('active'))
-    thumb.classList.add('active')
-  }
-
-  (window as any).switchStore = switchStore;
-  (window as any).storeThumbClick = storeThumbClick
+  (window as any).switchStore = switchStore
 </script>
