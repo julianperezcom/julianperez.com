@@ -1,5 +1,11 @@
 ---
+const bookingKey   = import.meta.env.PUBLIC_WEB3FORMS_BOOKING_KEY  ?? ''
+const contactKey   = import.meta.env.PUBLIC_WEB3FORMS_CONTACT_KEY  ?? ''
+const hcaptchaKey  = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY      ?? '10000000-ffff-ffff-ffff-000000000001'
 ---
+
+<!-- hCaptcha SDK — explicit render so hidden-tab widget loads correctly -->
+<script is:inline src="https://js.hcaptcha.com/1/api.js?render=explicit&onload=_hcLoad" async defer></script>
 
 <!-- BOOKING -->
 <div class="booking-section" id="booking">
@@ -20,52 +26,61 @@
           <p>Rellena el formulario con los datos del evento y nos ponemos en contacto contigo en menos de 48h.</p>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" id="form-booking">
+          <!-- Web3Forms config -->
+          <input type="hidden" name="access_key" value={bookingKey}>
+          <input type="hidden" name="subject" value="New Booking Request – julianperez.com">
+          <input type="hidden" name="from_name" value="julianperez.com">
+          <input type="hidden" name="botcheck" value="">
+
           <div class="form-section-title">Promoter</div>
           <div class="form-row">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
+            <input type="text" name="first_name" placeholder="First Name">
+            <input type="text" name="last_name" placeholder="Last Name">
           </div>
-          <input type="email" placeholder="E-Mail">
-          <input type="text" placeholder="Company Name">
-          <input type="text" placeholder="Full Address">
+          <input type="email" name="email" placeholder="E-Mail" required>
+          <input type="text" name="company" placeholder="Company Name">
+          <input type="text" name="address" placeholder="Full Address">
 
           <div class="form-section-title">Event</div>
           <div class="form-row">
-            <input type="text" placeholder="Event Name">
-            <input type="text" placeholder="Event Date (dd/mm/yyyy)">
+            <input type="text" name="event_name" placeholder="Event Name">
+            <input type="text" name="event_date" placeholder="Event Date (dd/mm/yyyy)">
           </div>
-          <input type="text" placeholder="Past Events / Artists">
-          <input type="text" placeholder="Line-up">
+          <input type="text" name="past_events" placeholder="Past Events / Artists">
+          <input type="text" name="lineup" placeholder="Line-up">
           <div class="form-row">
-            <input type="text" placeholder="Set Time">
-            <input type="text" placeholder="Offer">
+            <input type="text" name="set_time" placeholder="Set Time">
+            <input type="text" name="offer" placeholder="Offer">
           </div>
-          <input type="url" placeholder="Link (event page, FB event…)">
+          <input type="url" name="event_link" placeholder="Link (event page, FB event…)">
 
           <div class="form-section-title">Venue</div>
           <div class="form-row">
-            <input type="text" placeholder="Venue's Name">
-            <input type="text" placeholder="Venue's Capacity">
+            <input type="text" name="venue_name" placeholder="Venue's Name">
+            <input type="text" name="venue_capacity" placeholder="Venue's Capacity">
           </div>
           <div class="form-row">
-            <input type="text" placeholder="City">
-            <input type="text" placeholder="Country">
+            <input type="text" name="city" placeholder="City">
+            <input type="text" name="country" placeholder="Country">
           </div>
-          <input type="text" placeholder="Address">
+          <input type="text" name="venue_address" placeholder="Address">
           <div class="form-row">
-            <input type="url" placeholder="Website">
-            <input type="text" placeholder="Nearest Airports">
+            <input type="url" name="venue_website" placeholder="Website">
+            <input type="text" name="airports" placeholder="Nearest Airports">
           </div>
 
           <div class="form-section-title">Additional Info</div>
-          <textarea placeholder="Comments"></textarea>
+          <textarea name="comments" placeholder="Comments"></textarea>
+
+          <!-- hCaptcha -->
+          <div class="h-captcha" data-sitekey={hcaptchaKey} id="hcap-booking" style="margin:20px 0 8px;"></div>
 
           <div class="form-check">
             <input type="checkbox" required>
             <span>He leído y acepto la <a href="#">Política de Privacidad y Cookies</a></span>
           </div>
-          <button type="submit">Send Booking Request</button>
+          <button type="submit" id="btn-booking">Send Booking Request</button>
         </form>
       </div>
     </div>
@@ -79,20 +94,29 @@
           <p>This form is not directly managed by Julian. For press, media and general matters, fill in the form and someone from the team will get back to you shortly.</p>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" id="form-contact">
+          <!-- Web3Forms config -->
+          <input type="hidden" name="access_key" value={contactKey}>
+          <input type="hidden" name="subject" value="New Contact Message – julianperez.com">
+          <input type="hidden" name="from_name" value="julianperez.com">
+          <input type="hidden" name="botcheck" value="">
+
           <div class="form-row">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
+            <input type="text" name="first_name" placeholder="First Name">
+            <input type="text" name="last_name" placeholder="Last Name">
           </div>
-          <input type="email" placeholder="E-Mail">
-          <input type="text" placeholder="Subject">
-          <textarea placeholder="Message" style="height:140px;"></textarea>
+          <input type="email" name="email" placeholder="E-Mail" required>
+          <input type="text" name="subject_line" placeholder="Subject">
+          <textarea name="message" placeholder="Message" style="height:140px;"></textarea>
+
+          <!-- hCaptcha -->
+          <div class="h-captcha" data-sitekey={hcaptchaKey} id="hcap-contact" style="margin:20px 0 8px;"></div>
 
           <div class="form-check">
             <input type="checkbox" required>
             <span>He leído y acepto la <a href="#">Política de Privacidad y Cookies</a></span>
           </div>
-          <button type="submit">Send Message</button>
+          <button type="submit" id="btn-contact">Send Message</button>
         </form>
       </div>
     </div>
@@ -171,7 +195,7 @@
   .contact-form input:focus,
   .contact-form textarea:focus { border-bottom-color: var(--black); }
   .contact-form input::placeholder,
-  .contact-form textarea::placeholder { color: #bbb; }
+  .contact-form textarea::placeholder { color: #555; }
   .contact-form textarea { height: 90px; resize: none; }
   .form-check {
     display: flex;
@@ -192,7 +216,7 @@
     accent-color: var(--black);
   }
   .form-check a { color: var(--black); font-weight: 600; }
-  .contact-form button {
+  .contact-form button[type="submit"] {
     padding: 16px 48px;
     background: var(--black);
     color: var(--white);
@@ -205,7 +229,23 @@
     cursor: pointer;
     transition: opacity 0.2s;
   }
-  .contact-form button:hover { opacity: 0.7; }
+  .contact-form button[type="submit"]:hover:not(:disabled) { opacity: 0.7; }
+  .contact-form button[type="submit"]:disabled { opacity: 0.4; cursor: default; }
+
+  .form-success {
+    padding: 48px 0;
+    font-size: 0.9rem;
+    color: var(--black);
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+  }
+  .form-success strong { display: block; font-size: 1.1rem; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .form-error {
+    color: #c00;
+    font-size: 0.78rem;
+    margin-top: 12px;
+    letter-spacing: 0.03em;
+  }
 
   @media (max-width: 768px) {
     .booking-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -216,14 +256,79 @@
 </style>
 
 <script>
+  // ── Tab switching ────────────────────────────────────────────
   document.querySelectorAll('.booking-tab').forEach(btn => {
     btn.addEventListener('click', () => {
-      const panel = (btn as HTMLElement).dataset.tab!;
-      document.querySelectorAll('.booking-panel').forEach(p => ((p as HTMLElement).style.display = 'none'));
-      document.querySelectorAll('.booking-tab').forEach(b => b.classList.remove('active'));
-      const el = document.getElementById(panel);
-      if (el) el.style.display = 'block';
-      btn.classList.add('active');
-    });
-  });
+      const panel = (btn as HTMLElement).dataset.tab!
+      document.querySelectorAll('.booking-panel').forEach(p => ((p as HTMLElement).style.display = 'none'))
+      document.querySelectorAll('.booking-tab').forEach(b => b.classList.remove('active'))
+      const el = document.getElementById(panel)
+      if (el) el.style.display = 'block'
+      btn.classList.add('active')
+    })
+  })
+
+  // ── hCaptcha explicit render (handles hidden-at-load widgets) ─
+  ;(window as any)._hcLoad = function () {
+    const hc = (window as any).hcaptcha
+    if (!hc) return
+    document.querySelectorAll('.h-captcha').forEach((el: Element) => {
+      if (!el.hasAttribute('data-hcaptcha-widget-id')) {
+        hc.render(el as HTMLElement)
+      }
+    })
+  }
+
+  // ── Form submission ──────────────────────────────────────────
+  async function submitForm(formId: string, btnId: string) {
+    const form = document.getElementById(formId) as HTMLFormElement | null
+    if (!form) return
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+
+      const btn = document.getElementById(btnId) as HTMLButtonElement
+      const originalText = btn.textContent!
+      btn.disabled = true
+      btn.textContent = 'Sending…'
+
+      // Remove previous error
+      form.querySelectorAll('.form-error').forEach(el => el.remove())
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(form),
+        })
+        const data = await res.json()
+
+        if (data.success) {
+          // Replace form with confirmation
+          const grid = form.closest('.booking-grid')
+          if (grid) {
+            const info = grid.querySelector('.booking-info')
+            form.innerHTML = ''
+            form.insertAdjacentHTML('beforeend', `
+              <div class="form-success">
+                <strong>✓ Sent successfully</strong>
+                We'll get back to you shortly.
+              </div>
+            `)
+          }
+        } else {
+          throw new Error(data.message ?? 'Unknown error')
+        }
+      } catch (err: any) {
+        btn.disabled = false
+        btn.textContent = originalText
+        const msg = document.createElement('p')
+        msg.className = 'form-error'
+        msg.textContent = 'Error sending the form. Please try again.'
+        form.appendChild(msg)
+      }
+    })
+  }
+
+  submitForm('form-booking', 'btn-booking')
+  submitForm('form-contact', 'btn-contact')
 </script>
