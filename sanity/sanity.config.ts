@@ -6,7 +6,7 @@ import { schemas } from './schemas'
 export default defineConfig({
   name: 'julianperez',
   title: 'Julian Perez CMS',
-  projectId: 'YOUR_PROJECT_ID',
+  projectId: 'esbhlkf9',
   dataset: 'production',
   plugins: [structureTool(), visionTool()],
   schema: { types: schemas },
