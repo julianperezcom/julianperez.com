@@ -116,8 +116,8 @@ const hasRefs = refs.length > 0
     <div class="press-grid">
       <div>
         <div class="section-title" style="margin-bottom:24px;">Bio</div>
-        <p class="press-bio" data-lang="en" set:html={bio?.content ?? staticBio} />
-        <p class="press-bio" data-lang="es" style="display:none;" set:html={staticBioES} />
+        <p class="press-bio" data-show-lang="en" set:html={bio?.content ?? staticBio} />
+        <p class="press-bio" data-show-lang="es" style="display:none;" set:html={staticBioES} />
       </div>
       <div>
         <div class="section-title" style="margin-bottom:24px;">Press Kit</div>

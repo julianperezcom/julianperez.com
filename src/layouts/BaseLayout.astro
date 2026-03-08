@@ -209,9 +209,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     document.querySelectorAll('.lang-btn').forEach(function(b){
       b.classList.toggle('active',b.getAttribute('data-lang')===lang);
     });
-    document.querySelectorAll('[data-lang]').forEach(function(el){
-      var elLang=el.getAttribute('data-lang');
-      if(elLang==='en'||elLang==='es') el.style.display=elLang===lang?'':'none';
+    document.querySelectorAll('[data-show-lang]').forEach(function(el){
+      el.style.display=el.getAttribute('data-show-lang')===lang?'':'none';
     });
     document.dispatchEvent(new CustomEvent('langchange',{detail:{lang:lang,t:t}}));
   }
