@@ -18,6 +18,23 @@ function getYouTubeId(url: string): string | null {
 }
 
 const scSets = sets.filter((s: any) => s.soundcloudUrl)
+
+// Fetch SC thumbnails via oEmbed at build time
+async function getScThumbnail(url: string): Promise<string | null> {
+  try {
+    const res = await fetch(`https://soundcloud.com/oembed?url=${encodeURIComponent(url)}&format=json`)
+    if (!res.ok) return null
+    const data: any = await res.json()
+    return data.thumbnail_url ?? null
+  } catch { return null }
+}
+
+const scThumbnails: Record<string, string | null> = {}
+await Promise.all(
+  scSets.map(async (s: any) => {
+    scThumbnails[s.soundcloudUrl] = await getScThumbnail(s.soundcloudUrl)
+  })
+)
 const ytSets = sets.filter((s: any) => s.youtubeUrl)
 ---
 
@@ -71,7 +88,8 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
         {scSets.map((set: any) => (
           <div class="video-card">
             <div class="video-thumb sc-thumb"
-              data-src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(set.soundcloudUrl)}&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=true&visual=false`}>
+              data-src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(set.soundcloudUrl)}&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=true&visual=false`}
+              style={scThumbnails[set.soundcloudUrl] ? `background-image:url(${scThumbnails[set.soundcloudUrl]})` : ''}>
               <div class="play-btn sc-play-btn">
                 <span class="sc-play">▶</span>
                 <span class="sc-play-label">SoundCloud</span>
@@ -182,7 +200,7 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
     justify-content: center;
   }
   .yt-thumb { background-color: #111; }
-  .sc-thumb { background-color: #f2f2f2; aspect-ratio: 4 / 1; }
+  .sc-thumb { background-color: #f2f2f2; aspect-ratio: 1 / 1; background-size: cover; background-position: center; }
 
   .video-thumb iframe {
     position: absolute;
@@ -254,7 +272,6 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
   }
   @media (max-width: 480px) {
     .video-grid { grid-template-columns: 1fr; }
-    .sc-thumb { aspect-ratio: 16 / 5; }
   }
 </style>
 
