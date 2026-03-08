@@ -1,0 +1,117 @@
+---
+import { getReleases } from '../../lib/sanity'
+
+let releases: any[] = []
+try {
+  releases = await getReleases()
+} catch (e) {
+  releases = []
+}
+
+const originals    = releases.filter((r: any) => ['EP', 'Single', 'LP'].includes(r.releaseType))
+const remixes      = releases.filter((r: any) => r.releaseType === 'Remix')
+const appearances  = releases.filter((r: any) => r.releaseType === 'Appearance')
+---
+
+<div class="discog-section" id="discography">
+  <div class="section-wrap">
+    <div class="section-eyebrow">Discography</div>
+    <div class="section-title">Releases</div>
+    <p class="section-sub">Catálogo completo sincronizado con <a href="https://www.discogs.com/artist/54394-Julian-Perez" target="_blank" style="color:#666;text-decoration:none;border-bottom:1px solid #bbb;">Discogs</a>.</p>
+
+    <div class="music-tabs">
+      <button class="tab-btn active" onclick="switchDiscog('originals', this)">Originals</button>
+      <button class="tab-btn" onclick="switchDiscog('remixes', this)">Remixes</button>
+      <button class="tab-btn" onclick="switchDiscog('appearances', this)">Appearances</button>
+    </div>
+
+    <!-- ORIGINALS (EP / Single / LP) — grid of release cards -->
+    <div id="discog-originals" class="discog-grid">
+      {originals.length === 0 ? (
+        <div style="grid-column:1/-1;padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+          Próximamente
+        </div>
+      ) : (
+        originals.map((r: any) => (
+          <div class="release-card">
+            <div class="release-cover">
+              {r.coverImage ? (
+                <img src={r.coverImage} alt={r.title} style="width:100%;height:100%;object-fit:cover;display:block;" />
+              ) : (
+                <div class="release-cover-label">{r.releaseType ?? 'Release'}</div>
+              )}
+              <div class="release-cover-hover">View</div>
+            </div>
+            <div class="release-year">{r.year}</div>
+            <div class="release-title">{r.title}</div>
+            <div class="release-type">{r.label}</div>
+            <div class="release-links">
+              {r.discogsUrl && (
+                <a href={r.discogsUrl} target="_blank" rel="noopener noreferrer" class="release-link">Discogs</a>
+              )}
+              {r.bandcampUrl && (
+                <a href={r.bandcampUrl} target="_blank" rel="noopener noreferrer" class="release-link">Bandcamp</a>
+              )}
+              {r.spotifyUrl && (
+                <a href={r.spotifyUrl} target="_blank" rel="noopener noreferrer" class="release-link">Spotify</a>
+              )}
+              {r.beatportUrl && (
+                <a href={r.beatportUrl} target="_blank" rel="noopener noreferrer" class="release-link">Beatport</a>
+              )}
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+
+    <!-- REMIXES — list rows -->
+    <div id="discog-remixes" class="discog-list" style="display:none;">
+      {remixes.length === 0 ? (
+        <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+          Próximamente
+        </div>
+      ) : (
+        remixes.map((r: any) => (
+          <div class="discog-list-row">
+            <div class="discog-list-year">{r.year}</div>
+            <div class="discog-list-title">{r.title}</div>
+            <div class="discog-list-label">{r.label}</div>
+            <div class="discog-list-format">{r.releaseType}</div>
+          </div>
+        ))
+      )}
+    </div>
+
+    <!-- APPEARANCES — list rows -->
+    <div id="discog-appearances" class="discog-list" style="display:none;">
+      {appearances.length === 0 ? (
+        <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+          Próximamente
+        </div>
+      ) : (
+        appearances.map((r: any) => (
+          <div class="discog-list-row">
+            <div class="discog-list-year">{r.year}</div>
+            <div class="discog-list-title">{r.title}</div>
+            <div class="discog-list-label">{r.label}</div>
+            <div class="discog-list-format">{r.releaseType}</div>
+          </div>
+        ))
+      )}
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function switchDiscog(tab: string, btn: HTMLElement) {
+    document.querySelectorAll('#discography .tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    (document.getElementById('discog-originals') as HTMLElement).style.display   = tab === 'originals'   ? 'grid'  : 'none';
+    (document.getElementById('discog-remixes') as HTMLElement).style.display     = tab === 'remixes'     ? 'flex'  : 'none';
+    (document.getElementById('discog-appearances') as HTMLElement).style.display = tab === 'appearances' ? 'flex'  : 'none';
+  }
+
+  // Expose globally so inline onclick handlers work
+  (window as any).switchDiscog = switchDiscog;
+</script>
