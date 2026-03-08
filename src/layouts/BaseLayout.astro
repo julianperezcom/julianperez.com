@@ -1,0 +1,76 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+const {
+  title = 'Julian Perez — DJ & Producer | Electronic Music',
+  description = 'Julian Perez, DJ y productor de música electrónica afincado en España. Residente en Underground Ibiza. Fundador de Girada Unlimited y Fathers & Sons.',
+  ogImage = '/og-image.jpg',
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Julian Perez — DJ & Producer" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Julian Perez" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+  <!-- Structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Julian Perez",
+    "url": "https://julianperez.com",
+    "description": "DJ y productor de música electrónica afincado en España.",
+    "genre": ["Electronic", "Techno", "House", "Minimal"],
+    "sameAs": [
+      "https://ra.co/dj/julianperez",
+      "https://www.instagram.com/julianperez",
+      "https://soundcloud.com/julianperez",
+      "https://julianperez.bandcamp.com"
+    ]
+  })} />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0E0E0E" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://f4.bcbits.com" />
+  <link rel="preconnect" href="https://rest.bandsintown.com" />
+
+  <!-- Global CSS -->
+  <slot name="head" />
+</head>
+<body>
+  <slot />
+</body>
+</html>
