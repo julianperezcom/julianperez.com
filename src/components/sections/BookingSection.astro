@@ -1,0 +1,229 @@
+---
+---
+
+<!-- BOOKING -->
+<div class="booking-section" id="booking">
+  <div class="section-wrap">
+
+    <!-- Tabs -->
+    <div class="booking-tabs">
+      <button class="booking-tab active" data-tab="booking-request">Booking Request</button>
+      <button class="booking-tab" data-tab="general-contact">General Contact</button>
+    </div>
+
+    <!-- BOOKING REQUEST -->
+    <div id="booking-request" class="booking-panel">
+      <div class="booking-grid">
+        <div class="booking-info">
+          <div class="section-eyebrow">Contact</div>
+          <h2>Booking<br>Request</h2>
+          <p>Rellena el formulario con los datos del evento y nos ponemos en contacto contigo en menos de 48h.</p>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-section-title">Promoter</div>
+          <div class="form-row">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+          </div>
+          <input type="email" placeholder="E-Mail">
+          <input type="text" placeholder="Company Name">
+          <input type="text" placeholder="Full Address">
+
+          <div class="form-section-title">Event</div>
+          <div class="form-row">
+            <input type="text" placeholder="Event Name">
+            <input type="text" placeholder="Event Date (dd/mm/yyyy)">
+          </div>
+          <input type="text" placeholder="Past Events / Artists">
+          <input type="text" placeholder="Line-up">
+          <div class="form-row">
+            <input type="text" placeholder="Set Time">
+            <input type="text" placeholder="Offer">
+          </div>
+          <input type="url" placeholder="Link (event page, FB event…)">
+
+          <div class="form-section-title">Venue</div>
+          <div class="form-row">
+            <input type="text" placeholder="Venue's Name">
+            <input type="text" placeholder="Venue's Capacity">
+          </div>
+          <div class="form-row">
+            <input type="text" placeholder="City">
+            <input type="text" placeholder="Country">
+          </div>
+          <input type="text" placeholder="Address">
+          <div class="form-row">
+            <input type="url" placeholder="Website">
+            <input type="text" placeholder="Nearest Airports">
+          </div>
+
+          <div class="form-section-title">Additional Info</div>
+          <textarea placeholder="Comments"></textarea>
+
+          <div class="form-check">
+            <input type="checkbox" required>
+            <span>He leído y acepto la <a href="#">Política de Privacidad y Cookies</a></span>
+          </div>
+          <button type="submit">Send Booking Request</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- GENERAL CONTACT -->
+    <div id="general-contact" class="booking-panel" style="display:none;">
+      <div class="booking-grid">
+        <div class="booking-info">
+          <div class="section-eyebrow">Contact</div>
+          <h2>General<br>Contact</h2>
+          <p>This form is not directly managed by Julian. For press, media and general matters, fill in the form and someone from the team will get back to you shortly.</p>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+          </div>
+          <input type="email" placeholder="E-Mail">
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Message" style="height:140px;"></textarea>
+
+          <div class="form-check">
+            <input type="checkbox" required>
+            <span>He leído y acepto la <a href="#">Política de Privacidad y Cookies</a></span>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .booking-section { background: #DEDED9; }
+  .booking-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--light);
+    margin-bottom: 64px;
+  }
+  .booking-tab {
+    padding: 16px 32px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: inherit;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--gray);
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .booking-tab.active { color: var(--black); border-bottom-color: var(--black); }
+  .booking-tab:hover { color: var(--black); }
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .booking-info h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .booking-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+  .form-section-title {
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.3);
+    margin: 36px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--light);
+  }
+  .form-section-title:first-child { margin-top: 0; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+    background: transparent;
+    color: var(--black);
+    transition: border-color 0.2s;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus { border-bottom-color: var(--black); }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: #bbb; }
+  .contact-form textarea { height: 90px; resize: none; }
+  .form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 24px 0 36px;
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+  .form-check input[type="checkbox"] {
+    width: auto;
+    margin: 2px 0 0;
+    flex-shrink: 0;
+    border: 1.5px solid #ccc;
+    border-bottom: 1.5px solid #ccc;
+    padding: 0;
+    accent-color: var(--black);
+  }
+  .form-check a { color: var(--black); font-weight: 600; }
+  .contact-form button {
+    padding: 16px 48px;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    font-family: inherit;
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .contact-form button:hover { opacity: 0.7; }
+
+  @media (max-width: 768px) {
+    .booking-grid { grid-template-columns: 1fr; gap: 40px; }
+    .booking-info h2 { font-size: 1.8rem; }
+    .booking-tab { padding: 14px 16px; font-size: 0.65rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.booking-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = (btn as HTMLElement).dataset.tab!;
+      document.querySelectorAll('.booking-panel').forEach(p => ((p as HTMLElement).style.display = 'none'));
+      document.querySelectorAll('.booking-tab').forEach(b => b.classList.remove('active'));
+      const el = document.getElementById(panel);
+      if (el) el.style.display = 'block';
+      btn.classList.add('active');
+    });
+  });
+</script>
