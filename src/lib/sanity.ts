@@ -8,7 +8,10 @@ export const sanityClient = createClient({
 })
 
 export async function getSets() {
-  return sanityClient.fetch(`*[_type == "musicSet"] | order(order asc)`)
+  return sanityClient.fetch(`*[_type == "musicSet" && category == "dj-set"] | order(order asc)`)
+}
+export async function getLiveVideos() {
+  return sanityClient.fetch(`*[_type == "musicSet" && category == "live"] | order(order asc)`)
 }
 export async function getTracks() {
   return sanityClient.fetch(`*[_type == "track"] | order(order asc)`)

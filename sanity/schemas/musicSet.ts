@@ -11,5 +11,7 @@ export const musicSet = defineType({
     { name: 'youtubeUrl', type: 'url' },
     { name: 'duration', type: 'string' },
     { name: 'order', type: 'number' },
+    { name: 'category', type: 'string', title: 'Category',
+      options: { list: ['dj-set', 'live', 'track'] } },
   ],
 })
