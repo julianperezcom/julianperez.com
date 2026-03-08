@@ -33,45 +33,45 @@ const hcaptchaKey  = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY      ?? '10000000-
           <input type="hidden" name="from_name" value="julianperez.com">
           <input type="hidden" name="botcheck" value="">
 
-          <div class="form-section-title">Promoter</div>
+          <div class="form-section-title" data-i18n="form.promoter">Promoter</div>
           <div class="form-row">
-            <input type="text" name="first_name" placeholder="First Name">
-            <input type="text" name="last_name" placeholder="Last Name">
+            <input type="text" name="first_name" placeholder="First Name" data-i18n-ph="form.first_name">
+            <input type="text" name="last_name" placeholder="Last Name" data-i18n-ph="form.last_name">
           </div>
-          <input type="email" name="email" placeholder="E-Mail" required>
-          <input type="text" name="company" placeholder="Company Name">
-          <input type="text" name="address" placeholder="Full Address">
+          <input type="email" name="email" placeholder="E-Mail" required data-i18n-ph="form.email">
+          <input type="text" name="company" placeholder="Company Name" data-i18n-ph="form.company">
+          <input type="text" name="address" placeholder="Full Address" data-i18n-ph="form.address">
 
-          <div class="form-section-title">Event</div>
+          <div class="form-section-title" data-i18n="form.event">Event</div>
           <div class="form-row">
-            <input type="text" name="event_name" placeholder="Event Name">
-            <input type="text" name="event_date" placeholder="Event Date (dd/mm/yyyy)">
+            <input type="text" name="event_name" placeholder="Event Name" data-i18n-ph="form.event_name">
+            <input type="text" name="event_date" placeholder="Event Date (dd/mm/yyyy)" data-i18n-ph="form.event_date">
           </div>
-          <input type="text" name="past_events" placeholder="Past Events / Artists">
-          <input type="text" name="lineup" placeholder="Line-up">
+          <input type="text" name="past_events" placeholder="Past Events / Artists" data-i18n-ph="form.past_events">
+          <input type="text" name="lineup" placeholder="Line-up" data-i18n-ph="form.lineup">
           <div class="form-row">
-            <input type="text" name="set_time" placeholder="Set Time">
-            <input type="text" name="offer" placeholder="Offer">
+            <input type="text" name="set_time" placeholder="Set Time" data-i18n-ph="form.set_time">
+            <input type="text" name="offer" placeholder="Offer" data-i18n-ph="form.offer">
           </div>
-          <input type="url" name="event_link" placeholder="Link (event page, FB event…)">
+          <input type="url" name="event_link" placeholder="Link (event page, FB event…)" data-i18n-ph="form.event_link">
 
-          <div class="form-section-title">Venue</div>
+          <div class="form-section-title" data-i18n="form.venue">Venue</div>
           <div class="form-row">
-            <input type="text" name="venue_name" placeholder="Venue's Name">
-            <input type="text" name="venue_capacity" placeholder="Venue's Capacity">
+            <input type="text" name="venue_name" placeholder="Venue's Name" data-i18n-ph="form.venue_name">
+            <input type="text" name="venue_capacity" placeholder="Venue's Capacity" data-i18n-ph="form.venue_capacity">
           </div>
           <div class="form-row">
-            <input type="text" name="city" placeholder="City">
-            <input type="text" name="country" placeholder="Country">
+            <input type="text" name="city" placeholder="City" data-i18n-ph="form.city">
+            <input type="text" name="country" placeholder="Country" data-i18n-ph="form.country">
           </div>
-          <input type="text" name="venue_address" placeholder="Address">
+          <input type="text" name="venue_address" placeholder="Address" data-i18n-ph="form.venue_address">
           <div class="form-row">
-            <input type="url" name="venue_website" placeholder="Website">
-            <input type="text" name="airports" placeholder="Nearest Airports">
+            <input type="url" name="venue_website" placeholder="Website" data-i18n-ph="form.website">
+            <input type="text" name="airports" placeholder="Nearest Airports" data-i18n-ph="form.airports">
           </div>
 
-          <div class="form-section-title">Additional Info</div>
-          <textarea name="comments" placeholder="Comments"></textarea>
+          <div class="form-section-title" data-i18n="form.additional">Additional Info</div>
+          <textarea name="comments" placeholder="Comments" data-i18n-ph="form.comments"></textarea>
 
           <!-- hCaptcha -->
           <div class="h-captcha" data-sitekey={hcaptchaKey} id="hcap-booking" style="margin:20px 0 8px;"></div>
@@ -102,12 +102,12 @@ const hcaptchaKey  = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY      ?? '10000000-
           <input type="hidden" name="botcheck" value="">
 
           <div class="form-row">
-            <input type="text" name="first_name" placeholder="First Name">
-            <input type="text" name="last_name" placeholder="Last Name">
+            <input type="text" name="first_name" placeholder="First Name" data-i18n-ph="form.first_name">
+            <input type="text" name="last_name" placeholder="Last Name" data-i18n-ph="form.last_name">
           </div>
-          <input type="email" name="email" placeholder="E-Mail" required>
-          <input type="text" name="subject_line" placeholder="Subject">
-          <textarea name="message" placeholder="Message" style="height:140px;"></textarea>
+          <input type="email" name="email" placeholder="E-Mail" required data-i18n-ph="form.email">
+          <input type="text" name="subject_line" placeholder="Subject" data-i18n-ph="form.subject">
+          <textarea name="message" placeholder="Message" style="height:140px;" data-i18n-ph="form.message"></textarea>
 
           <!-- hCaptcha -->
           <div class="h-captcha" data-sitekey={hcaptchaKey} id="hcap-contact" style="margin:20px 0 8px;"></div>

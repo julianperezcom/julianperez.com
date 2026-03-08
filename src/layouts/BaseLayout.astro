@@ -115,7 +115,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       'booking.privacy.link':'Privacy and Cookie Policy',
       'booking.send_booking':'Send Booking Request','booking.send_message':'Send Message',
       'booking.success':'✓ Sent successfully','booking.success.sub':"We'll get back to you shortly.",
-      'booking.error':'Error sending the form. Please try again.'
+      'booking.error':'Error sending the form. Please try again.',
+      'form.promoter':'Promoter','form.event':'Event','form.venue':'Venue','form.additional':'Additional Info',
+      'form.first_name':'First Name','form.last_name':'Last Name','form.email':'E-Mail',
+      'form.company':'Company Name','form.address':'Full Address',
+      'form.event_name':'Event Name','form.event_date':'Event Date (dd/mm/yyyy)',
+      'form.past_events':'Past Events / Artists','form.lineup':'Line-up',
+      'form.set_time':'Set Time','form.offer':'Offer','form.event_link':'Link (event page, FB event…)',
+      'form.venue_name':"Venue's Name",'form.venue_capacity':"Venue's Capacity",
+      'form.city':'City','form.country':'Country','form.venue_address':'Address',
+      'form.website':'Website','form.airports':'Nearest Airports','form.comments':'Comments',
+      'form.subject':'Subject','form.message':'Message'
     },
     es:{
       'nav.music':'Música','nav.discography':'Discografía','nav.store':'Tienda',
@@ -159,7 +169,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       'booking.privacy.link':'Política de Privacidad y Cookies',
       'booking.send_booking':'Enviar Solicitud','booking.send_message':'Enviar Mensaje',
       'booking.success':'✓ Enviado correctamente','booking.success.sub':'Nos pondremos en contacto contigo pronto.',
-      'booking.error':'Error al enviar el formulario. Por favor, inténtalo de nuevo.'
+      'booking.error':'Error al enviar el formulario. Por favor, inténtalo de nuevo.',
+      'form.promoter':'Promotor','form.event':'Evento','form.venue':'Recinto','form.additional':'Información adicional',
+      'form.first_name':'Nombre','form.last_name':'Apellido','form.email':'E-Mail',
+      'form.company':'Nombre de la empresa','form.address':'Dirección completa',
+      'form.event_name':'Nombre del evento','form.event_date':'Fecha del evento (dd/mm/yyyy)',
+      'form.past_events':'Eventos pasados / Artistas','form.lineup':'Line-up',
+      'form.set_time':'Hora del set','form.offer':'Caché','form.event_link':'Enlace (página del evento, FB event…)',
+      'form.venue_name':'Nombre del recinto','form.venue_capacity':'Aforo del recinto',
+      'form.city':'Ciudad','form.country':'País','form.venue_address':'Dirección',
+      'form.website':'Sitio web','form.airports':'Aeropuertos cercanos','form.comments':'Comentarios',
+      'form.subject':'Asunto','form.message':'Mensaje'
     }
   };
 
@@ -184,6 +204,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     });
     document.querySelectorAll('.lang-btn').forEach(function(b){
       b.classList.toggle('active',b.getAttribute('data-lang')===lang);
+    });
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      var elLang=el.getAttribute('data-lang');
+      if(elLang==='en'||elLang==='es')(el as HTMLElement).style.display=elLang===lang?'':'none';
     });
     document.dispatchEvent(new CustomEvent('langchange',{detail:{lang:lang,t:t}}));
   }
