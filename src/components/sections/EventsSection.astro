@@ -1,3 +1,14 @@
+---
+import { fetchAllRAEvents, RA_YEARS } from '../../lib/ra'
+
+let raEvents: Record<string, any[]> = {}
+try {
+  raEvents = await fetchAllRAEvents()
+} catch {
+  raEvents = {}
+}
+---
+
 <!-- EVENTS -->
 <div class="events-section" id="events">
   <div class="section-wrap">
@@ -39,9 +50,15 @@
   </div>
 </div>
 
+<script define:vars={{ raEvents, RA_YEARS }}>
+  // Override the fetch with build-time data
+  window.__RA_EVENTS__ = raEvents
+  window.__RA_YEARS__ = RA_YEARS
+</script>
+
 <script>
   let RA_EVENTS_DATA: Record<string, any[]> | null = null;
-  const RA_YEARS = [2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013];
+  const RA_YEARS = (window as any).__RA_YEARS__ || [2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013];
   const BIT_APP_ID = '016523740f876056f578583f5fdb51d5';
   const BIT_ACCOUNT_ID = '1290950';
   let eventsYear = RA_YEARS[0];
@@ -152,10 +169,15 @@
     if (eventsInitialized) return;
     eventsInitialized = true;
     if (!RA_EVENTS_DATA) {
-      try {
-        const res = await fetch('/data/ra-events.json');
-        RA_EVENTS_DATA = await res.json();
-      } catch(e) { RA_EVENTS_DATA = {}; }
+      // Use build-time data if available, otherwise fall back to static JSON fetch
+      if ((window as any).__RA_EVENTS__ && Object.keys((window as any).__RA_EVENTS__).length > 0) {
+        RA_EVENTS_DATA = (window as any).__RA_EVENTS__;
+      } else {
+        try {
+          const res = await fetch('/data/ra-events.json');
+          RA_EVENTS_DATA = await res.json();
+        } catch(e) { RA_EVENTS_DATA = {}; }
+      }
     }
     const tabsEl = document.getElementById('events-year-tabs');
     if (tabsEl) {
