@@ -1,18 +1,42 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import '../styles/global.css'
+import Header from '../components/layout/Header.astro'
+import MobileNav from '../components/layout/MobileNav.astro'
+import Footer from '../components/layout/Footer.astro'
 import HeroSection from '../components/sections/HeroSection.astro'
+import MusicSection from '../components/sections/MusicSection.astro'
+import DiscographySection from '../components/sections/DiscographySection.astro'
 import EventsSection from '../components/sections/EventsSection.astro'
 import GallerySection from '../components/sections/GallerySection.astro'
 import StoreSection from '../components/sections/StoreSection.astro'
+import LinksSection from '../components/sections/LinksSection.astro'
+import PressSection from '../components/sections/PressSection.astro'
+import BookingSection from '../components/sections/BookingSection.astro'
+import Chatbot from '../components/ui/Chatbot.astro'
 ---
 <BaseLayout>
+  <MobileNav />
+  <Header />
   <HeroSection />
+  <MusicSection />
+  <DiscographySection />
   <EventsSection />
   <GallerySection />
   <StoreSection />
+  <LinksSection />
+  <PressSection />
+  <BookingSection />
+  <Footer />
+  <Chatbot />
   <script>
+    import { initNav } from '../scripts/nav'
     import { initHero } from '../scripts/hero'
-    document.addEventListener('DOMContentLoaded', () => initHero())
+    import { initChatbot } from '../scripts/chatbot'
+    document.addEventListener('DOMContentLoaded', () => {
+      initNav()
+      initHero()
+      initChatbot()
+    })
   </script>
 </BaseLayout>
