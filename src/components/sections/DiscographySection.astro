@@ -35,8 +35,8 @@ const appearances  = releases.filter((r: any) => r.releaseType === 'Appearance')
         originals.map((r: any) => (
           <div class="release-card">
             <div class="release-cover">
-              {r.coverImage ? (
-                <img src={r.coverImage} alt={r.title} style="width:100%;height:100%;object-fit:cover;display:block;" />
+              {r.coverUrl ? (
+                <img src={r.coverUrl} alt={r.title} style="width:100%;height:100%;object-fit:cover;display:block;" />
               ) : (
                 <div class="release-cover-label">{r.releaseType ?? 'Release'}</div>
               )}
