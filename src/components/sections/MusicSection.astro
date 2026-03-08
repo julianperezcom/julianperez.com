@@ -1,0 +1,141 @@
+---
+import { getSets, getTracks } from '../../lib/sanity'
+
+let sets: any[] = []
+let tracks: any[] = []
+
+try {
+  [sets, tracks] = await Promise.all([getSets(), getTracks()])
+} catch (e) {
+  // Sanity not configured yet or empty - render empty state
+  sets = []
+  tracks = []
+}
+---
+
+<!-- MUSIC: SETS & TRACKS -->
+<div id="music">
+  <div class="section-wrap">
+    <div class="section-eyebrow">Music</div>
+    <div class="section-title">Sets &amp; Tracks</div>
+    <p class="section-sub">Mixes de DJ en directo y producciones originales.</p>
+
+    <div class="music-tabs">
+      <button class="tab-btn active" id="music-tab-sets" onclick="switchMusic('sets',this)">DJ Sets</button>
+      <button class="tab-btn" id="music-tab-tracks" onclick="switchMusic('tracks',this)">Tracks</button>
+      <button class="tab-btn" id="music-tab-live" onclick="switchMusic('live',this)">Live Videos</button>
+    </div>
+
+    <!-- SETS -->
+    <div id="tab-sets">
+      <p style="font-size:0.75rem;color:#999;margin-bottom:32px;letter-spacing:0.05em;">
+        Sincronizado con
+        <a href="https://soundcloud.com/julianperez/sets/sets-podcasts" target="_blank" style="color:#FF5500;text-decoration:none;">SoundCloud</a>
+        &nbsp;+&nbsp;
+        <a href="https://www.youtube.com/playlist?list=PLLRxDKy3npviQXeQI5fRtp0FGNKJIfYNN" target="_blank" style="color:#FF0000;text-decoration:none;">YouTube</a>
+      </p>
+
+      {sets.length === 0 ? (
+        <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+          Próximamente
+        </div>
+      ) : (
+        sets.map((set: any) => (
+          <div class="set-entry">
+            <div class="set-info">
+              {set.artwork && (
+                <img src={set.artwork} alt={set.title} style="width:72px;height:72px;object-fit:cover;margin-bottom:14px;display:block;" />
+              )}
+              <div class="set-label">{set.type ?? 'Set'}{set.duration ? ` · ${set.duration}` : ''}</div>
+              <div class="set-title" set:html={set.title} />
+              <div class="set-meta">{set.venue}</div>
+            </div>
+            <div class="set-platforms">
+              {set.soundcloudUrl && (
+                <a href={set.soundcloudUrl} target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                  <div class="platform-embed soundcloud">
+                    <div class="platform-icon sc">SoundCloud</div>
+                    <div class="platform-bar"></div>
+                    <div class="platform-time">{set.duration ?? ''}</div>
+                  </div>
+                </a>
+              )}
+              {set.youtubeUrl && (
+                <a href={set.youtubeUrl} target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+                  <div class="platform-embed youtube">
+                    <div class="platform-icon yt">YouTube</div>
+                    <div class="platform-bar"></div>
+                    <div class="platform-time">{set.duration ?? ''}</div>
+                  </div>
+                </a>
+              )}
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+
+    <!-- TRACKS (YouTube Releases) -->
+    <div id="tab-tracks" style="display:none;">
+      <p style="font-size:0.75rem;color:#999;margin-bottom:32px;letter-spacing:0.05em;">
+        Sincronizado con <a href="https://www.youtube.com/@julianperezcom/releases" target="_blank" style="color:#FF0000;text-decoration:none;">youtube.com/@julianperezcom/releases</a> via YouTube API
+      </p>
+
+      {tracks.length === 0 ? (
+        <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+          Próximamente
+        </div>
+      ) : (
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
+          {tracks.map((track: any) => (
+            <a href={track.youtubeUrl ?? '#'} target="_blank" style="text-decoration:none;color:inherit;">
+              <div style="aspect-ratio:16/9;background:#1a1a1a;position:relative;margin-bottom:12px;overflow:hidden;">
+                {track.thumbnail ? (
+                  <img src={track.thumbnail} alt={track.title} style="width:100%;height:100%;object-fit:cover;" />
+                ) : (
+                  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                    <div style="width:48px;height:48px;background:rgba(255,0,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                      <div style="border-left:18px solid white;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px;"></div>
+                    </div>
+                  </div>
+                )}
+                {track.duration && (
+                  <div style="position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.8);color:#fff;font-size:0.7rem;padding:2px 6px;">{track.duration}</div>
+                )}
+              </div>
+              <div style="font-size:0.6rem;color:#FF0000;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:4px;">
+                {track.releaseType ?? 'Single'}{track.year ? ` · ${track.year}` : ''}
+              </div>
+              <div style="font-weight:700;font-size:0.9rem;margin-bottom:3px;">{track.title}</div>
+              <div style="font-size:0.78rem;color:#888;">{track.artist ?? 'Julian Perez'}</div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <!-- LIVE VIDEOS (YouTube playlist) -->
+    <div id="tab-live" style="display:none;">
+      <p style="font-size:0.75rem;color:#999;margin-bottom:32px;letter-spacing:0.05em;">
+        Sincronizado con <a href="https://www.youtube.com/playlist?list=PLLRxDKy3npvgR9aNV0vZJSYdLlA8nqzlV" target="_blank" style="color:#FF0000;text-decoration:none;">Live Videos playlist</a> via YouTube API
+      </p>
+      <div style="padding:60px 0;text-align:center;color:#999;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+        Próximamente
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function switchMusic(tab: string, btn: HTMLElement) {
+    document.querySelectorAll('#music .tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    (document.getElementById('tab-sets') as HTMLElement).style.display   = tab === 'sets'   ? 'block' : 'none';
+    (document.getElementById('tab-tracks') as HTMLElement).style.display = tab === 'tracks' ? 'block' : 'none';
+    (document.getElementById('tab-live') as HTMLElement).style.display   = tab === 'live'   ? 'block' : 'none';
+  }
+
+  // Expose globally so inline onclick handlers work
+  (window as any).switchMusic = switchMusic;
+</script>
