@@ -2,9 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import '../styles/global.css'
 import HeroSection from '../components/sections/HeroSection.astro'
+import EventsSection from '../components/sections/EventsSection.astro'
 ---
 <BaseLayout>
   <HeroSection />
+  <EventsSection />
   <script>
     import { initHero } from '../scripts/hero'
     document.addEventListener('DOMContentLoaded', () => initHero())

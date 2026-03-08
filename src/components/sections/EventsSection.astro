@@ -1,0 +1,185 @@
+<!-- EVENTS -->
+<div class="events-section" id="events">
+  <div class="section-wrap">
+    <div class="section-eyebrow">Events</div>
+    <div class="section-title">Fechas</div>
+
+    <!-- main tabs: Próximas / Pasadas -->
+    <div class="music-tabs" style="margin-bottom:0;margin-top:32px;">
+      <button class="tab-btn active" id="evt-tab-upcoming" onclick="switchEventsTab('upcoming')">Próximas</button>
+      <button class="tab-btn" id="evt-tab-past" onclick="switchEventsTab('past')">Pasadas</button>
+    </div>
+
+    <!-- upcoming: live from Bandsintown -->
+    <div id="evt-panel-upcoming">
+      <div class="event-list" id="event-list-upcoming">
+        <div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
+          Cargando…
+        </div>
+      </div>
+      <div style="text-align:center;padding:32px 0 0;">
+        <a href="https://www.bandsintown.com/a/1290950" target="_blank"
+           style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.2);padding-bottom:2px;">
+          Seguir en Bandsintown →
+        </a>
+      </div>
+    </div>
+
+    <!-- past: static RA data, filtered by year -->
+    <div id="evt-panel-past" style="display:none;">
+      <div class="music-tabs" id="events-year-tabs" style="margin-bottom:0;margin-top:24px;"></div>
+      <div class="event-list" id="event-list-past"></div>
+      <div style="text-align:center;padding:32px 0 0;">
+        <a href="https://ra.co/dj/julianperez" target="_blank"
+           style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.2);padding-bottom:2px;">
+          Ver perfil en Resident Advisor →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let RA_EVENTS_DATA: Record<string, any[]> | null = null;
+  const RA_YEARS = [2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013];
+  const BIT_APP_ID = '016523740f876056f578583f5fdb51d5';
+  const BIT_ACCOUNT_ID = '1290950';
+  let eventsYear = RA_YEARS[0];
+  let eventsInitialized = false;
+  let eventsTab = 'upcoming';
+
+  const MONTH_ABBR = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+
+  function escHtml(s: string): string {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function buildEventRow(
+    day: string, mon: string, yr: string,
+    venueName: string, city: string, titleShort: string,
+    href: string, isPast: boolean, btnLabel: string
+  ): string {
+    return `<div class="event-row${isPast?' event-past':''}">
+      <div class="event-date-block">
+        <div class="event-day">${day}</div>
+        <div class="event-month-year">${mon} '${yr}</div>
+      </div>
+      <div>
+        <div class="event-venue">${escHtml(venueName)}</div>
+        <div class="event-city">${escHtml(city)}</div>
+      </div>
+      <div class="event-type" style="${isPast?'opacity:0.45;font-size:0.58rem;':'font-size:0.6rem;'}">${escHtml(titleShort)}</div>
+      <a href="${href}" target="_blank" class="event-ticket" style="${isPast?'font-size:0.62rem;padding:8px 18px;border-color:rgba(0,0,0,0.22);color:var(--gray);':''}">
+        ${btnLabel}
+      </a>
+    </div>`;
+  }
+
+  // ── Bandsintown upcoming ──
+  async function loadUpcomingEvents(): Promise<void> {
+    const list = document.getElementById('event-list-upcoming');
+    if (!list) return;
+    try {
+      const res = await fetch(`https://rest.bandsintown.com/artists/id_${BIT_ACCOUNT_ID}/events?app_id=${BIT_APP_ID}&date=upcoming`);
+      const events = await res.json();
+      if (!Array.isArray(events) || events.length === 0) {
+        list.innerHTML = '<div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">No hay próximas fechas confirmadas.<br><span style="font-size:0.7rem;margin-top:8px;display:block;">Activa las notificaciones en Bandsintown para no perderte nada.</span></div>';
+        return;
+      }
+      list.innerHTML = events.map((ev: any) => {
+        const d = new Date(ev.datetime);
+        const day = String(d.getDate()).padStart(2,'0');
+        const mon = MONTH_ABBR[d.getMonth()];
+        const yr  = String(d.getFullYear()).slice(2);
+        const venueName = ev.venue ? ev.venue.name : 'TBA';
+        const city = [ev.venue && ev.venue.city, ev.venue && ev.venue.country].filter(Boolean).join(', ');
+        const titleShort = (ev.title||'Club Night').slice(0,50);
+        const href = ev.url || '#';
+        const ticketUrl = ev.offers && ev.offers.find((o: any) => o.type === 'Tickets');
+        const btnHref = ticketUrl ? ticketUrl.url : href;
+        return buildEventRow(day, mon, yr, venueName, city, titleShort, btnHref, false, 'Entradas →');
+      }).join('');
+    } catch(e) {
+      list.innerHTML = '<div style="padding:40px 0;text-align:center;color:var(--gray);font-size:0.8rem;">Error al cargar eventos.</div>';
+    }
+  }
+
+  // ── RA past events ──
+  function renderPastEvents(year: number): void {
+    eventsYear = year;
+    document.querySelectorAll('#events-year-tabs .tab-btn').forEach(b => {
+      (b as HTMLElement).classList.toggle('active', parseInt((b as HTMLElement).dataset.year || '0') === year);
+    });
+    const events = (RA_EVENTS_DATA as Record<string, any[]>)[String(year)] || [];
+    const list = document.getElementById('event-list-past');
+    if (!list) return;
+    if (!events.length) {
+      list.innerHTML = '<div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">Sin fechas registradas</div>';
+      return;
+    }
+    const sorted = [...events].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    list.innerHTML = sorted.map((ev: any) => {
+      const d = new Date(ev.date);
+      const day = String(d.getDate()).padStart(2,'0');
+      const mon = MONTH_ABBR[d.getMonth()];
+      const yr  = String(d.getFullYear()).slice(2);
+      const rawVenue = ev.venue ? ev.venue.name : '';
+      const venueName = rawVenue.replace(/^TBA\s*[-\u2013\u2014]?\s*/i,'').trim() || rawVenue || 'TBA';
+      const areaName = ev.area ? ev.area.name : '';
+      const cityParts: string[] = [];
+      if (areaName && areaName !== 'All' && areaName !== venueName) cityParts.push(areaName);
+      if (ev.country) cityParts.push(ev.country.name);
+      const city = cityParts.join(', ');
+      const href = ev.contentUrl ? 'https://ra.co' + ev.contentUrl : '#';
+      const titleShort = ev.title.length > 50 ? ev.title.slice(0,48)+'\u2026' : ev.title;
+      return buildEventRow(day, mon, yr, venueName, city, titleShort, href, true, 'Ver en RA →');
+    }).join('');
+  }
+
+  function switchEventsTab(tab: string): void {
+    eventsTab = tab;
+    const tabUpcoming = document.getElementById('evt-tab-upcoming');
+    const tabPast = document.getElementById('evt-tab-past');
+    const panelUpcoming = document.getElementById('evt-panel-upcoming');
+    const panelPast = document.getElementById('evt-panel-past');
+    if (tabUpcoming) tabUpcoming.classList.toggle('active', tab === 'upcoming');
+    if (tabPast) tabPast.classList.toggle('active', tab === 'past');
+    if (panelUpcoming) panelUpcoming.style.display = tab === 'upcoming' ? 'block' : 'none';
+    if (panelPast) panelPast.style.display = tab === 'past' ? 'block' : 'none';
+  }
+
+  async function initEvents(): Promise<void> {
+    if (eventsInitialized) return;
+    eventsInitialized = true;
+    if (!RA_EVENTS_DATA) {
+      try {
+        const res = await fetch('/data/ra-events.json');
+        RA_EVENTS_DATA = await res.json();
+      } catch(e) { RA_EVENTS_DATA = {}; }
+    }
+    const tabsEl = document.getElementById('events-year-tabs');
+    if (tabsEl) {
+      tabsEl.innerHTML = RA_YEARS.map(y =>
+        `<button class="tab-btn${y===eventsYear?' active':''}" data-year="${y}" onclick="renderPastEvents(${y})">${y}</button>`
+      ).join('');
+    }
+    renderPastEvents(eventsYear);
+    loadUpcomingEvents();
+  }
+
+  // Expose on window so nav.ts can call it
+  (window as any).initEvents = initEvents;
+  (window as any).switchEventsTab = switchEventsTab;
+  (window as any).renderPastEvents = renderPastEvents;
+
+  // Trigger on nav click
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLink = document.querySelector('nav a[data-s="events"]');
+    if (navLink) {
+      navLink.addEventListener('click', () => {
+        setTimeout(initEvents, 50);
+      });
+    }
+    if (location.hash === '#events') { setTimeout(initEvents, 100); }
+  });
+</script>
