@@ -4,11 +4,13 @@ import '../styles/global.css'
 import HeroSection from '../components/sections/HeroSection.astro'
 import EventsSection from '../components/sections/EventsSection.astro'
 import GallerySection from '../components/sections/GallerySection.astro'
+import StoreSection from '../components/sections/StoreSection.astro'
 ---
 <BaseLayout>
   <HeroSection />
   <EventsSection />
   <GallerySection />
+  <StoreSection />
   <script>
     import { initHero } from '../scripts/hero'
     document.addEventListener('DOMContentLoaded', () => initHero())

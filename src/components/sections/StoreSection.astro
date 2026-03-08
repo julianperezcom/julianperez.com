@@ -1,0 +1,140 @@
+---
+import { fetchBandcampItems } from '../../lib/bandcamp'
+
+let jpItems: any[] = []
+let giradaItems: any[] = []
+let fasItems: any[] = []
+
+try {
+  [jpItems, giradaItems, fasItems] = await Promise.all([
+    fetchBandcampItems('jp'),
+    fetchBandcampItems('girada'),
+    fetchBandcampItems('fas'),
+  ])
+} catch (e) {
+  jpItems = []
+  giradaItems = []
+  fasItems = []
+}
+---
+
+<!-- STORE -->
+<div class="store-section" id="store">
+  <div class="section-wrap" style="padding-bottom:32px;">
+    <div class="section-eyebrow">Store</div>
+    <div class="section-title">Shop</div>
+    <p class="section-sub">Vinilos, LPs y tracks disponibles en Bandcamp. Envíos a todo el mundo.</p>
+    <div class="music-tabs" style="margin-bottom:0;">
+      <button class="tab-btn active" onclick="switchStore('jp',this)">Julian Perez</button>
+      <button class="tab-btn" onclick="switchStore('girada',this)">Girada Unlimited</button>
+      <button class="tab-btn" onclick="switchStore('fas',this)">Fathers &amp; Sons</button>
+    </div>
+  </div>
+
+  <!-- JP panel -->
+  <div id="store-jp" class="store-grid">
+    {jpItems.length === 0 ? (
+      <div class="store-loading">Próximamente</div>
+    ) : (
+      jpItems.map((item: any) => (
+        <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item" style="text-decoration:none;color:inherit;">
+          <div class="store-cover">
+            <div class="store-cover-inner">
+              <img src={item.imageUrl} alt={item.title} style="width:100%;height:100%;object-fit:cover;" onerror={`this.src='${item.imageUrl.replace('_10.jpg','_2.jpg')}'`} />
+            </div>
+          </div>
+          <div class="store-info">
+            <div class="store-title">{item.title}</div>
+            {item.artist && <div class="store-label-name">{item.artist}</div>}
+            <div class="store-footer">
+              <div class="store-buy">Ver en Bandcamp ↗</div>
+            </div>
+          </div>
+        </a>
+      ))
+    )}
+  </div>
+
+  <!-- Girada panel -->
+  <div id="store-girada" class="store-grid" style="display:none;">
+    {giradaItems.length === 0 ? (
+      <div class="store-loading">Próximamente</div>
+    ) : (
+      giradaItems.map((item: any) => (
+        <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item" style="text-decoration:none;color:inherit;">
+          <div class="store-cover">
+            <div class="store-cover-inner">
+              <img src={item.imageUrl} alt={item.title} style="width:100%;height:100%;object-fit:cover;" onerror={`this.src='${item.imageUrl.replace('_10.jpg','_2.jpg')}'`} />
+            </div>
+          </div>
+          <div class="store-info">
+            <div class="store-title">{item.title}</div>
+            {item.artist && <div class="store-label-name">{item.artist}</div>}
+            <div class="store-footer">
+              <div class="store-buy">Ver en Bandcamp ↗</div>
+            </div>
+          </div>
+        </a>
+      ))
+    )}
+  </div>
+
+  <!-- FAS panel -->
+  <div id="store-fas" class="store-grid" style="display:none;">
+    {fasItems.length === 0 ? (
+      <div class="store-loading">Próximamente</div>
+    ) : (
+      fasItems.map((item: any) => (
+        <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item" style="text-decoration:none;color:inherit;">
+          <div class="store-cover">
+            <div class="store-cover-inner">
+              <img src={item.imageUrl} alt={item.title} style="width:100%;height:100%;object-fit:cover;" onerror={`this.src='${item.imageUrl.replace('_10.jpg','_2.jpg')}'`} />
+            </div>
+          </div>
+          <div class="store-info">
+            <div class="store-title">{item.title}</div>
+            {item.artist && <div class="store-label-name">{item.artist}</div>}
+            <div class="store-footer">
+              <div class="store-buy">Ver en Bandcamp ↗</div>
+            </div>
+          </div>
+        </a>
+      ))
+    )}
+  </div>
+
+  <div class="section-wrap" style="padding-top:32px;padding-bottom:48px;">
+    <div id="store-bc-link">
+      <a href="https://julianperez.bandcamp.com" target="_blank" style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:3px;">Ver todos en julianperez.bandcamp.com →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const STORE_ACCOUNTS: Record<string, { url: string; label: string }> = {
+    jp:     { url: 'https://julianperez.bandcamp.com',              label: 'julianperez.bandcamp.com' },
+    girada: { url: 'https://giradaunlimited.bandcamp.com',          label: 'giradaunlimited.bandcamp.com' },
+    fas:    { url: 'https://fathersandsonsproductions.bandcamp.com', label: 'fathersandsonsproductions.bandcamp.com' },
+  };
+
+  function updateBcLink(tab: string) {
+    const a = STORE_ACCOUNTS[tab];
+    const el = document.getElementById('store-bc-link');
+    if (el) {
+      el.innerHTML = `<a href="${a.url}" target="_blank" style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:3px;">Ver todos en ${a.label} →</a>`;
+    }
+  }
+
+  function switchStore(tab: string, btn: HTMLElement) {
+    document.querySelectorAll('#store .tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    ['jp', 'girada', 'fas'].forEach(t => {
+      const panel = document.getElementById('store-' + t) as HTMLElement | null;
+      if (panel) panel.style.display = t === tab ? 'grid' : 'none';
+    });
+    updateBcLink(tab);
+  }
+
+  // Expose globally so inline onclick handlers work
+  (window as any).switchStore = switchStore;
+</script>
