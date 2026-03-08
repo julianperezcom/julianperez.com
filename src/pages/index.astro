@@ -1,7 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import '../styles/global.css'
+import HeroSection from '../components/sections/HeroSection.astro'
 ---
 <BaseLayout>
-  <p>Site coming soon.</p>
+  <HeroSection />
+  <script>
+    import { initHero } from '../scripts/hero'
+    document.addEventListener('DOMContentLoaded', () => initHero())
+  </script>
 </BaseLayout>
