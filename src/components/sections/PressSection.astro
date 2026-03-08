@@ -110,7 +110,7 @@ const hasRefs = refs.length > 0
 
 <div class="press-section" id="press">
   <div class="section-wrap">
-    <div class="section-eyebrow">Press</div>
+    <div class="section-eyebrow" data-i18n="press.eyebrow">Press</div>
     <div class="press-grid">
       <div>
         <div class="section-title" style="margin-bottom:24px;">Bio</div>
@@ -128,7 +128,7 @@ const hasRefs = refs.length > 0
                 <div class="press-asset-name">{asset.name ?? asset.title}</div>
                 <div class="press-asset-meta">{asset.meta ?? asset.fileInfo ?? ''}</div>
               </div>
-              <a href={asset.url ?? asset.file?.asset?.url ?? '#'} class="press-download" target="_blank" rel="noopener">Descargar</a>
+              <a href={asset.url ?? asset.file?.asset?.url ?? '#'} class="press-download" target="_blank" rel="noopener" data-i18n="press.download">Download</a>
             </div>
           ))}
         </div>
@@ -149,7 +149,7 @@ const hasRefs = refs.length > 0
                     <div class="press-ref-title">{ref.title}</div>
                     <div class="press-ref-source">{ref.source}{ref.date ? ` · ${ref.date}` : ''}</div>
                   </div>
-                  <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link">Ver</a>
+                  <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link" data-i18n="press.view">View</a>
                 </div>
               ))}
             </div>
@@ -164,7 +164,7 @@ const hasRefs = refs.length > 0
                   <div class="press-ref-title">{ref.title}</div>
                   <div class="press-ref-source">{ref.source}</div>
                 </div>
-                <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link">Ver</a>
+                <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link" data-i18n="press.view">View</a>
               </div>
             ))}
           </div>

@@ -12,7 +12,7 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -69,6 +69,149 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <!-- Global CSS -->
   <slot name="head" />
+
+  <script is:inline>
+(function(){
+  var T={
+    en:{
+      'nav.music':'Music','nav.discography':'Discography','nav.store':'Store',
+      'nav.events':'Events','nav.gallery':'Gallery','nav.press':'Press',
+      'nav.links':'Links','nav.booking':'Booking',
+      'hero.unmute':'Unmute','hero.mute':'Mute',
+      'music.eyebrow':'Music','music.sub':'Mixes, live sets and original productions.',
+      'music.tab.sets':'DJ Sets & Podcasts','music.tab.live':'Live Videos','music.tab.tracks':'Tracks',
+      'music.coming_soon':'Coming soon',
+      'discog.eyebrow':'Discography','discog.sub':'Full catalog synced with',
+      'discog.tab.originals':'Originals','discog.tab.remixes':'Remixes','discog.tab.appearances':'Appearances',
+      'discog.coming_soon':'Coming soon',
+      'events.eyebrow':'Events','events.title':'Dates',
+      'events.tab.upcoming':'Upcoming','events.tab.past':'Past',
+      'events.loading':'Loading…',
+      'events.no_upcoming':'No upcoming dates confirmed.',
+      'events.no_upcoming_sub':'Follow on Bandsintown to stay updated.',
+      'events.no_past':'No dates on record',
+      'events.error':'Error loading events.',
+      'events.bandsintown':'Follow on Bandsintown →',
+      'events.ra':'View profile on Resident Advisor →',
+      'events.tickets':'Tickets →','events.view_ra':'View on RA →',
+      'month.0':'Jan','month.1':'Feb','month.2':'Mar','month.3':'Apr',
+      'month.4':'May','month.5':'Jun','month.6':'Jul','month.7':'Aug',
+      'month.8':'Sep','month.9':'Oct','month.10':'Nov','month.11':'Dec',
+      'gallery.eyebrow':'Gallery','gallery.title':'Photos',
+      'store.eyebrow':'Store','store.title':'Shop',
+      'store.sub':'Vinyls, LPs and tracks on Bandcamp. Worldwide shipping.',
+      'store.view_bandcamp':'View on Bandcamp ↗','store.view_all':'View all on',
+      'store.coming_soon':'Coming soon',
+      'press.eyebrow':'Press','press.download':'Download','press.view':'View',
+      'links.sub':'All platforms and featured releases in one place.',
+      'links.featured':'Featured','links.platforms':'Platforms','links.labels':'Labels',
+      'booking.eyebrow':'Contact',
+      'booking.tab.booking':'Booking Request','booking.tab.contact':'General Contact',
+      'booking.request.title':'Booking\nRequest',
+      'booking.request.desc':'Fill in the form with the event details and we\'ll get back to you within 48h.',
+      'booking.contact.h2':'General<br>Contact',
+      'booking.contact.desc':'This form is not directly managed by Julian. For press, media and general matters, fill in the form and someone from the team will get back to you shortly.',
+      'booking.privacy':'I have read and accept the',
+      'booking.privacy.link':'Privacy and Cookie Policy',
+      'booking.send_booking':'Send Booking Request','booking.send_message':'Send Message',
+      'booking.success':'✓ Sent successfully','booking.success.sub':"We'll get back to you shortly.",
+      'booking.error':'Error sending the form. Please try again.'
+    },
+    es:{
+      'nav.music':'Música','nav.discography':'Discografía','nav.store':'Tienda',
+      'nav.events':'Eventos','nav.gallery':'Galería','nav.press':'Prensa',
+      'nav.links':'Links','nav.booking':'Booking',
+      'hero.unmute':'Activar sonido','hero.mute':'Silenciar',
+      'music.eyebrow':'Música','music.sub':'Mixes, directo y producciones originales.',
+      'music.tab.sets':'DJ Sets & Podcasts','music.tab.live':'Vídeos en Vivo','music.tab.tracks':'Tracks',
+      'music.coming_soon':'Próximamente',
+      'discog.eyebrow':'Discografía','discog.sub':'Catálogo completo sincronizado con',
+      'discog.tab.originals':'Originales','discog.tab.remixes':'Remixes','discog.tab.appearances':'Apariciones',
+      'discog.coming_soon':'Próximamente',
+      'events.eyebrow':'Eventos','events.title':'Fechas',
+      'events.tab.upcoming':'Próximas','events.tab.past':'Pasadas',
+      'events.loading':'Cargando…',
+      'events.no_upcoming':'No hay próximas fechas confirmadas.',
+      'events.no_upcoming_sub':'Activa las notificaciones en Bandsintown para no perderte nada.',
+      'events.no_past':'Sin fechas registradas',
+      'events.error':'Error al cargar eventos.',
+      'events.bandsintown':'Seguir en Bandsintown →',
+      'events.ra':'Ver perfil en Resident Advisor →',
+      'events.tickets':'Entradas →','events.view_ra':'Ver en RA →',
+      'month.0':'Ene','month.1':'Feb','month.2':'Mar','month.3':'Abr',
+      'month.4':'May','month.5':'Jun','month.6':'Jul','month.7':'Ago',
+      'month.8':'Sep','month.9':'Oct','month.10':'Nov','month.11':'Dic',
+      'gallery.eyebrow':'Galería','gallery.title':'Fotos',
+      'store.eyebrow':'Tienda','store.title':'Shop',
+      'store.sub':'Vinilos, LPs y tracks disponibles en Bandcamp. Envíos a todo el mundo.',
+      'store.view_bandcamp':'Ver en Bandcamp ↗','store.view_all':'Ver todos en',
+      'store.coming_soon':'Próximamente',
+      'press.eyebrow':'Prensa','press.download':'Descargar','press.view':'Ver',
+      'links.sub':'Todas las plataformas y lanzamientos destacados en un solo lugar.',
+      'links.featured':'Destacados','links.platforms':'Plataformas','links.labels':'Sellos',
+      'booking.eyebrow':'Contacto',
+      'booking.tab.booking':'Booking Request','booking.tab.contact':'Contacto General',
+      'booking.request.title':'Booking\nRequest',
+      'booking.request.desc':'Rellena el formulario con los datos del evento y nos ponemos en contacto contigo en menos de 48h.',
+      'booking.contact.h2':'Contacto<br>General',
+      'booking.contact.desc':'Este formulario no es gestionado directamente por Julian. Para prensa, medios y consultas generales, rellena el formulario y alguien del equipo se pondrá en contacto contigo en breve.',
+      'booking.privacy':'He leído y acepto la',
+      'booking.privacy.link':'Política de Privacidad y Cookies',
+      'booking.send_booking':'Enviar Solicitud','booking.send_message':'Enviar Mensaje',
+      'booking.success':'✓ Enviado correctamente','booking.success.sub':'Nos pondremos en contacto contigo pronto.',
+      'booking.error':'Error al enviar el formulario. Por favor, inténtalo de nuevo.'
+    }
+  };
+
+  window.__T__=T;
+
+  function applyLang(lang){
+    var t=T[lang]||T.en;
+    window.__lang__=lang;
+    window.__t__=t;
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k=el.getAttribute('data-i18n');
+      if(t[k]!==undefined) el.textContent=t[k];
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+      var k=el.getAttribute('data-i18n-ph');
+      if(t[k]!==undefined) el.setAttribute('placeholder',t[k]);
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+      var k=el.getAttribute('data-i18n-html');
+      if(t[k]!==undefined) el.innerHTML=t[k];
+    });
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      b.classList.toggle('active',b.getAttribute('data-lang')===lang);
+    });
+    document.dispatchEvent(new CustomEvent('langchange',{detail:{lang:lang,t:t}}));
+  }
+
+  function setLanguage(lang){
+    try{localStorage.setItem('lang',lang);}catch(e){}
+    if(document.readyState==='loading'){
+      document.addEventListener('DOMContentLoaded',function(){applyLang(lang);});
+    } else {
+      applyLang(lang);
+    }
+  }
+
+  window.setLanguage=setLanguage;
+
+  // Apply immediately (or on DOMContentLoaded)
+  var saved;
+  try{saved=localStorage.getItem('lang');}catch(e){}
+  var initLang=saved||'en';
+  window.__lang__=initLang;
+  window.__t__=T[initLang]||T.en;
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){applyLang(initLang);});
+  } else {
+    applyLang(initLang);
+  }
+})();
+</script>
 </head>
 <body>
   <slot />

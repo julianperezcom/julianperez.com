@@ -21,9 +21,9 @@ try {
 <!-- STORE -->
 <div class="store-section" id="store">
   <div class="section-wrap" style="padding-bottom:32px;">
-    <div class="section-eyebrow">Store</div>
-    <div class="section-title">Shop</div>
-    <p class="section-sub">Vinilos, LPs y tracks disponibles en Bandcamp. Envíos a todo el mundo.</p>
+    <div class="section-eyebrow" data-i18n="store.eyebrow">Store</div>
+    <div class="section-title" data-i18n="store.title">Shop</div>
+    <p class="section-sub" data-i18n="store.sub">Vinyls, LPs and tracks on Bandcamp. Worldwide shipping.</p>
     <div class="music-tabs" style="margin-bottom:0;">
       <button class="tab-btn active" onclick="switchStore('jp',this)">Julian Perez</button>
       <button class="tab-btn" onclick="switchStore('girada',this)">Girada Unlimited</button>
@@ -34,7 +34,7 @@ try {
   <!-- JP panel -->
   <div id="store-jp" class="store-grid">
     {jpItems.length === 0 ? (
-      <div class="store-loading">Próximamente</div>
+      <div class="store-loading" data-i18n="store.coming_soon">Coming soon</div>
     ) : (
       jpItems.map((item: any) => (
         <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item">
@@ -44,7 +44,7 @@ try {
           <div class="store-info">
             <div class="store-title">{item.title}</div>
             {item.artist && <div class="store-label-name">{item.artist}</div>}
-            <div class="store-buy">Ver en Bandcamp ↗</div>
+            <div class="store-buy" data-i18n="store.view_bandcamp">View on Bandcamp ↗</div>
           </div>
         </a>
       ))
@@ -54,7 +54,7 @@ try {
   <!-- Girada panel -->
   <div id="store-girada" class="store-grid" style="display:none;">
     {giradaItems.length === 0 ? (
-      <div class="store-loading">Próximamente</div>
+      <div class="store-loading" data-i18n="store.coming_soon">Coming soon</div>
     ) : (
       giradaItems.map((item: any) => (
         <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item">
@@ -64,7 +64,7 @@ try {
           <div class="store-info">
             <div class="store-title">{item.title}</div>
             {item.artist && <div class="store-label-name">{item.artist}</div>}
-            <div class="store-buy">Ver en Bandcamp ↗</div>
+            <div class="store-buy" data-i18n="store.view_bandcamp">View on Bandcamp ↗</div>
           </div>
         </a>
       ))
@@ -74,7 +74,7 @@ try {
   <!-- FAS panel -->
   <div id="store-fas" class="store-grid" style="display:none;">
     {fasItems.length === 0 ? (
-      <div class="store-loading">Próximamente</div>
+      <div class="store-loading" data-i18n="store.coming_soon">Coming soon</div>
     ) : (
       fasItems.map((item: any) => (
         <a href={item.url} target="_blank" rel="noopener noreferrer" class="store-item">
@@ -84,7 +84,7 @@ try {
           <div class="store-info">
             <div class="store-title">{item.title}</div>
             {item.artist && <div class="store-label-name">{item.artist}</div>}
-            <div class="store-buy">Ver en Bandcamp ↗</div>
+            <div class="store-buy" data-i18n="store.view_bandcamp">View on Bandcamp ↗</div>
           </div>
         </a>
       ))
@@ -115,15 +115,20 @@ try {
     fas:    { url: 'https://fathersandsonsproductions.bandcamp.com', label: 'fathersandsonsproductions.bandcamp.com' },
   }
 
+  let currentStoreTab = 'jp';
+
   function updateBcLink(tab: string) {
     const a = STORE_ACCOUNTS[tab]
+    const t = (window as any).__t__ || {}
+    const viewAll = t['store.view_all'] || 'View all on'
     const el = document.getElementById('store-bc-link')
     if (el) {
-      el.innerHTML = `<a href="${a.url}" target="_blank" style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:3px;">Ver todos en ${a.label} →</a>`
+      el.innerHTML = `<a href="${a.url}" target="_blank" style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;color:var(--black);text-decoration:none;border-bottom:1.5px solid var(--black);padding-bottom:3px;">${viewAll} ${a.label} →</a>`
     }
   }
 
   function switchStore(tab: string, btn: HTMLElement) {
+    currentStoreTab = tab;
     document.querySelectorAll('#store .tab-btn').forEach(b => b.classList.remove('active'))
     btn.classList.add('active');
     ['jp', 'girada', 'fas'].forEach(t => {
@@ -132,6 +137,10 @@ try {
     })
     updateBcLink(tab)
   }
+
+  document.addEventListener('langchange', () => {
+    updateBcLink(currentStoreTab);
+  });
 
   (window as any).switchStore = switchStore
 </script>

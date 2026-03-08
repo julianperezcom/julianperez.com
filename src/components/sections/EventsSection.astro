@@ -12,26 +12,27 @@ try {
 <!-- EVENTS -->
 <div class="events-section" id="events">
   <div class="section-wrap">
-    <div class="section-eyebrow">Events</div>
-    <div class="section-title">Fechas</div>
+    <div class="section-eyebrow" data-i18n="events.eyebrow">Events</div>
+    <div class="section-title" data-i18n="events.title">Dates</div>
 
-    <!-- main tabs: Próximas / Pasadas -->
+    <!-- main tabs: Upcoming / Past -->
     <div class="music-tabs" style="margin-bottom:0;margin-top:32px;">
-      <button class="tab-btn active" id="evt-tab-upcoming" onclick="switchEventsTab('upcoming')">Próximas</button>
-      <button class="tab-btn" id="evt-tab-past" onclick="switchEventsTab('past')">Pasadas</button>
+      <button class="tab-btn active" id="evt-tab-upcoming" onclick="switchEventsTab('upcoming')" data-i18n="events.tab.upcoming">Upcoming</button>
+      <button class="tab-btn" id="evt-tab-past" onclick="switchEventsTab('past')" data-i18n="events.tab.past">Past</button>
     </div>
 
     <!-- upcoming: live from Bandsintown -->
     <div id="evt-panel-upcoming">
       <div class="event-list" id="event-list-upcoming">
-        <div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">
-          Cargando…
+        <div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;" data-i18n="events.loading">
+          Loading…
         </div>
       </div>
       <div style="text-align:center;padding:32px 0 0;">
         <a href="https://www.bandsintown.com/a/1290950" target="_blank"
-           style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.2);padding-bottom:2px;">
-          Seguir en Bandsintown →
+           style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.2);padding-bottom:2px;"
+           data-i18n="events.bandsintown">
+          Follow on Bandsintown →
         </a>
       </div>
     </div>
@@ -42,8 +43,9 @@ try {
       <div class="event-list" id="event-list-past"></div>
       <div style="text-align:center;padding:32px 0 0;">
         <a href="https://ra.co/dj/julianperez" target="_blank"
-           style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.2);padding-bottom:2px;">
-          Ver perfil en Resident Advisor →
+           style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.2);padding-bottom:2px;"
+           data-i18n="events.ra">
+          View profile on Resident Advisor →
         </a>
       </div>
     </div>
@@ -65,7 +67,10 @@ try {
   let eventsInitialized = false;
   let eventsTab = 'upcoming';
 
-  const MONTH_ABBR = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  function getMonthAbbr(monthIndex: number): string {
+    const t = (window as any).__t__ || {};
+    return t['month.' + monthIndex] || ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][monthIndex];
+  }
 
   function escHtml(s: string): string {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -99,14 +104,15 @@ try {
     try {
       const res = await fetch(`https://rest.bandsintown.com/artists/id_${BIT_ACCOUNT_ID}/events?app_id=${BIT_APP_ID}&date=upcoming`);
       const events = await res.json();
+      const t = (window as any).__t__ || {};
       if (!Array.isArray(events) || events.length === 0) {
-        list.innerHTML = '<div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">No hay próximas fechas confirmadas.<br><span style="font-size:0.7rem;margin-top:8px;display:block;">Activa las notificaciones en Bandsintown para no perderte nada.</span></div>';
+        list.innerHTML = `<div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">${t['events.no_upcoming'] || 'No upcoming dates confirmed.'}<br><span style="font-size:0.7rem;margin-top:8px;display:block;">${t['events.no_upcoming_sub'] || 'Follow on Bandsintown to stay updated.'}</span></div>`;
         return;
       }
       list.innerHTML = events.map((ev: any) => {
         const d = new Date(ev.datetime);
         const day = String(d.getDate()).padStart(2,'0');
-        const mon = MONTH_ABBR[d.getMonth()];
+        const mon = getMonthAbbr(d.getMonth());
         const yr  = String(d.getFullYear()).slice(2);
         const venueName = ev.venue ? ev.venue.name : 'TBA';
         const city = [ev.venue && ev.venue.city, ev.venue && ev.venue.country].filter(Boolean).join(', ');
@@ -114,10 +120,11 @@ try {
         const href = ev.url || '#';
         const ticketUrl = ev.offers && ev.offers.find((o: any) => o.type === 'Tickets');
         const btnHref = ticketUrl ? ticketUrl.url : href;
-        return buildEventRow(day, mon, yr, venueName, city, titleShort, btnHref, false, 'Entradas →');
+        return buildEventRow(day, mon, yr, venueName, city, titleShort, btnHref, false, t['events.tickets'] || 'Tickets →');
       }).join('');
     } catch(e) {
-      list.innerHTML = '<div style="padding:40px 0;text-align:center;color:var(--gray);font-size:0.8rem;">Error al cargar eventos.</div>';
+      const t = (window as any).__t__ || {};
+      list.innerHTML = `<div style="padding:40px 0;text-align:center;color:var(--gray);font-size:0.8rem;">${t['events.error'] || 'Error loading events.'}</div>`;
     }
   }
 
@@ -131,14 +138,14 @@ try {
     const list = document.getElementById('event-list-past');
     if (!list) return;
     if (!events.length) {
-      list.innerHTML = '<div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">Sin fechas registradas</div>';
+      list.innerHTML = `<div style="padding:60px 0;text-align:center;color:var(--gray);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;">${(window as any).__t__?.['events.no_past'] || 'No dates on record'}</div>`;
       return;
     }
     const sorted = [...events].sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
     list.innerHTML = sorted.map((ev: any) => {
       const d = new Date(ev.date);
       const day = String(d.getDate()).padStart(2,'0');
-      const mon = MONTH_ABBR[d.getMonth()];
+      const mon = getMonthAbbr(d.getMonth());
       const yr  = String(d.getFullYear()).slice(2);
       const rawVenue = ev.venue ? ev.venue.name : '';
       const venueName = rawVenue.replace(/^TBA\s*[-\u2013\u2014]?\s*/i,'').trim() || rawVenue || 'TBA';
@@ -149,7 +156,7 @@ try {
       const city = cityParts.join(', ');
       const href = ev.contentUrl ? 'https://ra.co' + ev.contentUrl : '#';
       const titleShort = ev.title.length > 50 ? ev.title.slice(0,48)+'\u2026' : ev.title;
-      return buildEventRow(day, mon, yr, venueName, city, titleShort, href, true, 'Ver en RA →');
+      return buildEventRow(day, mon, yr, venueName, city, titleShort, href, true, (window as any).__t__?.['events.view_ra'] || 'View on RA →');
     }).join('');
   }
 
@@ -203,5 +210,21 @@ try {
       });
     }
     if (location.hash === '#events') { setTimeout(initEvents, 100); }
+  });
+
+  document.addEventListener('langchange', () => {
+    if (eventsInitialized) {
+      loadUpcomingEvents();
+      if (eventsTab === 'past') renderPastEvents(eventsYear);
+      const tabUpcoming = document.getElementById('evt-tab-upcoming');
+      const tabPast = document.getElementById('evt-tab-past');
+      const t = (window as any).__t__ || {};
+      if (tabUpcoming) tabUpcoming.textContent = t['events.tab.upcoming'] || 'Upcoming';
+      if (tabPast) tabPast.textContent = t['events.tab.past'] || 'Past';
+      const bitLink = document.querySelector('#evt-panel-upcoming a[href*="bandsintown"]') as HTMLAnchorElement | null;
+      if (bitLink) bitLink.textContent = t['events.bandsintown'] || 'Follow on Bandsintown →';
+      const raLink = document.querySelector('#evt-panel-past a[href*="ra.co"]') as HTMLAnchorElement | null;
+      if (raLink) raLink.textContent = t['events.ra'] || 'View profile on Resident Advisor →';
+    }
   });
 </script>

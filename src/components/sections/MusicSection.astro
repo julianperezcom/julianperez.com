@@ -40,14 +40,14 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
 
 <div id="music">
   <div class="section-wrap">
-    <div class="section-eyebrow">Music</div>
+    <div class="section-eyebrow" data-i18n="music.eyebrow">Music</div>
     <div class="section-title">Sets &amp; Tracks</div>
-    <p class="section-sub">Mixes, directo y producciones originales.</p>
+    <p class="section-sub" data-i18n="music.sub">Mixes, live sets and original productions.</p>
 
     <div class="music-tabs">
-      <button class="tab-btn active" onclick="switchMusic('sets',this)">DJ Sets &amp; Podcasts</button>
-      <button class="tab-btn" onclick="switchMusic('live',this)">Live Videos</button>
-      <button class="tab-btn" onclick="switchMusic('tracks',this)">Tracks</button>
+      <button class="tab-btn active" onclick="switchMusic('sets',this)" data-i18n="music.tab.sets">DJ Sets &amp; Podcasts</button>
+      <button class="tab-btn" onclick="switchMusic('live',this)" data-i18n="music.tab.live">Live Videos</button>
+      <button class="tab-btn" onclick="switchMusic('tracks',this)" data-i18n="music.tab.tracks">Tracks</button>
     </div>
 
     <!-- ── DJ SETS & PODCASTS ── -->
@@ -102,7 +102,7 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
       </div>
 
       {sets.length === 0 && (
-        <div class="empty-state">Próximamente</div>
+        <div class="empty-state" data-i18n="music.coming_soon">Coming soon</div>
       )}
     </div>
 
@@ -128,7 +128,7 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
           )
         })}
       </div>
-      {liveVideos.length === 0 && <div class="empty-state">Próximamente</div>}
+      {liveVideos.length === 0 && <div class="empty-state" data-i18n="music.coming_soon">Coming soon</div>}
     </div>
 
     <!-- ── TRACKS ── -->
@@ -155,7 +155,7 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
           </div>
         ))}
       </div>
-      {tracks.length === 0 && <div class="empty-state">Próximamente</div>}
+      {tracks.length === 0 && <div class="empty-state" data-i18n="music.coming_soon">Coming soon</div>}
     </div>
 
   </div>
