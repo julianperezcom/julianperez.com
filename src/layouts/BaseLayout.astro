@@ -103,6 +103,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       'store.view_bandcamp':'View on Bandcamp ↗','store.view_all':'View all on',
       'store.coming_soon':'Coming soon',
       'press.eyebrow':'Press','press.download':'Download','press.view':'View',
+      'press.asset.photo':'Press Photo — High Resolution','press.asset.bio':'Bio — ES / EN',
+      'press.asset.rider':'Technical Rider','press.asset.logo':'Logo — Vector',
       'links.sub':'All platforms and featured releases in one place.',
       'links.featured':'Featured','links.platforms':'Platforms','links.labels':'Labels',
       'booking.eyebrow':'Contact',
@@ -157,6 +159,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       'store.view_bandcamp':'Ver en Bandcamp ↗','store.view_all':'Ver todos en',
       'store.coming_soon':'Próximamente',
       'press.eyebrow':'Prensa','press.download':'Descargar','press.view':'Ver',
+      'press.asset.photo':'Foto de prensa — Alta resolución','press.asset.bio':'Bio — ES / EN',
+      'press.asset.rider':'Rider técnico','press.asset.logo':'Logo — Vectorial',
       'links.sub':'Todas las plataformas y lanzamientos destacados en un solo lugar.',
       'links.featured':'Destacados','links.platforms':'Plataformas','links.labels':'Sellos',
       'booking.eyebrow':'Contacto',
@@ -207,7 +211,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     });
     document.querySelectorAll('[data-lang]').forEach(function(el){
       var elLang=el.getAttribute('data-lang');
-      if(elLang==='en'||elLang==='es')(el as HTMLElement).style.display=elLang===lang?'':'none';
+      if(elLang==='en'||elLang==='es') el.style.display=elLang===lang?'':'none';
     });
     document.dispatchEvent(new CustomEvent('langchange',{detail:{lang:lang,t:t}}));
   }
