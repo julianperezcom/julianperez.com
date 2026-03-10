@@ -30,7 +30,7 @@ body {
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: 97px;
+  height: 130px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
