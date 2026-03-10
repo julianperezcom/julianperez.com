@@ -261,7 +261,7 @@ nav a:hover { opacity: 1; }
 .section-wrap {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 96px 52px;
+  padding: 140px 52px 96px;
 }
 .section-eyebrow {
   font-size: 0.62rem;
