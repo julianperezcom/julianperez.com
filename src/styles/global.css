@@ -268,7 +268,7 @@ nav a:hover { opacity: 1; }
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--gray);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .section-title {
   font-size: clamp(2rem, 4vw, 3.4rem);
