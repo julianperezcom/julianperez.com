@@ -115,12 +115,12 @@ const hasRefs = refs.length > 0
     <div class="section-eyebrow" data-i18n="press.eyebrow">Press</div>
     <div class="press-grid">
       <div>
-        <div class="section-title" style="margin-bottom:24px;">Bio</div>
+        <div class="section-title" style="margin-bottom:24px;color:#C8C7C3;">Bio</div>
         <p class="press-bio" data-show-lang="en" set:html={bio?.content ?? staticBio} />
         <p class="press-bio" data-show-lang="es" style="display:none;" set:html={staticBioES} />
       </div>
       <div>
-        <div class="section-title" style="margin-bottom:24px;">Press Kit</div>
+        <div class="section-title" style="margin-bottom:24px;color:#C8C7C3;">Press Kit</div>
         <div class="press-assets">
           {displayAssets.map((asset: any) => (
             <div class="press-asset">
