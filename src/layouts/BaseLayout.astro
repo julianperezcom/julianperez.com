@@ -67,6 +67,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="preconnect" href="https://f4.bcbits.com" />
   <link rel="preconnect" href="https://rest.bandsintown.com" />
 
+  <!-- Vercel Analytics -->
+  <script is:inline>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js" is:inline></script>
+
   <!-- Global CSS -->
   <slot name="head" />
 

@@ -10,6 +10,7 @@ export const release = defineType({
     { name: 'year', type: 'number' },
     { name: 'label', type: 'string' },
     { name: 'coverUrl', title: 'Cover URL (Bandcamp)', type: 'url' },
+    { name: 'discogsUrl', title: 'Discogs URL', type: 'url' },
     { name: 'beatportUrl', type: 'url' },
     { name: 'soundcloudUrl', type: 'url' },
     { name: 'bandcampUrl', type: 'url' },
