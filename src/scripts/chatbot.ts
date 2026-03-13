@@ -145,9 +145,39 @@ function chatSend(): void {
 function finishChat(): void {
   const inputRow = document.getElementById('chatInputRow');
   if (inputRow) inputRow.style.display = 'none';
+
+  // Populate and submit the real form in the background
+  const formId = chatMode === 'booking' ? 'form-booking' : 'form-contact';
+  const form = document.getElementById(formId) as HTMLFormElement | null;
+  if (form) {
+    const keyMap: Record<string, string> = chatMode === 'booking' ? {
+      firstName: 'first_name', lastName: 'last_name', email: 'email',
+      company: 'company', address: 'address', eventName: 'event_name',
+      eventDate: 'event_date', pastArtists: 'past_events', lineup: 'lineup',
+      setTime: 'set_time', offer: 'offer', eventLink: 'event_link',
+      venueName: 'venue_name', venueCapacity: 'venue_capacity', city: 'city',
+      country: 'country', venueAddress: 'venue_address', website: 'venue_website',
+      airports: 'airports', comments: 'comments',
+    } : {
+      firstName: 'first_name', lastName: 'last_name', email: 'email',
+      subject: 'subject_line', message: 'message',
+    };
+    Object.entries(chatData).forEach(([key, value]) => {
+      const fieldName = keyMap[key];
+      if (fieldName) {
+        const input = form.querySelector(`[name="${fieldName}"]`) as HTMLInputElement | null;
+        if (input) input.value = value;
+      }
+    });
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(form),
+    }).catch(() => {});
+  }
+
   setTimeout(() => {
     addMsg(
-      'Perfect! I have everything I need. The team will review your request and get back to you within 48h. Thank you!',
+      'Perfect! Your request has been submitted. The team will get back to you within 48h. Thank you!',
       'bot'
     );
     setTimeout(() => {

@@ -12,6 +12,9 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { scroll-padding-top: 140px; }
+@media (max-width: 768px) { html { scroll-padding-top: 72px; } }
+
 :root {
   --black: #0E0E0E;
   --white: #F5F4F0;
