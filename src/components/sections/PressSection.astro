@@ -149,38 +149,28 @@ function bioToHtml(html: string): string {
     <!-- PRESS REFERENCES -->
     <div class="press-refs-title">Media &amp; Press References</div>
 
-    {hasRefs
-      ? categories.map((cat) => (
-          refsByCategory[cat].length > 0 && (
-            <div class="press-refs-group">
-              <div class="press-refs-group-name">{cat}</div>
-              {refsByCategory[cat].map((ref: any) => (
-                <div class="press-ref">
-                  <div class="press-ref-left">
-                    <div class="press-ref-title">{ref.title}</div>
-                    <div class="press-ref-source">{ref.source}{ref.date ? ` · ${ref.date}` : ''}</div>
-                  </div>
-                  <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link" data-i18n="press.view">View</a>
-                </div>
-              ))}
-            </div>
-          )
-        ))
-      : staticRefGroups.map((group) => (
-          <div class="press-refs-group">
-            <div class="press-refs-group-name">{group.name}</div>
-            {group.refs.map((ref) => (
-              <div class="press-ref">
-                <div class="press-ref-left">
-                  <div class="press-ref-title">{ref.title}</div>
-                  <div class="press-ref-source">{ref.source}</div>
-                </div>
-                <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link" data-i18n="press.view">View</a>
+    <div class="press-refs-group">
+      {hasRefs
+        ? refs.map((ref: any) => (
+            <div class="press-ref">
+              <div class="press-ref-left">
+                <div class="press-ref-title">{ref.title}</div>
+                <div class="press-ref-source">{ref.source}{ref.date ? ` · ${ref.date}` : ''}</div>
               </div>
-            ))}
-          </div>
-        ))
-    }
+              <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link" data-i18n="press.view">View</a>
+            </div>
+          ))
+        : staticRefGroups.flatMap((group) => group.refs).map((ref) => (
+            <div class="press-ref">
+              <div class="press-ref-left">
+                <div class="press-ref-title">{ref.title}</div>
+                <div class="press-ref-source">{ref.source}</div>
+              </div>
+              <a href={ref.url} target="_blank" rel="noopener" class="press-ref-link" data-i18n="press.view">View</a>
+            </div>
+          ))
+      }
+    </div>
 
   </div>
 </div>
