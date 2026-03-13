@@ -6,7 +6,7 @@ interface Props {
 }
 const {
   title = 'Julian Perez — DJ & Producer | Electronic Music',
-  description = 'Julian Perez, DJ y productor de música electrónica afincado en España. Residente en Underground Ibiza. Fundador de Girada Unlimited y Fathers & Sons.',
+  description = 'Julian Perez — DJ and producer based in Spain. Underground Ibiza resident. House, Techno and Minimal. Founder of Girada Unlimited and Fathers & Sons Productions.',
   ogImage = '/og-image.jpg',
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -38,6 +38,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+  <meta name="twitter:creator" content="@julianperezcom" />
 
   <!-- Structured data -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -45,13 +46,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     "@type": "MusicGroup",
     "name": "Julian Perez",
     "url": "https://julianperez.com",
-    "description": "DJ y productor de música electrónica afincado en España.",
+    "image": "https://julianperez.com/og-image.jpg",
+    "description": "DJ and producer based in Spain. Underground Ibiza resident. House, Techno and Minimal. Founder of Girada Unlimited and Fathers & Sons Productions.",
     "genre": ["Electronic", "Techno", "House", "Minimal"],
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Spain"
+    },
     "sameAs": [
       "https://ra.co/dj/julianperez",
       "https://www.instagram.com/julianperez",
       "https://soundcloud.com/julianperez",
-      "https://julianperez.bandcamp.com"
+      "https://julianperez.bandcamp.com",
+      "https://open.spotify.com/artist/2pMZw333AGGowD4t65HmuC",
+      "https://music.apple.com/artist/julian-perez/1458131437",
+      "https://www.youtube.com/@julianperezcom",
+      "https://www.facebook.com/JulianPerezOfficial",
+      "https://x.com/julianperezcom",
+      "https://www.discogs.com/artist/54394"
     ]
   })} />
 
