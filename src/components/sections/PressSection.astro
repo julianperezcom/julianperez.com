@@ -108,6 +108,14 @@ const staticRefGroups = [
 // Use Sanity data if available, otherwise fall back to static
 const displayAssets = assets.length > 0 ? assets : staticAssets
 const hasRefs = refs.length > 0
+
+function bioToHtml(html: string): string {
+  return html
+    .split(/<br\s*\/?>\s*<br\s*\/?>/)
+    .map(p => `<p>${p.trim()}</p>`)
+    .filter(p => p !== '<p></p>')
+    .join('')
+}
 ---
 
 <div class="press-section" id="press">
@@ -116,8 +124,8 @@ const hasRefs = refs.length > 0
     <div class="press-grid">
       <div>
         <h2 class="section-title" style="margin-bottom:24px;color:#C8C7C3;">Bio</h2>
-        <p class="press-bio" data-show-lang="en" set:html={bio?.content ?? staticBio} />
-        <p class="press-bio" data-show-lang="es" style="display:none;" set:html={staticBioES} />
+        <div class="press-bio" data-show-lang="en" set:html={bioToHtml(bio?.content ?? staticBio)} />
+        <div class="press-bio" data-show-lang="es" style="display:none;" set:html={bioToHtml(staticBioES)} />
       </div>
       <div>
         <h2 class="section-title" style="margin-bottom:24px;color:#C8C7C3;">Press Kit</h2>
@@ -187,6 +195,8 @@ const hasRefs = refs.length > 0
     font-size: 1.05rem; line-height: 1.85;
     color: #444;
   }
+  .press-bio p { margin-bottom: 1.4em; }
+  .press-bio p:last-child { margin-bottom: 0; }
   .press-bio strong { color: var(--black); }
   .press-bio em { color: #555; }
   .press-assets { display: flex; flex-direction: column; gap: 2px; }
