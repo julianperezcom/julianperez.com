@@ -110,6 +110,9 @@ const displayAssets = assets.length > 0 ? assets : staticAssets
 const hasRefs = refs.length > 0
 
 function bioToHtml(html: string): string {
+  // Sanity bio already has <p> tags — return as-is
+  if (/<p[\s>]/i.test(html)) return html
+  // Static bio uses <br><br> — convert to <p> tags
   return html
     .split(/<br\s*\/?>\s*<br\s*\/?>/)
     .map(p => `<p>${p.trim()}</p>`)
