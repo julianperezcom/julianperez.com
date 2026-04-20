@@ -1,0 +1,27 @@
+# Build artifacts
+dist/
+.vercel/
+.astro/
+.sanity/
+
+# Dependencies
+node_modules/
+
+# Images and media (large binary files)
+public/gallery/
+public/*.png
+public/*.ico
+public/*.jpg
+public/*.webp
+public/*.svg
+
+# OS files
+.DS_Store
+
+# Lock files
+package-lock.json
+pnpm-lock.yaml
+
+# IDE
+.idea/
+.vscode/
