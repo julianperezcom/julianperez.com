@@ -41,19 +41,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
   <meta name="twitter:creator" content="@julianperezcom" />
 
-  <!-- Structured data -->
+  <!-- Structured data — Person -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
+    "@type": "Person",
     "name": "Julian Perez",
-    "url": canonicalURL.toString(),
+    "alternateName": ["Julian Perez DJ", "Julián Pérez"],
+    "url": "https://julianperez.com",
     "image": "https://julianperez.com/og-image.jpg",
-    "description": "DJ and producer based in Spain. Underground Ibiza resident. House, Techno and Minimal. Founder of Girada Unlimited and Fathers & Sons Productions.",
-    "genre": ["Electronic", "Techno", "House", "Minimal"],
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Spain"
-    },
+    "description": "Julian Perez is a DJ and electronic music producer based in Spain, resident at Underground Ibiza. Active since the early 1990s in the House, Techno and Minimal scenes. Founder of vinyl labels Fathers & Sons Productions (2012) and Girada Unlimited. Has performed in over 50 countries and 150 cities, appeared at festivals including Amsterdam Dance Event, Sunwaves, Epizode, The BPM Festival and Outline Festival, and at clubs such as Rex Club (Paris), Fabric (London), Womb (Tokyo) and Robert Johnson (Frankfurt). Nominated Best Artist at Vicious Music Awards (2012, 2013) and Best Newcomer at DJ Awards (2016). Author of the book INTERFASE: The Infinite Set (2026).",
+    "jobTitle": "DJ, Producer, Record Label Owner",
+    "knowsAbout": ["Techno", "House", "Minimal Techno", "EBM", "New Beat", "Electronic Music", "Vinyl DJing", "Music Production", "Record Label Management"],
+    "nationality": { "@type": "Country", "name": "Spain" },
+    "homeLocation": { "@type": "Place", "name": "Ibiza, Spain" },
+    "memberOf": [
+      { "@type": "Organization", "name": "Underground Ibiza", "description": "Ibiza nightclub where Julian Perez holds a summer residency" }
+    ],
+    "award": [
+      "Nominated Best Artist — Vicious Music Awards 2012",
+      "Nominated Best Artist — Vicious Music Awards 2013",
+      "Nominated Best Newcomer — DJ Awards 2016"
+    ],
     "sameAs": [
       "https://ra.co/dj/julianperez",
       "https://www.instagram.com/julianperez",
@@ -65,6 +73,132 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "https://www.facebook.com/JulianPerezOfficial",
       "https://x.com/julianperezcom",
       "https://www.discogs.com/artist/54394"
+    ]
+  })} />
+
+  <!-- Structured data — MusicGroup -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Julian Perez",
+    "url": "https://julianperez.com",
+    "image": "https://julianperez.com/og-image.jpg",
+    "description": "DJ and producer based in Ibiza, Spain. Resident at Underground Ibiza. House, Techno and Minimal. Founder of Girada Unlimited and Fathers & Sons Productions.",
+    "genre": ["Electronic", "Techno", "House", "Minimal", "EBM"],
+    "foundingDate": "1990",
+    "foundingLocation": { "@type": "Place", "name": "Spain" },
+    "album": [
+      {
+        "@type": "MusicAlbum",
+        "name": "Solemnity",
+        "byArtist": "Julian Perez",
+        "datePublished": "2016",
+        "recordLabel": "Fathers & Sons Productions",
+        "description": "Double vinyl solo album by Julian Perez, released on Fathers & Sons Productions in 2016."
+      },
+      {
+        "@type": "MusicAlbum",
+        "name": "Break-Even",
+        "byArtist": "Julian Perez",
+        "datePublished": "2021",
+        "recordLabel": "Girada Unlimited",
+        "description": "Second studio album by Julian Perez, released on Girada Unlimited in 2021 as the label's tenth release."
+      }
+    ],
+    "sameAs": [
+      "https://ra.co/dj/julianperez",
+      "https://www.instagram.com/julianperez",
+      "https://soundcloud.com/julianperez",
+      "https://julianperez.bandcamp.com",
+      "https://open.spotify.com/artist/2pMZw333AGGowD4t65HmuC",
+      "https://music.apple.com/artist/julian-perez/1458131437",
+      "https://www.youtube.com/@julianperezcom",
+      "https://www.facebook.com/JulianPerezOfficial",
+      "https://x.com/julianperezcom",
+      "https://www.discogs.com/artist/54394"
+    ]
+  })} />
+
+  <!-- Structured data — FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is Julian Perez?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Julian Perez is a DJ and electronic music producer based in Spain with a summer residency at Underground Ibiza. He has been active since the early 1990s, playing House, Techno and Minimal. He is the founder of vinyl labels Fathers & Sons Productions (2012) and Girada Unlimited, has performed in over 50 countries and 150 cities, and released two studio albums: Solemnity (2016) and Break-Even (2021). In 2026 he published his debut book, INTERFASE: The Infinite Set."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Fathers & Sons Productions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fathers & Sons Productions is a vinyl-only record label founded by Julian Perez in 2012. Within its first year, the label hosted showcases in more than twelve countries. Every release has sold out within days of publication. The label released Julian's debut solo album Solemnity (2016) and was relaunched in 2023 with a new direction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Girada Unlimited?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Girada Unlimited is a record label founded by Julian Perez that gained strong underground support before his involvement was widely known. Its tenth release was Julian's second album, Break-Even (2021). The label continues to evolve with releases by Julian and a carefully curated roster of artists."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does Julian Perez play in Ibiza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Julian Perez holds a regular summer residency at Underground Ibiza, where he hosts his own nights each season. He has also appeared at landmark Ibiza events including ENTER. at Space and Cocoon Ibiza."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What festivals has Julian Perez played?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Julian Perez has appeared at Amsterdam Dance Event (ADE), Sunwaves Festival, Epizode Festival, The BPM Festival, Outline Festival, Sónar off week (Barcelona), Kazantip Festival, and Winter Music Conference, among others."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What clubs has Julian Perez played?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Julian Perez has performed at iconic clubs including Rex Club (Paris), Fabric (London), Womb (Tokyo), Robert Johnson (Frankfurt), and Underground (Ibiza), among many others across more than 50 countries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What labels has Julian Perez released music on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Julian Perez has released music on his own labels Fathers & Sons Productions and Girada Unlimited, as well as on respected labels including Cocoon Recordings, Raum..Musik, and Subwax Bcn."
+        }
+      }
+    ]
+  })} />
+
+  <!-- Structured data — Press mentions -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Julian Perez",
+    "url": "https://julianperez.com",
+    "subjectOf": [
+      { "@type": "Article", "name": "Julian Perez Releases Debut LP, Closes Fathers & Sons Productions", "publisher": { "@type": "Organization", "name": "Resident Advisor" }, "datePublished": "2016-10-20", "url": "https://ra.co/news/36928" },
+      { "@type": "Article", "name": "Stream Snippets of Julian Perez's Debut Album — Solemnity", "publisher": { "@type": "Organization", "name": "XLR8R" }, "datePublished": "2016-12-16", "url": "https://xlr8r.com/news/stream-snippets-of-julian-perezs-debut-album/" },
+      { "@type": "Article", "name": "Review: Julian Perez – Break-Even LP [GIRADA010]", "publisher": { "@type": "Organization", "name": "Trommel Music" }, "datePublished": "2021-05-17", "url": "https://trommelmusic.com/music/reviews/review-julian-perez-break-even-lp-girada010/" },
+      { "@type": "Article", "name": "Julian Perez – Now, After", "publisher": { "@type": "Organization", "name": "Resident Advisor" }, "datePublished": "2016-03-18", "url": "https://ra.co/reviews/18750" },
+      { "@type": "Article", "name": "RA Ibiza Weekly: Julian Perez, The Zoo Project", "publisher": { "@type": "Organization", "name": "Resident Advisor" }, "datePublished": "2014-09-12", "url": "https://ra.co/news/26382" },
+      { "@type": "Article", "name": "A Day In The Life: Julian Perez", "publisher": { "@type": "Organization", "name": "Trommel Music" }, "datePublished": "2018-07-12", "url": "https://trommelmusic.com/featured/a-day-in-the-life-julian-perez" },
+      { "@type": "Article", "name": "Premiere: Hear Girada Unlimited's Cure Music Debut", "publisher": { "@type": "Organization", "name": "XLR8R" }, "datePublished": "2018-11-06", "url": "https://xlr8r.com/news/premiere-hear-girada-unlimiteds-cure-music-debut/" },
+      { "@type": "Article", "name": "Epizode Festival Launches in Vietnam", "publisher": { "@type": "Organization", "name": "XLR8R" }, "url": "https://xlr8r.com/news/epizode-festival-launches-in-vietnam/" },
+      { "@type": "Article", "name": "Moscow's Outline Festival Announces 2016 Lineup", "publisher": { "@type": "Organization", "name": "Resident Advisor" }, "url": "https://ra.co/news/35024" }
     ]
   })} />
 
