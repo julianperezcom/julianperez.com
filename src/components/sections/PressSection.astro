@@ -172,6 +172,10 @@ function bioToHtml(html: string): string {
       }
     </div>
 
+    <div class="press-deep-links">
+      <a href="/press">Full press archive &amp; coverage →</a>
+      <a href="/bio">Full biography →</a>
+    </div>
   </div>
 </div>
 
@@ -242,6 +246,19 @@ function bioToHtml(html: string): string {
     transition: color 0.2s, border-color 0.2s; flex-shrink: 0;
   }
   .press-ref-link:hover { color: var(--black); border-color: var(--black); }
+  .press-deep-links {
+    margin-top: 40px;
+    display: flex; gap: 32px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 24px;
+  }
+  .press-deep-links a {
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: #888; text-decoration: none;
+    border-bottom: 1px solid #ccc; padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .press-deep-links a:hover { color: var(--black); border-color: var(--black); }
 
   @media (max-width: 768px) {
     .press-grid { grid-template-columns: 1fr; gap: 48px; }
