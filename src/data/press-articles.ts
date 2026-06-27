@@ -89,6 +89,208 @@ export const pressArticles: PressArticle[] = [
 `,
   },
   {
+    slug: 'rhythmatic-2013-interview',
+    title: 'Rhythmatic Talks to Julian Perez',
+    publication: 'Rhythmatic',
+    date: 'July 16, 2013',
+    dateISO: '2013-07-16',
+    category: 'interview',
+    excerpt: 'Ahead of the Fathers & Sons 1st Anniversary party at Rhythmatic London, Julian Perez discusses his DJ setup, vinyl philosophy, studio gear, musical influences and what DC10 means to him.',
+    image: '/press/rhythmatic-2013.png',
+    imageAlt: 'Rhythmatic interview with Julian Perez, July 2013',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p>Welcome to Rhythmatic, we are very glad to have you host the 1st Anniversary of Fathers and Sons with us. We have a selection of questions for you with regards to yourself as an artist and your label Fathers and Sons.</p>
+
+<h3>When you play — do you DJ, play LIVE or both?</h3>
+<p>I'm currently just DJing. However I am also thinking about doing live sets in the near future, so I've started to think about what I would play in my set. If I do it, I don't want to just mix my own tracks, I'd like to do a proper live set.</p>
+
+<h3>What's your ideal DJ setup?</h3>
+<p>One good quality analog mixer, 2 turntables and 1 or 2 CD players. I could live without the CD players but not without turntables.</p>
+
+<h3>There continues to be an endless dispute between vinyl DJs and sync DJs. What is your opinion on the Vinyl vs Sync debate?</h3>
+<blockquote>"For me the first and most important thing when I'm playing is having fun, then to make the crowd have fun too. I could play the same music with a laptop and sync and perhaps the crowd would enjoy it just as much, but I'd get bored after dropping the first track."</blockquote>
+
+<h3>What does your studio consist of?</h3>
+<p>My studio now consists of 3 analog drum machines: Jomox 999, MFB-522 and Tempest — the last one is a synth too. I don't have external effects. Ableton Live and Logic to sequence, and a 24 channel analog mixer for an external mixdown.</p>
+
+<h3>Do you use much analog gear?</h3>
+<p>The neighbours in the studios next to me have a lot of old gear so I'm borrowing and trying it out all the time on my tracks. In the end, the most important thing is to know what works better for your sound and to learn 100% how to use each machine or instrument.</p>
+
+<h3>When it comes to making a track, do you manage to finish it in a relatively short time, or can you work on it for years?</h3>
+<p>My best tracks can be done in one evening or they can be made in a whole day. When a track takes so much time it isn't usually one of my favourites.</p>
+
+<h3>Have you ever done any sound engineering courses, or are you a self-taught producer?</h3>
+<p>Self-taught producer. It started in 2010 — I had the structures of the tracks in my head and the sounds were very familiar to me because I started playing from an early age. I was also reading a lot, getting some advice and with clear ideas about what I wanted, the rest of the time was spent focusing on it.</p>
+
+<h3>Are you a musician too? Do you play any instruments?</h3>
+<p>No, I'm not a musician and I don't play instruments. I'm just a DJ who loves to make music.</p>
+
+<h3>Were you influenced by music that your parents or siblings would listen to growing up?</h3>
+<blockquote>"I grew up living with a cousin who was like my big brother; he was listening to Depeche Mode, Michael Jackson, Queen, Pink Floyd — all day long. I had this music at home after school all the time, so they were probably my strongest influences as a kid. This was before I started with Dance & Techno just a few years later. My parents still don't get why I liked that 'noise'."</blockquote>
+
+<h3>What do you think will be the next cool trend to dominate the music scene?</h3>
+<p>There are always people who follow different kinds of trends — clothing, music, dancing, even drugs. After a while a new one comes out and followers jump from one to another. There will always be new music trends but as with fashion, this is about looking at the past to take something which worked back in the day and make it "cool". Only you can choose to follow your thoughts or to be a follower.</p>
+
+<h3>Living and working from Ibiza — what are the advantages?</h3>
+<blockquote>"To spend the summer season in Ibiza is great as you are in touch with a lot of artists you know, who are always going there to play, meeting new ones all the time, sharing studio sessions with them, getting ideas when partying and enjoying long private after hours sets if you're lucky. It's my place to be, to enjoy and to keep learning."</blockquote>
+
+<h3>Which club in Ibiza would you call your favourite?</h3>
+<p>I have amazing memories on the Space terrace when it was uncovered, I loved the long nights at Underground which hosted closed-door after parties, but the club where I had the most fun back in the day would be DC10.</p>
+
+<h3>This year you celebrate the 1st anniversary of Fathers & Sons Productions. What are you looking forward to the most?</h3>
+<p>I'm getting exactly what I expected. I'm having artists I admire professionally and personally, and I've seen that they feel and support the sound, label and concept of it. To see how the F&S artists and residents of the clubs are having the chance to be involved in this project, expressing themselves and learning from the guests, makes me feel that it's worth it. It's a big way of communication, sharing and respect.</p>
+
+<h3>What should people expect from the Rhythmatic night in London?</h3>
+<p>People in London know Rhythmatic and their parties very well. They've had huge line-ups over the last years and now they are having us for a label night with Sebo K (Mobilee) and Martinez (Cocoon) as guests, plus myself and Rhythmatic residents in one of the best underground venues in town. London people are very musically educated — we'll give our best to have a big party.</p>
+
+<h3>What's the next release we can look forward to from Fathers & Sons?</h3>
+<p>We are already on it. Every release is not revealed until the day we announce it. However I can advance that FAS006 will be a project with various artists. This one brings old school sounds back to the label — it's a deep and groovy release, 100% Fathers and Sons sound.</p>
+`,
+  },
+  {
+    slug: 'buenos-aliens-2015-prefiero-una-batea',
+    title: '"Prefiero una batea a un disco duro"',
+    publication: 'Buenos Aliens',
+    date: 'September 10, 2015',
+    dateISO: '2015-09-10',
+    category: 'interview',
+    excerpt: 'Ahead of his Argentina tour (Córdoba, Mendoza, Buenos Aires), Julian Perez speaks to Buenos Aliens about Fathers & Sons Productions, the vinyl-only philosophy, his studio evolution and what Argentina means to him.',
+    image: '/press/buenos-aliens-2015.png',
+    imageAlt: 'Buenos Aliens interview with Julian Perez, September 2015',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>Entrevista por Damián Levensohn. A días de encarar una intensa gira por Argentina, que lo llevaría a Córdoba, Mendoza y finalizaría en la fiesta Flora & Fauna en el Hipódromo de Buenos Aires, nos encontramos con el ascendente artista español Julian Perez.</em></p>
+
+<h3>¿Cuál es la actualidad de Fathers & Sons Productions?</h3>
+<p>Podemos decir que Fathers & Sons, por mucho que se haya expandido y dado a conocer en los últimos años, es un sello que sigue siendo fiel a sí mismo. Nació con una idea particular y clara, un sonido personal que no se iba a ver afectado por las modas y no se iba a corromper. Está concebido para aportar algo diferente a la escena y para hacerlo con nuestras reglas, plazos y desde nuestro punto de vista, por supuesto muy subjetivo.</p>
+<p>Seguimos ampliando nuestro catálogo con cada nueva referencia a través de los diferentes estilos que tienen cabida en Fathers & Sons. Artistas nuevos, frecuentes, algunos desconocidos y proyectos donde en un principio no se conoce el artista hasta que no se lee en el crédito del disco — es lo que viene próximamente junto a más cosas que se nos irán ocurriendo. Queremos ofrecer música basándonos principalmente en la calidad de ésta. Pagar artistas caros famosos o invertir en promoción y marketing siguen sin ser nuestros recursos principales a la hora de publicar.</p>
+
+<h3>¿Por qué decidiste que sea un sello estrictamente vinyl only?</h3>
+<blockquote>"Fuimos de aquellos que decidieron que el vinilo debía volver para quedarse y apostamos por ello. Nos gusta más tener discos en la estantería que tener música en el disco duro. Como artista que estaba empezando a tener producciones para publicar, realmente quería que mi música saliese en vinilo y pocos sellos se querían arriesgar con esto. Era la época en que era muy económico y rentable un sello digital y todo el mundo podía tener uno. Para mí no era nada especial el tener un sello digital entre millones."</blockquote>
+
+<h3>¿En qué parte del proceso de aprendizaje te sentís hoy en cuanto al estudio?</h3>
+<p>Empecé en el 2010 yo solo y aprendiendo día a día — fue una etapa muy importante y emocionante en mi carrera. Lo que más me motiva es el aprendizaje, crear todo el tiempo y probar hacer diferentes estilos y llegar a ver los trabajos terminados. Ha llegado un punto en el que voy conociendo mejor mis herramientas; aun así no dejo de aprender cosas y experimentar. Últimamente estoy dedicando mucho tiempo a aprender de mezcla y hacer que mis tracks suenen lo mejor posible a mi gusto.</p>
+
+<h3>¿Cuáles fueron los highlights del verano europeo?</h3>
+<p>Ha sido un verano divertido. He estado dos veces en Norte América, Canadá, México y muchos gigs en Europa. Puede que Chicago, Cocoon Formentera y ENTER (en Space Ibiza) hayan sido los más remarcables del verano.</p>
+
+<h3>¿Cuál es el contexto que preferís a la hora de desarrollar un DJ set?</h3>
+<p>Me gusta llevar un poco de todo en la maleta, no suelo hacer una sesión "dura" aunque solamente tenga dos horas de set. Me gusta ir subiendo y bajando el ritmo e ir jugando con la pista. La idea es poder hacer entender a la gente que no es necesario tenerlo siempre arriba para divertirse. Para eso, claro, hay que ganarse su confianza.</p>
+
+<h3>¿Planes para lo que resta del año?</h3>
+<p>Va a ser un buen invierno — seguir viajando los fines de semana y sobre todo trabajando mucho en el estudio. Tengo muchos proyectos que voy a ir acabando durante el invierno: trabajos propios y colaboraciones. Hay mucho que terminar y por supuesto centrarme en muchos proyectos que van a empezar antes de final de año.</p>
+
+<h3>¿Cuáles son las expectativas para la gira argentina?</h3>
+<p>Tengo muchas ganas. Llego el viernes 11 a Córdoba para tocar con mi buen amigo Guti en un gran evento en Espacio Quality, donde también estarán Dokser y Knowbru. El jueves 16 vuelvo a Córdoba para una noche más íntima en Blacksheep. El 17 en Black Jagger, Mendoza, y el 19 en Flora y Fauna, en el Hipódromo de Buenos Aires. Va a ser un tour intenso, compartiendo con buenos amigos, y estoy seguro de que la gente se va a divertir.</p>
+
+<h3>¿Qué recordás de tus anteriores experiencias en Argentina?</h3>
+<blockquote>"La última vez estuve en febrero y fue increíble. Fueron tres gigs en tres días muy intensos. ¡Ah, la gente lo vive de verdad!"</blockquote>
+`,
+  },
+  {
+    slug: 'pulseradio-2016-no-dj-wants-to-sound-boring',
+    title: '"No DJ Wants to Sound Boring When Playing Long Sets"',
+    publication: 'Pulse Radio Asia',
+    date: 'June 10, 2016',
+    dateISO: '2016-06-10',
+    category: 'interview',
+    excerpt: 'Ahead of his South East Asian debut at Glow Club Bangkok, Julian Perez speaks to Pulse Radio Asia about long sets, the vinyl revival, crate digging and why he never pre-plans his sets.',
+    image: '/press/buenos-aliens-2015.png',
+    imageAlt: 'Pulse Radio Asia interview with Julian Perez, June 2016',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>By Marlina Azmi — June 10, 2016</em></p>
+<p>Ibiza-based DJ and producer Julian Perez has garnered a stellar reputation for himself for his unique and diverse, cutting-edge sound that takes his audience on an exciting ride, from rolling deep house to stripped-down dub techno. After releasing an abundance of tracks on a handful of the hottest labels, Perez launched his own strictly vinyl-only label Fathers & Sons Productions — quickly earning support from some of the most respected artists in the scene.</p>
+
+<h3>For someone as experienced as yourself, how do you keep from being jaded?</h3>
+<blockquote>"By staying true to myself. Otherwise I wouldn't be here."</blockquote>
+
+<h3>What excites you about playing at unfamiliar territories, and how do you prepare for gigs like your first trip to Israel or your upcoming gig at Glow in Bangkok?</h3>
+<p>It's challenging to bring my sound to a new crowd, who are not just expected to dance, but to also experience a musical journey through their ears and minds by a DJ who they might not have heard about. You don't know how many actually come to see you until you arrive and interact with them. That give and take process while feeling their reaction is what it's all about.</p>
+<blockquote>"I don't prepare my sets. Not even the music for any particular gigs on a tour like this one — that would be stressful and it wouldn't work for me. I can't think about what would work and suit in each one of the clubs, so I am here to give them a good surprise. That's the idea."</blockquote>
+<p>It's always about choosing the freshest and most interesting records that I'm hooked on at the moment — regardless of how old the tracks are. I like to play a bit of everything that will work in clubs, including my own unreleased tracks. That has worked out great for me until today, and I won't have it any other way.</p>
+
+<h3>Long sets are always fun for the DJ, but you've also got to keep the crowd engaged for a long time. What are your tips?</h3>
+<blockquote>"No DJ wants to sound boring when playing long sets but trust me, it's not easy to get the crowd engaged for many hours — I can personally count the number of people who can do it successfully with all my fingers in one hand. It is a big advantage when you have a musically educated and respectful crowd in front of you during long sets."</blockquote>
+<p>From my experience: try to not sound repetitive by not playing tracks of the same genre one after the other. You need to be versatile on the track selection and keep a steady flow. You have to keep people engaged and anticipate the next record you're going to play through feeling their vibe. Long sets give you the chance to showcase a proper history of your personality through music — then you're able to show who you really are as an artist.</p>
+
+<h3>Vinyl revenues surpassed free streaming last year. Has there been an increase in sales for Fathers & Sons?</h3>
+<p>We've been forced to increase the amount of pressed copies with our latest releases due to the growing demand from shops worldwide. When we started, the market was slumping and we wanted to entice the interest of DJs and collectors — this was before the hype of vinyl began.</p>
+<blockquote>"However, we're not yet re-pressing records. We don't believe in continuously re-pressing new releases to make more money. DJs who follow us and have stayed tuned — or even the ones who have discovered us recently — appreciate the fact the record they've just got won't always be available."</blockquote>
+
+<h3>Do you think the vinyl revival is a passing trend?</h3>
+<p>It is a trend, but I personally dig it over others because it is keeping vinyl records alive. Buying records makes your selection way more personal. The second-hand market is moving fast — the 'followers' will stop feeling the trend at some point, but others will stick to it for longer because it has become more of a lifestyle.</p>
+
+<h3>Where are some of your favourite crate digging spots?</h3>
+<p>Technique in Tokyo, Gramaphone Records in Chicago, Spacehall in Berlin, Vinyl Pimp in London, A-1 in New York, Subwax and Discos Paradiso in Barcelona — to name a few.</p>
+`,
+  },
+  {
+    slug: 'reckon-2016-guest-of-the-house',
+    title: 'Julian Perez: Guest of the House',
+    publication: 'Reckon Music & Events',
+    date: 'January 28, 2016',
+    dateISO: '2016-01-28',
+    category: 'interview',
+    excerpt: 'Reckon Music sits down with Julian Perez ahead of his Barcelona headline to discuss independence as an artist, the philosophy behind Fathers & Sons, and why he will never belong to any brand.',
+    image: '/press/reckon-2016.png',
+    imageAlt: 'Reckon Music & Events interview with Julian Perez, January 2016. Photo by Carlos Carrillo.',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>Photo by Carlos Carrillo. Following up from one of his hottest years yet, trailblazer Julian Perez takes a step back to compare his work on wax to his infamous live sets ahead of one of what's looking to be one of his most experimental years yet.</em></p>
+
+<h3>You maintain you're an independent artist pioneering Fathers & Sons. Is remaining independent whilst running a label challenging?</h3>
+<blockquote>"I do my own stuff, I have my own label, and I'm really happy to release on other people's labels. But at the end I consider myself independent. I don't really belong to another brand. I like to be a guest. I don't want anyone to say 'Okay, this guy is from this' — to point at me in a direction. I am just from my level. I have my own brand and myself. I am my own brand."</blockquote>
+
+<h3>Why do you like to release music on other labels? Why not release everything on your own?</h3>
+<p>I'm releasing on other labels — upcoming releases on Subwax Barcelona because I like the guys and I like the label. I could release all the stuff on my own label but I also like to share with other people, with other labels. The good thing about doing it the way I do is that I do what I want. I release when I want and nobody can tell me anything. It's freedom.</p>
+<blockquote>"I like to share with other people. Also they're friends, it's good to share with them. It's not like I'm releasing on every label — there are a lot of labels asking — it's just how I'm feeling. If they are flexible, then it's gonna work. You don't wanna put restrictions on yourself."</blockquote>
+<p>I don't want to feel pressure that there's a brand telling me the way I have to dress or how to play. I don't like that. I have my own personality, my own way of thinking, way to dress, way to play. I like to be myself and then, if you invite me to your party and I like it, I go and I do it. But I won't belong to your party, I won't belong to your brand.</p>
+
+<h3>Do you think it's the duty of a good artist to bring others up with you when you're established?</h3>
+<p>I think so — that's the point of the label. It started with releasing our stuff and doing things the way we wanted. But it's about supporting the other artists who really needed the support.</p>
+<blockquote>"Fathers and Sons is this: the fathers supporting the sons. You become a father when you're supporting a son. Everyone who's playing our releases — Ricardo, Zip, Sonja, Margaret, Cassy, Dorian — all of these guys are giving us support playing our stuff in their sets. Ricardo is one of the people who can be considered as a father. A 'father' is who helps selflessly. A 'son' is a talent yet to be discovered. We need more fathers in the electronic music industry."</blockquote>
+
+<h3>Is there something family-like about running Fathers & Sons?</h3>
+<p>Some brands and labels want to be like "Yeah let's do this as a family" and then there's only one person telling everyone else what to do — or maybe everyone at the label is not allowed to release on other labels. That's not freedom, that's not what I want to do. I want to support the artist.</p>
+
+<h3>You've spoken before about Ibiza as a unique ecosystem. How has it shaped you as an artist?</h3>
+<p>Ibiza in the summer is like a non-stop masterclass — you are in touch with the people you respect most, in the studio during the day, on the terrace at night. The access to so many different kinds of music happening at the same time in one small island is unique. It also teaches you who you are, because the competition is high and you either find your identity or you get lost following others.</p>
+`,
+  },
+  {
+    slug: 'brag-magazine-2016-five-things',
+    title: 'Five Things with Julian Perez',
+    publication: 'Brag Magazine (Sydney)',
+    date: 'June 2, 2016',
+    dateISO: '2016-06-02',
+    category: 'feature',
+    excerpt: 'Brag Magazine asks Julian Perez five defining things: from childhood memories of club tapes, to inspirations Quincy Jones and Depeche Mode, to his take on the current state of the electronic music scene.',
+    image: '/press/brag-sydney-2016.png',
+    imageAlt: 'Five Things with Julian Perez — Brag Magazine, Sydney, June 2016',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>Julian Perez plays S.A.S.H Queen's Birthday Long Weekend Party at Home Nightclub, Sydney, Sunday June 12, 2016.</em></p>
+
+<h3>1. Growing Up</h3>
+<blockquote>"The key childhood memory was when I was listening to electronic music at eight or nine years old back in 1991. My friends and I were waiting for our older friends, cousins, brothers and sisters to come back from the clubs every weekend. They were bringing us tapes recorded on the night. Now that's not really common but DJs in that time were recording various tapes of the sets at the same time every night. We knew all that music from that time after many listenings before we started getting into records years after."</blockquote>
+
+<h3>2. Inspirations</h3>
+<p>Quincy Jones, Herbie Hancock, Depeche Mode. I had them on repeat and still do.</p>
+
+<h3>3. Your Crew</h3>
+<p>I was getting into DJing and producing, taking it as my full-time job in the time when the scene was about talent, effort and dedication. I'm still working with my close friends who share this point — for me that's the only way to stay in this business: being happy and staying true to yourself and to the people who follow us.</p>
+<blockquote>"Now working in the studio is what is really pushing me — learning every day from other people and having fun doing what I love most: leaving some music here for the future."</blockquote>
+
+<h3>4. The Music You Make and Play</h3>
+<p>The styles are a bit messed up lately when listed online. People are a bit confused with what is what and how to classify each record into styles and sub-styles. On my sets as well as on my releases you'll find a mix of house, techno, minimal, deep house, dub techno and lately even ambient. So people can expect a set quite wide in styles.</p>
+
+<h3>5. Music, Right Here, Right Now</h3>
+<blockquote>"The music scene right now is growing so fast, it has become very popular and with new artists growing up quick, it's not always just about the talent like it used to be, but about the political interests on the scene, management companies, et cetera. Luckily there is an amount of true artists out there doing a great job — and hopefully more every time. The bigger obstacles to overcome now? Our own ego."</blockquote>
+`,
+  },
+  {
     slug: 'ibiza-voice-2018-cards-on-the-tables',
     title: 'Cards On The Tables: Julian Perez',
     publication: 'Ibiza Voice',
