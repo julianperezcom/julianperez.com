@@ -3,11 +3,19 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
+  articleMeta?: {
+    publishedTime: string;
+    imageAlt?: string;
+    jsonLd: string;
+  };
 }
 const {
   title = 'Julian Perez — DJ & Producer | Electronic Music',
   description = 'Julian Perez — DJ and producer based in Spain. Ibiza Underground resident. House, Techno and Minimal. Girada Unlimited & Fathers & Sons.',
   ogImage = '/og-image.jpg',
+  ogType = 'website',
+  articleMeta,
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -22,7 +30,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="canonical" href={canonicalURL} />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -40,6 +48,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
   <meta name="twitter:creator" content="@julianperezcom" />
+
+  <!-- Article meta (press pages only) -->
+  {articleMeta && <>
+    <meta property="article:published_time" content={articleMeta.publishedTime} />
+    <meta property="article:author" content="Julian Perez" />
+    <meta property="article:section" content="Press" />
+    {articleMeta.imageAlt && <meta property="og:image:alt" content={articleMeta.imageAlt} />}
+    <script type="application/ld+json" set:html={articleMeta.jsonLd} />
+  </>}
 
   <!-- Structured data — Person -->
   <script type="application/ld+json" set:html={JSON.stringify({

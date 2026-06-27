@@ -12,18 +12,27 @@ export function getStaticPaths() {
 const { article } = Astro.props
 ---
 
-<BaseLayout title={`${article.title} — ${article.publication} · Julian Perez`} description={article.excerpt}>
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": article.title,
-    "description": article.excerpt,
-    "datePublished": article.dateISO,
-    "publisher": { "@type": "Organization", "name": article.publication },
-    "about": { "@type": "Person", "name": "Julian Perez", "url": "https://julianperez.com" },
-    "url": `https://julianperez.com/press/${article.slug}`,
-    ...(article.image ? { "image": `https://julianperez.com${article.image}` } : {}),
-  })} />
+<BaseLayout
+  title={`${article.title} — ${article.publication} · Julian Perez`}
+  description={article.excerpt}
+  ogImage={article.image ?? '/og-image.jpg'}
+  ogType="article"
+  articleMeta={{
+    publishedTime: article.dateISO,
+    imageAlt: article.imageAlt,
+    jsonLd: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": article.title,
+      "description": article.excerpt,
+      "datePublished": article.dateISO,
+      "publisher": { "@type": "Organization", "name": article.publication },
+      "about": { "@type": "Person", "name": "Julian Perez", "url": "https://julianperez.com" },
+      "url": `https://julianperez.com/press/${article.slug}`,
+      ...(article.image ? { "image": `https://julianperez.com${article.image}` } : {}),
+    }),
+  }}
+>
 
   <main class="article-wrap">
     <nav class="article-nav">
