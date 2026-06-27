@@ -196,7 +196,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2016-06-10',
     category: 'interview',
     excerpt: 'Ahead of his South East Asian debut at Glow Club Bangkok, Julian Perez speaks to Pulse Radio Asia about long sets, the vinyl revival, crate digging and why he never pre-plans his sets.',
-    image: '/press/buenos-aliens-2015.png',
+    image: '/press/pulseradio-2016.png',
     imageAlt: 'Pulse Radio Asia interview with Julian Perez, June 2016',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -494,6 +494,178 @@ export const pressArticles: PressArticle[] = [
 
 <h3>How do you handle things when something goes wrong in the middle of a set?</h3>
 <p>Problems with sound systems and setups still bother me most these days. Bad quality monitoring, incorrectly set up DJ booths on top of the subs or tables that aren't stable enough for spinning records are the most common problems.</p>
+`,
+  },
+  {
+    slug: 'clubber-confession-2017-from-advertising-to-djing',
+    title: 'From Advertising Work in Office to DJing All Over the World',
+    publication: 'Clubber Confession',
+    date: 'May 19, 2017',
+    dateISO: '2017-05-19',
+    category: 'interview',
+    excerpt: 'Julian Perez speaks with Italian music outlet Clubber Confession about leaving a career in advertising in Alicante to pursue music in Ibiza, founding Fathers & Sons in 2013, and the real value of studio work.',
+    image: '/press/clubber-confession-2017.png',
+    imageAlt: 'Clubber Confession interview with Julian Perez, May 2017',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>By Federico Brunelli — Clubber Confession, Italy. May 19, 2017.</em></p>
+<p>Last Saturday, May 6 at the MIF in Rimini I had the pleasure to meet Julian Perez, with him I spent a good hour talking about his life explaining how he changed from Alicante to Ibiza, from office world to dancefloor and clubbing scene.</p>
+
+<h3>Hi Julian, tell us your beginnings</h3>
+<p>Before doing the DJ I was working in advertising, like graphic designers and web designers in Alicante (Spain). I worked in this field for a few years from 2000 to 2005, worked a lot and at some point I was fed up with the routine I was following; to wake up every day and go to work for a boss, to satisfy the customers with their many requests, I was little more than 20 years old and that life made me feel old.</p>
+<p>At that time I went on vacation in Ibiza, and I loved the vibe there, so decided to move there. I had no idea what I would have done but I certainly would not have done that life anymore. Once I moved, I started doing various works and helped a friend of mine in a construction company.</p>
+<p>In Ibiza I went out a lot, so in the meantime I began to be called to play in after parties, parties in the villa and small clubs, at that time it was a good way to show that I was able to mix good music, it worked and slowly put me in. Then I came to a point where I told myself: "Ok if I really want to do this and have a chance I need to work hard, stop with everything else and create my own sound."</p>
+<p>In summer I was in Ibiza, I liked the energy and have party there, while in winter I was traveling a lot and started working hard in the studio. I watched YouTube tutorials to learn, I asked my friends to teach me how to use the gear, I decided that I wanted to do it, and make productions that I could be proud of.</p>
+<p>I spent a lot of time in the studio, in 2010 I made my first releases, and I do not know how in the years to come, at some point the wheel started to turn in the right direction and started to get the first gigs, paid and enough to live from this. Although the period between 2010 and 2012 was a bit tough, spending so much time in the studio I had to do several jobs to survive.</p>
+<p>In 2013 everything started to go well, I founded Fathers &amp; Sons that was a great step for my career, especially to impose my style. The fact that others wanted to publish my music was cool, but I didn't have the control of my music and its diffusion. With the first releases of the label my records began to be played, even by big names, and people started to get to know me more than for my DJ set.</p>
+
+<h3>So do you think that producing your own music is still important?</h3>
+<p>You know, at times it was very different, but it still remains very important. Someone will start playing your records and you'll start to be known.</p>
+<p>For example, when I was playing in the clubs the resident might tell me "ah you're the one who made that record, I play your tracks". With productions, you can make your own style, and people already know something about you, so you may be a bad DJ, but if you produce good music you will be recognized for that.</p>
+
+<h3>What would you recommend to those who want to make it into the music business?</h3>
+<p>Well, now it's almost the same as when I started, there are a lot of DJs and lots of producers, even more, but when you do your music, you have your style and people know you about it and it's good for you. If I had not done the job I did in the studio, I would definitely not be where I am now.</p>
+<p>You know, there are some DJs that have important gigs even without producing but it's a lot more difficult these days, even more. You have to be very busy in the round, know the right people, maybe be resident and still need a long time. For me to produce counts 50% of my relationship with music, I really like it, as to make a DJ set.</p>
+
+<h3>What is your set-up in the studio?</h3>
+<p>I use drum machines, pianos, keys, sequencers, synths etc. but I'm not a musician, I do not play drums or other instruments, but I have ear; which for me is enough. I know how to put things together and to use my instrumentation to create a track that is ok for me.</p>
+<p>Now I use a lot of analog gear, at the beginnings I did not have enough money so I was lending machines from friends or using software, getting inspired by others trying to learn how to create my style and my workflow, to do this I tried so many instruments. Then depending on what I want to create, instrumentation changes — for a house, techno or tech-house track I use different gear.</p>
+
+<h3>Are you thinking of a new album or some new release?</h3>
+<p>The album was a last-minute thing, I found myself with 4–5 tracks and I thought: "I could make a double disc album", so I produced other tracks coming at around 11–12.</p>
+<p>For me the album made sense to do it because I wanted to close the label at a certain point, so it was a special thing for the latest release of Fathers &amp; Sons. The scope of this label for me was about releasing my music and that of my friends, we reached it and felt the need to close this project. I'm going to go back to the studio in the coming months and start with a new project, but I still have nothing in my mind.</p>
+
+<h3>What do you like more and less of your work?</h3>
+<p>I like to play around, I like the connection with the dancefloor, meet new people, traveling, visiting new places — it's something that I wouldn't be able to stop doing.</p>
+<p>Things I don't like instead are spending a lot of time alone between trips, sleeping less or nothing, at some point it is heavy, maybe you want to have a healthy routine, do some sport, eat at right times, but sometimes it is not possible and sometimes I do not like it. But for me the game is worth the candle, good things compensate for bad things. When I get booked somewhere for an event I like taking a few extra days to visit the places where I go.</p>
+`,
+  },
+  {
+    slug: 'techno-cz-2014-nechci-byt-zaujaty',
+    title: '"I Don\'t Want to Be Biased by Myself" — Interview',
+    publication: 'Techno.cz',
+    date: 'April 14, 2014',
+    dateISO: '2014-04-14',
+    category: 'interview',
+    excerpt: 'Ahead of his first-ever Prague appearance, Julian Perez discusses his studio setup, vinyl philosophy, working with tINI, the Ibiza underground, and why he never prepares sets for new cities.',
+    image: '/press/techno-cz-2014.png',
+    imageAlt: 'Techno.cz interview with Julian Perez, April 2014',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>Interview by adlet, March 2014. Translated from Czech for international readers.</em></p>
+<p>In just three weeks, Spanish DJ and producer Julian Perez — a representative of Fathers &amp; Sons Production and close collaborator of tINI — will appear in Prague for the very first time. This young talented DJ from Ibiza has made a name for himself with original tracks and high-quality dance sets at events like WMC Miami, playing alongside names such as tINI and Steve Lawler.</p>
+
+<h3>How are you at the beginning of spring? Are you busy?</h3>
+<p>The beginning of spring is being great. I'm still in Miami after WMC, so I'm having a good one, chilling before going back to Europe next week. Yeah, always busy — loads of new projects and stuff to do, which is a good thing. Trying to organize myself to make them all on time.</p>
+
+<h3>It's your first time in Prague. Have you heard about the Czech electronic scene?</h3>
+<p>I haven't heard so much about it, so I'm looking forward to checking it out by myself in May. Curious to be in one of the most beautiful cities in the world — I've just read it in a ranking. I'll fly early in the morning so I'll have time to see around.</p>
+
+<h3>As a Spanish DJ, how did you get the attention of a Berlin agency?</h3>
+<p>It's a mix of everything. It's a very exclusive agency and yeah, I think I'm the only Spanish artist in there. I needed a proper agency and it showed up at the right time. It was more than my relation to records that got their attention. To be the kind of artist they were looking for makes me work even harder, because the level is high. It's a good challenge.</p>
+
+<h3>How did you start collaborating with tINI?</h3>
+<p>She is such a cool girl! I don't really remember where and when we met for the first time but it worked well between us from the start. She is always playing and supporting my music and the releases on Fathers &amp; Sons, she really digs it. I love her energy and taste when playing — she is without doubt one of the new most talented DJ women out there. We'll be playing together a few shows this year.</p>
+
+<h3>How long did it take you to produce your first track? Was it hard to get it released?</h3>
+<p>When you are a DJ trying to start producing, releasing the first track is something you really want badly. You can't wait to hear feedback from other DJs after many attempts to do something decent. The first track I released was my project Nº19. It took a couple of days to create the idea, and another couple to try to get the best sound from my inexperience. It was released 5 months after the first trial. I think I never sent anyone my first 18 attempts. It's important to be patient, even if that's not one of my virtues. After some time you become more selective.</p>
+
+<h3>You have a classic analog sound. What are your studio favourites?</h3>
+<p>What you feel in my production is more about the character of the track than the equipment used to make it. It's a touch of the '90s, because that's the sound I grew up with, and logically all its influences are present in my production — which is why I use a lot of classic samples. My studio favourites are Roland TR-909, TR-606 and TB-303 (belonging to my neighbour), Jomox XBASE 999, MFB 522, Tempest and Korg MS2000 for vintage synth. Then I use an MPC3000, an analog 24-channel mixer and external effects.</p>
+
+<h3>Your own label releases only on vinyl. What's the main reason?</h3>
+<p>The reason is sharing a piece of music — something you can collect the same way we used to. Music that was created to be pressed on a record and listened to in that format. It keeps it close to people who truly appreciate it.</p>
+<p>It's great that everyone can enjoy music digitally too, but if you have a label that pursues that format for production and sales, you can't control how widely the track spreads. Then everyone can play it, so it's far too easy to get and it won't get the attention from DJs like me. Also, producing tracks for vinyl matters — if a track is produced and mastered fully digitally, it will still sound digital in analog format. In such cases I'd rather buy the digital version than the vinyl.</p>
+
+<h3>What's it like when DJs like Loco Dice or Ricardo Villalobos play your music?</h3>
+<p>Those are the things that make you feel great and fired up to keep working. Who wouldn't imagine their favourite DJ playing your latest freshly-made track with the crowd going crazy? That's the classic dream.</p>
+
+<h3>How do you start sets in cities where you've never played before?</h3>
+<p>I never arrive with a plan of what I'll play in a city I haven't been to. I come to the club fairly early to listen to the resident DJs and then start my set in my own way, feeling it as I go and watching the reactions. When people are open to diving into it, it always works.</p>
+
+<h3>Can you tell us something about the scene in Ibiza? Underground or commercial?</h3>
+<p>Ibiza itself is commercial — truthfully there is no underground scene there. But if you're talking about a classic party with normal prices, where promoters aren't only thinking about making money and people come who simply want to enjoy the music rather than watch famous DJs they don't even know — you can find those. But not on billboards or flyers. Those are definitely not underground.</p>
+`,
+  },
+  {
+    slug: 'muno-pl-2019-wywiad',
+    title: '"Fake It Till You Make It" Is Unfortunately Everywhere Now — Interview',
+    publication: 'muno.pl',
+    date: 'May 16, 2019',
+    dateISO: '2019-05-16',
+    category: 'interview',
+    excerpt: 'Polish music outlet muno.pl interviews Julian Perez ahead of his Poznań appearance at Projekt LAB. He discusses inspiration from Detroit and Chicago labels, closing Fathers & Sons, Girada Unlimited, and the creeping commercialisation of electronic music culture.',
+    image: '/press/muno-pl-2019.png',
+    imageAlt: 'muno.pl interview with Julian Perez, May 2019',
+    sourceNote: 'Original in Polish. Published on muno.pl, May 16, 2019. No longer online.',
+    content: `
+<p><em>Interview by Karolina Jakubowska. Published in Polish on muno.pl, May 16, 2019, ahead of Julian Perez's appearance at Karawana, Projekt LAB, Poznań.</em></p>
+<p><em>We speak with Julian Perez, head of the legendary Fathers &amp; Sons label, before his appearance at Poznań's Projekt LAB club.</em></p>
+
+<h3>Your biography mentions that at the beginning of your musical journey you were inspired by sounds from the UK and USA. Which artists and labels did you particularly admire?</h3>
+<p>Mainly it was Detroit — Derrick May, Carl Craig, Juan Atkins, Kevin Saunderson and their labels: Transmat, Planet E, KMS, Metroplex. I was also inspired by labels from Chicago: Relief Records, Cajual, Guidance from Spencer Kincy / Green Velvet, Derrick Carter. From the UK: Peacefrog, Ferox, Force Inc were my thing. At the time there were also many great labels in Europe, but somehow at the very beginning I was much more interested in the ones I mentioned first.</p>
+
+<h3>Many artists talk about their studio rituals. What are yours?</h3>
+<p>I agree that the room must be clean and tidy, but I don't really sit in an atmosphere of incense and rituals. When inspiration appears, it's better to be in the studio, ready to record. I'm definitely more productive when I'm completely rested, from morning to late evening. But it can happen that many hours pass before you create something interesting — then you have no choice but to sit there until it sounds the way it should. Going to sleep would mean losing the flow. What definitely helps me is natural light in the studio.</p>
+
+<h3>Apart from releases on other labels, you have been totally dedicated to your two own — Fathers &amp; Sons Productions, which you closed with your album, and now Girada Unlimited. What chapter did you close and what lies ahead for your new label?</h3>
+<p>I believe that life consists of chapters, periods, stages — whatever you prefer. I believe that certain things need to be concluded so that you can enter something new with fresh energy. I'm very satisfied and proud of every stage of this journey. The new chapter has no defined path yet, its story is still being written. Girada Unlimited is still developing its sound, which is very broad these days. What comes next? That is always unknown and unlimited.</p>
+
+<h3>In one interview you mentioned that you don't prepare sets when you play somewhere for the first time. Where during your debuts did you experience the most satisfying reception from the audience?</h3>
+<p>If you're playing somewhere for the first time, trying to prepare a set seems quite stressful. One such event was my debut in Córdoba, Argentina. It was one of the stops on my tour through several countries and I couldn't really fill my bag with that specific gig in mind. Interestingly, the music I had with me turned out to be perfect. The approach and vibe of the people was something from another planet.</p>
+<p>The same thing happened when I first played in Romania and that feeling stays with me to this day when I play in that country. It's simply a different level — a well-informed audience that makes you feel confident and relaxed, and as a result you play better and it becomes a great experience for everyone.</p>
+
+<h3>Apart from your vast experience in electronic music, you once worked in advertising. How did you jump from one to the other?</h3>
+<p>Advertising has always excited me, and its creative part has application in what I do now. It was about chasing my dream, which had been my hobby since I was a teenager — so when it came to the point where I had to decide which field to commit to one hundred percent, I chose music.</p>
+
+<h3>Advertising also plays a big role in electronic music, especially now in the social media era. People say that when a culture becomes a business, an industry, it ceases to be culture. What is your view on this?</h3>
+<p>It's undeniable that strategy is important today and everyone plays by their own rules. I don't believe popularity always means success. There are those who believe it and will continue to believe it as long as they can live from this new business — which is far from what we call culture. The "ends justify the means" approach or "fake it till you make it" are unfortunately omnipresent today. Whatever works, right? Culture will always remain culture and remain where it is. If you dig deep enough, you'll find it.</p>
+
+<h3>Will we hear your live set soon?</h3>
+<p>It has always interested me, but at the same time I love playing from records — the diversity it gives depending on your mood, the audience and so on. A live set has to be more or less planned, and several events with a live performance means producing a large amount of music to keep the performance and material fresh. Actually, working on a live performance with another artist seems more interesting and satisfying. Why not?</p>
+`,
+  },
+  {
+    slug: 'mixmag-io-2016-ya-veryu-v-nastoyashchikh',
+    title: '"I Believe in Real and Sincere People" — Interview',
+    publication: 'Mixmag Russia (mixmag.io)',
+    date: 'March 31, 2016',
+    dateISO: '2016-03-31',
+    category: 'interview',
+    excerpt: 'Russian edition of Mixmag interviews Julian Perez from Lima, Peru, ahead of his Moscow appearance. He discusses the Spanish electronic scene, Fathers & Sons vinyl philosophy, label curation, avoiding burnout, and his admiration for DJs who stay true to themselves.',
+    image: '/press/mixmag-io-2016.jpg',
+    imageAlt: 'Mixmag Russia interview with Julian Perez, March 2016',
+    sourceNote: 'Original in Russian. Published on mixmag.io, March 31, 2016. No longer online.',
+    content: `
+<p><em>Interview by Ilya Voronin. Published in Russian on mixmag.io, March 31, 2016. Julian Perez was in Lima, Peru on a South American tour at the time of the interview, ahead of his Moscow appearance at club Konstruktor on April 2.</em></p>
+
+<h3>Is there a developed house scene in Spain? Is there something that distinguishes it from others?</h3>
+<p>Compared to any other European techno and house scene, the modern Spanish scene is very small. Of course I'm not counting Ibiza, because that's a completely different story. In fact I would even talk about an audience rather than a "movement" as it was in the past. Although we still have really good DJs and producers active on this scene over the past two decades, plus new talents constantly emerging, everyone knows that the Spanish market alone is not enough to launch an artist's career. 95% of everything that happens in the world of techno and house happens outside the country.</p>
+
+<h3>You launched Fathers &amp; Sons Production in 2012. Can you tell us more about the label, its goals, and why music on it is released exclusively on vinyl?</h3>
+<p>That's right. The label was launched in 2012 focusing on DJs and lovers of electronic music. By that point the digital music market had already developed greatly and become ubiquitous. It had become too easy to share music and you could get music without much effort. The digital music market quickly became flat and boring.</p>
+<p>We believed in our taste and wanted to do things the way we thought was right and necessary — and we wanted our music on vinyl. At the start we had to invest ourselves and print releases in small runs, but the process began. Today we continue this work with the same pride and enthusiasm.</p>
+
+<h3>What are your criteria for selecting tracks for a release?</h3>
+<p>Believe it or not, there's no special process. Regardless of who the artist is or what type of tracks they are — if we like the idea, if we feel something — we sign it. We don't follow any strict stylistic line. We're interested in various genres. With the label we try to create a kind of story, showing through the records what we love — the most varied dance music that we love to listen to and play. Moving this way we will never get bored, and boredom is immediately the end for the label.</p>
+<p>Every day people send us their music; some even send to all the labels they like, hoping to get released on at least one of them. Others work on a specific sound to get onto a particular label, which sometimes works — but it can also happen that at that moment the label has already changed its direction. Personally I think that music should be made relying exclusively on your own feelings, not thinking in terms of labels, and only then looking at a specific one.</p>
+
+<h3>Are there any places that inspire you to create music?</h3>
+<p>Spain is full of notable places, but there are no specific places after visiting which I would get inspiration. I draw from my everyday emotions, feelings and moods. I truly value and love the moments of silence I arrange for myself for a few hours a day — only then can I gather my thoughts, and in such moments I manage to find new ideas for my future tracks.</p>
+
+<h3>How do you protect yourself from emotional burnout?</h3>
+<p>Everyone who performs and goes on tour knows that DJ life is an emotional rollercoaster. Often things don't go as planned, not everything depends on us, and success is not an easy thing — but that's life, right? Such experience is worth living for.</p>
+<p>In my opinion, the main thing is to enjoy what you do, to stay true to yourself, and not to lose the desire to keep moving. I don't believe in the "get there at any cost" approach. Respect can be earned through hard work, by trying to make those around you happy. For me personally, dedication, patience, accuracy and enjoying every second are important. If I burn out recklessly, the fun won't last long.</p>
+
+<h3>Are there DJs who serve as examples for you?</h3>
+<p>Of course I have DJs and people I respect, who I admire — but it would be unfair to name only some of them. For me, good examples are DJs who go their own way, who don't put on airs, who don't rely forever on PR, who don't always expect help, who learn from those they admire. Those I look up to have individuality, they always maintain an element of surprise — people never know what to expect from them. Those who dedicate themselves entirely to music, ignoring all the outside nonsense.</p>
+<blockquote>"I respect DJs who do this not for money, or not out of a desire to avoid a boring job they don't like. They do it because they can't do it any other way. I'm talking about those who don't need to use people, who don't need to constantly put themselves above others, diminishing others' achievements and using someone to secretly do all the work for them, spreading lies about their fans and colleagues just to stay 'there' at any cost. I admire those who work like crazy to achieve their goals. I believe in real and sincere people — they are my examples."</blockquote>
+
+<h3>When did you last dance on the dancefloor?</h3>
+<p>Actually last weekend in Lima, the capital of Peru. I'm not a big fan of standing in the DJ booth when I'm not playing, so you can easily find me on the dancefloor.</p>
+
+<h3>Five records without which life would be boring?</h3>
+<p>Oh, there are so many! Let me try five different records for different moments: Michael Jackson — Thriller (1982), Aretha Franklin — Amazing Grace (1972), John Coltrane — A Love Supreme (1965), The Cure — Disintegration (1989), Derrick May — Strings of Life (1987).</p>
 `,
   },
 ]

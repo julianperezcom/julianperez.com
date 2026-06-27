@@ -115,4 +115,24 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://julianperez.com/press/clubber-confession-2017-from-advertising-to-djing</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://julianperez.com/press/techno-cz-2014-nechci-byt-zaujaty</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://julianperez.com/press/muno-pl-2019-wywiad</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://julianperez.com/press/mixmag-io-2016-ya-veryu-v-nastoyashchikh</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
