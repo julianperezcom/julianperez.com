@@ -428,6 +428,8 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2023-03-02',
     category: 'premiere',
     excerpt: 'Trommel Music premieres the lead track from Julian Perez\'s return EP on Girada Unlimited — a four-track release crossing bouncy techno, dub-influenced textures, deep house and electro.',
+    image: '/press/trommel-2023-overdubbing-theory.jpg',
+    imageAlt: 'GIRADA11 Command Station EP — Julian Perez on Girada Unlimited, 2023',
     sourceUrl: 'https://trommelmusic.com/music/premiere/premiere-a1-julian-perez-overdubbing-theory-girada11/',
     content: `
 <p>Spanish DJ and producer Julian Perez returned from a hiatus with a new EP on his Girada Unlimited imprint. The label has established itself as a platform for innovative electronic music, supporting artists including Amsterdam's Caim, Argentina's Franco Cinelli, and Dutch producers D&S.</p>
