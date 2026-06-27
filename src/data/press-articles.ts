@@ -377,6 +377,75 @@ export const pressArticles: PressArticle[] = [
 `,
   },
   {
+    slug: 'trommel-2018-a-day-in-the-life',
+    title: 'A Day in the Life: Julian Perez',
+    publication: 'Trommel Music',
+    date: 'July 12, 2018',
+    dateISO: '2018-07-12',
+    category: 'feature',
+    excerpt: 'Trommel Music follows Julian Perez during a weekend visit to Rotterdam — factory tours, a historic record shop, a Void soundsystem, and a four-hour set at BAR.',
+    image: '/press/trommel-2018-day-in-the-life.png',
+    imageAlt: 'A Day in the Life: Julian Perez — Trommel Music, July 2018',
+    sourceUrl: 'https://trommelmusic.com/featured/a-day-in-the-life-julian-perez',
+    content: `
+<p>Trommel Music followed Julian Perez during a weekend visit to Rotterdam, Netherlands — a city with a complex relationship with electronic music, having been the birthplace of gabber-house and hardcore in the early 90s, yet historically less supportive of club culture than Amsterdam.</p>
+
+<p>The feature documents his itinerary: a gym session, a tour of M4H — a repurposed industrial factory space at the forefront of Rotterdam's new cultural development — and a visit to a landmark record shop owned by Michel Steinbach, a key figure from the city's formative rave era. The piece contrasts the city's industrial past with its present resurgence as a hub for electronic music.</p>
+
+<p>Perez was in Rotterdam for a four-hour set at BAR, known for its intimate atmosphere and Void soundsystem. The format suited his approach to long sets: building a full narrative arc across genres, from rolling deep house through to late-night dub techno, never locking into a single tempo or mood.</p>
+
+<p>The article presented Perez as an artist who carefully selects his performances, remaining studio-focused between bookings and avoiding the saturation trap that affects many touring DJs. His labels — <strong>Fathers & Sons Productions</strong> and the newer <strong>Girada Unlimited</strong> — were highlighted as expressions of that same discipline: releasing only when something is genuinely ready, never to fill a schedule.</p>
+
+<p>Rotterdam's promoters noted that "their city was not to be underestimated" — a sentiment that resonated with Perez's own approach to discovering new audiences: arriving without assumptions, reading the room from the first record.</p>
+`,
+  },
+  {
+    slug: 'trommel-2021-break-even-lp-review',
+    title: 'Review: Julian Perez – Break-Even LP [GIRADA010]',
+    publication: 'Trommel Music',
+    date: 'May 17, 2021',
+    dateISO: '2021-05-17',
+    category: 'review',
+    excerpt: 'Trommel Music reviews the Break-Even LP — Julian Perez\'s double 12" on Girada Unlimited, spanning cosmic breaks, deep house, peak-time techno and dream house across four sides of vinyl.',
+    image: '/press/trommel-2021-break-even-review.png',
+    imageAlt: 'Trommel Music — Review: Julian Perez – Break-Even LP [GIRADA010], May 2021',
+    sourceUrl: 'https://trommelmusic.com/music/reviews/review-julian-perez-break-even-lp-girada010/',
+    content: `
+<p>For Julian Perez's imprint Girada's tenth release he has cooked up something rather special. His label has always stood for originality and diversity and as well as his own unique productions having a respected platform from which to propel him, he has also given sanctuary to other like-minded artists such as D&S, Franco Cinelli and Caim. It is however Julian that has taken the reins for GIRADA010.</p>
+
+<p>Spread over 2×12", <em>Break-Even</em> is an impressive body of work that spans a broad range of styles as followers of Perez's work will have come to expect. The double 12" kicks off Side A with the spacey breaks of 'Sweentro', closely followed by the lushness of 'Facts' and brooding 'Revelation'. With three tracks on Side A it is to be expected that one of these will be a tad shorter than the others.</p>
+
+<p>Flipping over, Side B treads more towards peak time vibes with 'Eveileb'. The pumping kick drum and menacing synth lines encounter a sweet contrast by way of the retro synth pads. The pressure drops somewhat to deep house territory on 'Versatile' and remains there come the start of Side C with 'Energy Fever'. The low-slung conga-laden groover is a sublime piece of dream house more than capable of entrancing a dancefloor.</p>
+
+<p>Closing out Side C is 'CSO All The Way', a shimmering piece of cosmic breaks — and the theme creeps over onto the sublime D1 banger 'Beyond Existence'. Rounding out the landmark GIRADA010 is the stunning 'Drowned In Faith (Love & Light)' — and the title could not be more fitting.</p>
+`,
+  },
+  {
+    slug: 'trommel-2023-overdubbing-theory-girada11',
+    title: 'Premiere: A1 – Julian Perez – Overdubbing Theory [GIRADA11]',
+    publication: 'Trommel Music',
+    date: 'March 2, 2023',
+    dateISO: '2023-03-02',
+    category: 'premiere',
+    excerpt: 'Trommel Music premieres the lead track from Julian Perez\'s return EP on Girada Unlimited — a four-track release crossing bouncy techno, dub-influenced textures, deep house and electro.',
+    sourceUrl: 'https://trommelmusic.com/music/premiere/premiere-a1-julian-perez-overdubbing-theory-girada11/',
+    content: `
+<p>Spanish DJ and producer Julian Perez returned from a hiatus with a new EP on his Girada Unlimited imprint. The label has established itself as a platform for innovative electronic music, supporting artists including Amsterdam's Caim, Argentina's Franco Cinelli, and Dutch producers D&S.</p>
+
+<h3>Track by Track</h3>
+
+<p><strong>A1 — 'Overdubbing Theory'</strong> opens the record with Perez's recognizable production style, combining bouncy kicks, snare drums and puzzling synths. The composition starts with ethereal textures and atmospheric elements layered over driving percussion, building toward an intense peak-time moment suitable for DJ sets.</p>
+
+<p><strong>A2 — 'Mean Anomaly'</strong> adopts a slower tempo with dub-influenced aesthetics, gradually introducing playful rhythmic elements and crisp drum patterns as it develops.</p>
+
+<p><strong>B1 — 'Kinetic Phatt'</strong> shifts toward house music territory, featuring deep bass movements, vocal elements and luminous pad textures creating a groovy foundation.</p>
+
+<p><strong>B2 — 'A Different D'</strong> concludes the release by exploring electro directions with syncopated breakbeats and atmospheric vocals.</p>
+
+<p>The EP demonstrates Perez's versatility across multiple electronic music styles. Available for pre-order through Yoyaku, deejay.de and HHV Records.</p>
+`,
+  },
+  {
     slug: 'ibiza-voice-2018-cards-on-the-tables',
     title: 'Cards On The Tables: Julian Perez',
     publication: 'Ibiza Voice',
