@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { pressArticles } from '../../data/press-articles'
+
+export function getStaticPaths() {
+  return pressArticles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }))
+}
+
+const { article } = Astro.props
+---
+
+<BaseLayout title={`${article.title} — ${article.publication} · Julian Perez`} description={article.excerpt}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.excerpt,
+    "datePublished": article.dateISO,
+    "publisher": { "@type": "Organization", "name": article.publication },
+    "about": { "@type": "Person", "name": "Julian Perez", "url": "https://julianperez.com" },
+    "url": `https://julianperez.com/press/${article.slug}`,
+    ...(article.image ? { "image": `https://julianperez.com${article.image}` } : {}),
+  })} />
+
+  <main class="article-wrap">
+    <nav class="article-nav">
+      <a href="/press">← Press archive</a>
+    </nav>
+
+    <header class="article-header">
+      <p class="article-meta">{article.publication} · {article.date}</p>
+      <h1 class="article-title">{article.title}</h1>
+      <p class="article-excerpt">{article.excerpt}</p>
+    </header>
+
+    {article.image && (
+      <figure class="article-image">
+        <img src={article.image} alt={article.imageAlt ?? article.title} loading="lazy" />
+      </figure>
+    )}
+
+    <div class="article-body" set:html={article.content} />
+
+    {article.sourceUrl && (
+      <p class="article-source">
+        <a href={article.sourceUrl} target="_blank" rel="noopener">Read original article →</a>
+      </p>
+    )}
+    {!article.sourceUrl && article.sourceNote && (
+      <p class="article-source-note">{article.sourceNote}</p>
+    )}
+
+    <nav class="article-footer-nav">
+      <a href="/press">← Back to press archive</a>
+      <a href="/#booking">Book Julian Perez →</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style>
+  .article-wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 24px 120px;
+  }
+  .article-nav {
+    margin-bottom: 48px;
+  }
+  .article-nav a {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+  }
+  .article-nav a:hover { color: #111; border-color: #111; }
+  .article-meta {
+    font-size: 0.78rem;
+    color: #999;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+  .article-title {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 16px;
+  }
+  .article-excerpt {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0;
+    border-left: 3px solid #ddd;
+    padding-left: 16px;
+  }
+  .article-image {
+    margin: 40px 0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .article-body {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #333;
+    margin-top: 40px;
+  }
+  .article-body h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+    margin: 2rem 0 0.5rem;
+    letter-spacing: 0.01em;
+  }
+  .article-body p {
+    margin-bottom: 1.2em;
+  }
+  .article-body blockquote {
+    border-left: 3px solid #111;
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    margin: 1.5rem 0;
+    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .article-source {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+  }
+  .article-source a {
+    font-size: 0.78rem;
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+  }
+  .article-source a:hover { color: #111; }
+  .article-source-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+    font-size: 0.75rem;
+    color: #bbb;
+  }
+  .article-footer-nav {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .article-footer-nav a {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+  }
+  .article-footer-nav a:hover { color: #111; border-color: #111; }
+</style>

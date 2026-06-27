@@ -1,5 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { pressArticles } from '../../data/press-articles';
 ---
 <BaseLayout
   title="Julian Perez — Press & Media Coverage"
@@ -15,7 +16,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <p style="margin-bottom:3rem;">Julian Perez has been featured in Resident Advisor, XLR8R, Mixmag, DJ Mag ES, Trommel Music, MEOKO, Ibiza Voice, Vicious Magazine, Pulse Radio, Buenos Aliens, and dozens more publications across Europe, Asia, North America and South America since 2009. Coverage spans album reviews, artist profiles, label features, festival appearances and interviews. His debut album <em>Solemnity</em> (2016) and second album <em>Break-Even</em> (2021) received wide critical attention. His labels Fathers &amp; Sons Productions and Girada Unlimited have been covered as significant contributions to the underground vinyl scene. In 2026 he published his debut book, <em>INTERFASE: The Infinite Set</em>.</p>
 
-    <!-- QUOTES -->
+    <!-- FEATURED ARTICLES -->
+    <h2 style="font-size:1.2rem;margin-bottom:1.5rem;border-bottom:1px solid #eee;padding-bottom:0.75rem;">Full Interviews & Features</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-bottom:3rem;">
+      {pressArticles.map(article => (
+        <a href={`/press/${article.slug}`} style="display:block;text-decoration:none;color:inherit;border:1px solid #eee;border-radius:4px;overflow:hidden;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+          {article.image && (
+            <img src={article.image} alt={article.imageAlt ?? article.title} style="width:100%;height:180px;object-fit:cover;object-position:top;display:block;" loading="lazy" />
+          )}
+          <div style="padding:16px;">
+            <p style="font-size:0.72rem;color:#999;margin-bottom:6px;letter-spacing:0.05em;">{article.publication} · {article.date}</p>
+            <p style="font-size:0.95rem;font-weight:600;color:#111;line-height:1.35;margin-bottom:8px;">{article.title}</p>
+            <p style="font-size:0.8rem;color:#666;line-height:1.5;margin-bottom:12px;">{article.excerpt}</p>
+            <span style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#888;border-bottom:1px solid #ccc;padding-bottom:2px;">Read full article →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+        <!-- QUOTES -->
     <h2 style="margin-bottom:1.5rem;">Selected Quotes</h2>
 
     <blockquote style="border-left:4px solid #111;padding-left:1.5rem;margin:0 0 1.5rem;color:#333;font-size:1.05rem;">
