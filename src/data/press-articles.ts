@@ -291,6 +291,92 @@ export const pressArticles: PressArticle[] = [
 `,
   },
   {
+    slug: 'mixmag-2014-breakout-djs-ibiza',
+    title: 'After the Island: The Breakout DJs of Ibiza 2014',
+    publication: 'Mixmag',
+    date: 'October 17, 2014',
+    dateISO: '2014-10-17',
+    category: 'feature',
+    excerpt: 'Mixmag names Julian Perez among the breakout DJs of the Ibiza 2014 season, spotlighting his residency at ENTER. (Space Ibiza) alongside Ricardo Villalobos and his vinyl-only label Fathers & Sons Productions.',
+    image: '/press/mixmag-2014.png',
+    imageAlt: 'Mixmag — The breakout DJs of Ibiza 2014, featuring Julian Perez',
+    sourceNote: 'Original article archived locally. Mixmag.com/blog.',
+    content: `
+<p>Mixmag identified Julian Perez as one of the standout DJs to emerge from the Ibiza 2014 season in their end-of-summer feature <em>After the Island: The Breakout DJs of Ibiza 2014</em>.</p>
+
+<p>The feature highlighted his appearances at ENTER. — Ricardo Villalobos's landmark weekly at Space Ibiza — as one of the key moments that pushed him to wider international attention. His sets at ENTER. drew comparisons to the Romanian and German minimal traditions, while retaining a distinctly personal groove that audiences and fellow DJs responded to.</p>
+
+<p>The article also referenced his work with <strong>Fathers & Sons Productions</strong>, his strictly vinyl-only label founded in 2012 in Valencia, Spain, which had by that point established itself as one of the more respected underground imprints of its generation — with support from Ricardo Villalobos, Zip, Sonja Moonear, Margaret Dygas and Cassy.</p>
+
+<p>Perez's inclusion in the Mixmag feature cemented his transition from respected underground figure to internationally recognised artist, following a summer that included residency appearances, festival bookings across Europe, and the continued growth of Fathers & Sons into its third year of releases.</p>
+`,
+  },
+  {
+    slug: 'midi-peru-2016-entrevista',
+    title: 'Entrevista a Julian Perez',
+    publication: 'MIDI (Perú)',
+    date: 'August 18, 2016',
+    dateISO: '2016-08-18',
+    category: 'interview',
+    excerpt: 'Ahead of his appearance at Backyard Project in Lima, Julian Perez speaks to MIDI Perú about his connection with the Peruvian audience, the Ibiza scene, artistic independence and his production process.',
+    image: '/press/midi-peru-2016.png',
+    imageAlt: 'MIDI Perú — Entrevista a Julian Perez, agosto 2016',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>Nuevamente contaremos con la visita de Julián Pérez en Lima, quien vive apasionado por la música desde principios de los años 90 con influencias de Detroit, Chicago e Inglaterra. Este sábado 20 de agosto regresa para Backyard Project en Cieneguilla.</em></p>
+
+<h3>Lima siempre ha estado agradecida de tenerte. ¿Cómo han sido tus experiencias en la capital? ¿Crees que el público limeño es exigente en cuanto a la música?</h3>
+<blockquote>"El público limeño y yo nos entendemos mejor que bien después de todos estos años en muchas buenas fiestas. Sean eventos de día o noche siempre hay buen ambiente y mucho buen rollo. Me he encontrado gente peruana en fiestas y festivales de todo el mundo. Saben lo que quieren escuchar, son exigentes y a la hora de festejar no tienen fin."</blockquote>
+<p>Estoy muy agradecido por todas las experiencias que me ha aportado el Perú y todas las amistades que he ido haciendo a lo largo de este tiempo. Me encanta la cultura andina y he tenido la suerte de poder visitar lugares increíbles en ese país que me atrapó desde la primera vez que fui. El que tenga para mi gusto la mejor cocina del mundo también tiene mucho que ver.</p>
+
+<h3>Ibiza sigue siendo un referente en fiestas de vanguardia. ¿Qué nos puedes contar sobre la escena actual?</h3>
+<p>Es cierto que Ibiza siempre ha sido un referente donde todo se ha exportado al extranjero y donde muchos grandes DJs de hoy en día han afianzado sus carreras. Sin embargo, en estos momentos no es todo Ibiza. Ahora hay infinidad de festivales durante el verano, la gente que realmente le gusta seleccionar ya no queda solo en la isla. Cada año entran nuevas fiestas y otras que se van, tienes infinidad de estilos musicales para escuchar. Eso sí, si buscas algo poco comercial durante la temporada no lo tendrás fácil — está en peligro de extinción.</p>
+
+<h3>Eres de origen español y hay varios representantes de tu país sobresaliendo en la escena electrónica mundial. ¿Cómo has llegado a estar dentro de los principales line-ups?</h3>
+<blockquote>"Para mí es un privilegio estar donde estoy ahora mismo — puedo decir que no ha sido un camino fácil. Cuando nadie te regala nada, el único camino es el del trabajo, la dedicación y la pasión por tu proyecto personal, que eres tú mismo. El poco o mucho talento, sin todo eso anterior, no te servirá demasiado."</blockquote>
+<p>Cuando estás creyendo en ti mismo y en lo que haces, tienes mucho ganado y ves que las cosas se van poniendo más de tu lado — aunque no te puedes relajar. Muchas cosas te van a venir en contra pero tienes que seguir adelante con más fuerza y confianza aún, aprendiendo de tus errores. Ser creativo, arriesgar, iniciar tu propio camino aprendiendo e intentando mejorar cada día. Sin darte apenas cuenta estás empezando a ver tu nombre en esos line-ups donde antes comprabas la entrada anticipada para ir. El ansiar subir más alto cada vez puede llegar a hacer que te olvides del presente — me lo recuerdo a mí mismo cada día.</p>
+
+<h3>Recientemente has sacado material para Subwax BCN. ¿De qué trata este nuevo material?</h3>
+<p>Subwax es un gran sello y un grupo al que admiro. Durante los últimos dos años he estado experimentando con otros estilos, con sonidos inspirados en dub y techno de mi época y anterior. He salido a grabar ambientes, he estado implementando nuevos efectos y sintetizadores en el estudio y aprendiendo nuevas técnicas. Al innovar con el equipo y con la forma de trabajar, el sonido evoluciona y se abren otras puertas que pueden resultar interesantes para evolucionar como productor. En mi caso, ha sido desarrollar un lado más techno y Subwax ha sido una buena plataforma para mostrarlo.</p>
+
+<h3>¿Cuál es tu proceso de creación en el estudio?</h3>
+<p>Tengo mi método de trabajo pero me adapto a lo que tengo en el momento. Cajas de ritmos, samplers, sintetizadores, efectos — lo pongo todo a sonar a la vez y voy programando las secuencias y grabando lo que más me gusta para luego ir montando el track.</p>
+<blockquote>"También es muy divertido cuando estás colaborando con alguien más y cada uno está haciendo sonar algo diferente, pulsas REC y vais tocando y grabando todo al vuelo, desarrollando el track de principio a fin sobre la marcha. Es el método clásico."</blockquote>
+
+<h3>¿Cómo ves el surgimiento del talento electrónico en Latinoamérica? ¿Qué recomendarías a los nuevos talentos?</h3>
+<p>Tengo buenos amigos latinoamericanos con los que tengo el gusto de compartir cabina cada vez que estoy por sus países de origen. Hay mucho talento y muchas ganas de hacer las cosas bien pero a veces las fronteras limitan sus carreras como artistas. Me alegra ver a muchos de ellos por el otro lado del charco llevando y compartiendo su música con ilusión.</p>
+<blockquote>"A los que aún no se han decidido a hacerlo, siempre les animo a que vivan la experiencia y salgan a luchar por lo que creen. Aprender y compartir viajando es un privilegio."</blockquote>
+`,
+  },
+  {
+    slug: 'vos-argentina-2015-fiebre-del-vinilo',
+    title: '"Vivimos una fiebre del vinilo"',
+    publication: 'VOS / La Voz (Argentina)',
+    date: 'September 16, 2015',
+    dateISO: '2015-09-16',
+    category: 'interview',
+    excerpt: 'Germán Arrascaeta interviews Julian Perez for La Voz\'s VOS supplement ahead of his Córdoba BlackSheep show — covering vinyl fever, the curation of Fathers & Sons Productions and what "old school" really means.',
+    image: '/press/vos-argentina-2015.png',
+    imageAlt: 'VOS Argentina — Julian Perez: Vivimos una fiebre del vinilo, septiembre 2015',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>Por Germán Arrascaeta. El español Julian Perez es otro de los dee jays más relevantes de la electrónica actual que suele "aquerenciarse" en Córdoba. En esta oportunidad, pasó de tocar en el Quality (junto a Guti) a un espacio minúsculo como BlackSheep.</em></p>
+
+<blockquote>"Me da mucha vida el combinar entre eventos grandes y pequeños. Si sólo tocase en grandes, me acabaría aburriendo mucho. La sesión de esta noche va a distar mucho de lo que puse el pasado viernes. Voy a poder experimentar mucho más y al tener más horas con la gente tan cerca, se va a hacer más íntimo y con mayor conexión."</blockquote>
+
+<h3>¿Adherís a la idea de que tu estilo es "vieja escuela"?</h3>
+<blockquote>"Mi estilo tiene mucho de 'vieja escuela'. Empecé bastante joven y siempre combino discos antiguos con nuevos en mis sets. Ese sonido tiene un carácter con el que también se me identifica a la hora de producir. Soy un gran admirador de los verdaderos jefes 'vieja escuela' de la electrónica. Todo está inventado y por muchos nuevos estilos que vayan saliendo, siempre volveremos al inicio. Yo de manera natural tengo esas influencias y me quedo cerca de ese origen, y Fathers & Sons Productions tiene mucho de esa esencia."</blockquote>
+
+<h3>Fathers & Sons sólo produce en vinilo. ¿Es una reivindicación del formato?</h3>
+<p>No lo considero especialmente una restricción. Es un sello que no se creó para expandirse de una forma tan rápida y fácil como un sello digital o uno que pretenda vender millones de copias. Obviamente, es menos accesible, pero es más interesante para los que llegan a él.</p>
+<blockquote>"Respecto al vinilo: como pasa con todo, se ha convertido en una moda en Europa en los últimos años. Ahora los productores sienten la presión de publicar su música en vinilo para que los consideren serios. Hemos pasado de intentar rescatar el vinilo a saturar el mercado igual que estaba saturado el digital antes de esta nueva moda. Es la fiebre del vinilo."</blockquote>
+
+<h3>¿Cómo llevás adelante la curaduría de tu sello?</h3>
+<p>Siempre hemos estado abiertos a artistas que comparten nuestra filosofía y que nos aportan algo más que música. Todos nos hemos ido haciendo amigos con el paso del tiempo y vamos creciendo juntos haciendo camino. Los artistas de F&S tienen sus proyectos paralelos pero siempre esos tienen algo en común con nosotros.</p>
+<blockquote>"No todos los seguidores de F&S conocen personalmente a cada uno de los artistas, pero escuchando todas las referencias te puedes dar cuenta de que hay algo que siempre se relaciona entre sí. Como he dicho antes, todo vuelve al origen."</blockquote>
+`,
+  },
+  {
     slug: 'ibiza-voice-2018-cards-on-the-tables',
     title: 'Cards On The Tables: Julian Perez',
     publication: 'Ibiza Voice',
