@@ -22,7 +22,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2014-08-29',
     category: 'interview',
     excerpt: 'MEOKO speaks to Julian Perez about his Cocoon Recordings debut, the Fuse movement, Robert Johnson, and why he never carries music on his phone.',
-    image: '/press/meoko-2014.png',
+    image: '/press/meoko-2014.jpg',
     imageAlt: 'MEOKO interview with Julian Perez, August 2014',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -71,7 +71,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2017-08-23',
     category: 'feature',
     excerpt: 'MEOKO reveals that Julian Perez is the mastermind behind the mysterious Girada Unlimited label, whose debut "Girada Max EP" sold out before release day.',
-    image: '/press/meoko-2017.png',
+    image: '/press/meoko-2017.jpg',
     imageAlt: 'MEOKO exclusive: The face behind Girada Unlimited — Julian Perez, August 2017',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -96,7 +96,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2013-07-16',
     category: 'interview',
     excerpt: 'Ahead of the Fathers & Sons 1st Anniversary party at Rhythmatic London, Julian Perez discusses his DJ setup, vinyl philosophy, studio gear, musical influences and what DC10 means to him.',
-    image: '/press/rhythmatic-2013.png',
+    image: '/press/rhythmatic-2013.jpg',
     imageAlt: 'Rhythmatic interview with Julian Perez, July 2013',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -156,7 +156,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2015-09-10',
     category: 'interview',
     excerpt: 'Ahead of his Argentina tour (Córdoba, Mendoza, Buenos Aires), Julian Perez speaks to Buenos Aliens about Fathers & Sons Productions, the vinyl-only philosophy, his studio evolution and what Argentina means to him.',
-    image: '/press/buenos-aliens-2015.png',
+    image: '/press/buenos-aliens-2015.jpg',
     imageAlt: 'Buenos Aliens interview with Julian Perez, September 2015',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -196,7 +196,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2016-06-10',
     category: 'interview',
     excerpt: 'Ahead of his South East Asian debut at Glow Club Bangkok, Julian Perez speaks to Pulse Radio Asia about long sets, the vinyl revival, crate digging and why he never pre-plans his sets.',
-    image: '/press/pulseradio-2016.png',
+    image: '/press/pulseradio-2016.jpg',
     imageAlt: 'Pulse Radio Asia interview with Julian Perez, June 2016',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -234,7 +234,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2016-01-28',
     category: 'interview',
     excerpt: 'Reckon Music sits down with Julian Perez ahead of his Barcelona headline to discuss independence as an artist, the philosophy behind Fathers & Sons, and why he will never belong to any brand.',
-    image: '/press/reckon-2016.png',
+    image: '/press/reckon-2016.jpg',
     imageAlt: 'Reckon Music & Events interview with Julian Perez, January 2016. Photo by Carlos Carrillo.',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -267,7 +267,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2016-06-02',
     category: 'feature',
     excerpt: 'Brag Magazine asks Julian Perez five defining things: from childhood memories of club tapes, to inspirations Quincy Jones and Depeche Mode, to his take on the current state of the electronic music scene.',
-    image: '/press/brag-sydney-2016.png',
+    image: '/press/brag-sydney-2016.jpg',
     imageAlt: 'Five Things with Julian Perez — Brag Magazine, Sydney, June 2016',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -298,7 +298,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2014-10-17',
     category: 'feature',
     excerpt: 'Mixmag names Julian Perez among the breakout DJs of the Ibiza 2014 season, spotlighting his residency at ENTER. (Space Ibiza) alongside Ricardo Villalobos and his vinyl-only label Fathers & Sons Productions.',
-    image: '/press/mixmag-2014.png',
+    image: '/press/mixmag-2014.jpg',
     imageAlt: 'Mixmag — The breakout DJs of Ibiza 2014, featuring Julian Perez',
     sourceNote: 'Original article archived locally. Mixmag.com/blog.',
     content: `
@@ -319,7 +319,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2016-08-18',
     category: 'interview',
     excerpt: 'Ahead of his appearance at Backyard Project in Lima, Julian Perez speaks to MIDI Perú about his connection with the Peruvian audience, the Ibiza scene, artistic independence and his production process.',
-    image: '/press/midi-peru-2016.png',
+    image: '/press/midi-peru-2016.jpg',
     imageAlt: 'MIDI Perú — Entrevista a Julian Perez, agosto 2016',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -356,7 +356,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2015-09-16',
     category: 'interview',
     excerpt: 'Germán Arrascaeta interviews Julian Perez for La Voz\'s VOS supplement ahead of his Córdoba BlackSheep show — covering vinyl fever, the curation of Fathers & Sons Productions and what "old school" really means.',
-    image: '/press/vos-argentina-2015.png',
+    image: '/press/vos-argentina-2015.jpg',
     imageAlt: 'VOS Argentina — Julian Perez: Vivimos una fiebre del vinilo, septiembre 2015',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -384,7 +384,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2018-07-12',
     category: 'feature',
     excerpt: 'Trommel Music follows Julian Perez during a weekend visit to Rotterdam — factory tours, a historic record shop, a Void soundsystem, and a four-hour set at BAR.',
-    image: '/press/trommel-2018-day-in-the-life.png',
+    image: '/press/trommel-2018-day-in-the-life.jpg',
     imageAlt: 'A Day in the Life: Julian Perez — Trommel Music, July 2018',
     sourceUrl: 'https://trommelmusic.com/featured/a-day-in-the-life-julian-perez',
     content: `
@@ -407,7 +407,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2021-05-17',
     category: 'review',
     excerpt: 'Trommel Music reviews the Break-Even LP — Julian Perez\'s double 12" on Girada Unlimited, spanning cosmic breaks, deep house, peak-time techno and dream house across four sides of vinyl.',
-    image: '/press/trommel-2021-break-even-review.png',
+    image: '/press/trommel-2021-break-even-review.jpg',
     imageAlt: 'Trommel Music — Review: Julian Perez – Break-Even LP [GIRADA010], May 2021',
     sourceUrl: 'https://trommelmusic.com/music/reviews/review-julian-perez-break-even-lp-girada010/',
     content: `
@@ -453,7 +453,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2018-02-02',
     category: 'interview',
     excerpt: 'Ben Raven speaks with Julian Perez about what it\'s really like to be a DJ — record sourcing, set preparation, mental resilience, and why he never compromises his sound.',
-    image: '/press/ibiza-voice-2018.png',
+    image: '/press/ibiza-voice-2018.jpg',
     imageAlt: 'Cards On The Tables: Julian Perez — Ibiza Voice, February 2018',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -504,7 +504,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2017-05-19',
     category: 'interview',
     excerpt: 'Julian Perez speaks with Italian music outlet Clubber Confession about leaving a career in advertising in Alicante to pursue music in Ibiza, founding Fathers & Sons in 2013, and the real value of studio work.',
-    image: '/press/clubber-confession-2017.png',
+    image: '/press/clubber-confession-2017.jpg',
     imageAlt: 'Clubber Confession interview with Julian Perez, May 2017',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -548,7 +548,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2014-04-14',
     category: 'interview',
     excerpt: 'Ahead of his first-ever Prague appearance, Julian Perez discusses his studio setup, vinyl philosophy, working with tINI, the Ibiza underground, and why he never prepares sets for new cities.',
-    image: '/press/techno-cz-2014.png',
+    image: '/press/techno-cz-2014.jpg',
     imageAlt: 'Techno.cz interview with Julian Perez, April 2014',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -595,7 +595,7 @@ export const pressArticles: PressArticle[] = [
     dateISO: '2019-05-16',
     category: 'interview',
     excerpt: 'Polish music outlet muno.pl interviews Julian Perez ahead of his Poznań appearance at Projekt LAB. He discusses inspiration from Detroit and Chicago labels, closing Fathers & Sons, Girada Unlimited, and the creeping commercialisation of electronic music culture.',
-    image: '/press/muno-pl-2019.png',
+    image: '/press/muno-pl-2019.jpg',
     imageAlt: 'muno.pl interview with Julian Perez, May 2019',
     sourceNote: 'Original in Polish. Published on muno.pl, May 16, 2019. No longer online.',
     content: `
