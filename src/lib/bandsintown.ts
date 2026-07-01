@@ -1,5 +1,5 @@
 const APP_ID = '016523740f876056f578583f5fdb51d5'
-const ACCOUNT_ID = '1290950'
+const ACCOUNT_ID = '975824'
 
 export interface BITEvent {
   id: string
