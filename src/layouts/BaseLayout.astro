@@ -247,6 +247,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=143923866325111&ev=PageView&noscript=1" /></noscript>
 
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-624EM29GNS" is:inline></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-624EM29GNS');
+  </script>
+
   <!-- Vercel Analytics -->
   <script is:inline>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

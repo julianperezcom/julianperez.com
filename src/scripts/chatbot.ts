@@ -146,9 +146,15 @@ function finishChat(): void {
   const inputRow = document.getElementById('chatInputRow');
   if (inputRow) inputRow.style.display = 'none';
 
-  // Populate and submit the real form in the background
+  // Populate and submit the real BookingSection form in the background.
+  // ⚠️ Depends on form IDs 'form-booking' and 'form-contact' defined in BookingSection.astro.
   const formId = chatMode === 'booking' ? 'form-booking' : 'form-contact';
   const form = document.getElementById(formId) as HTMLFormElement | null;
+  if (!form) {
+    console.error(`[Chatbot] form #${formId} not found — submission not sent`);
+    addMsg('Sorry, something went wrong. Please use the booking form directly.', 'bot');
+    return;
+  }
   if (form) {
     const keyMap: Record<string, string> = chatMode === 'booking' ? {
       firstName: 'first_name', lastName: 'last_name', email: 'email',

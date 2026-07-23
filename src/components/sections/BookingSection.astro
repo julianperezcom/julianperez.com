@@ -26,6 +26,7 @@ const hcaptchaKey  = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY      ?? '10000000-
           <p data-i18n="booking.request.desc">Fill in the form with the event details and we'll get back to you within 48h.</p>
         </div>
 
+        <!-- ⚠️ id="form-booking" is used by chatbot.ts to submit — do not rename -->
         <form class="contact-form" id="form-booking">
           <!-- Web3Forms config -->
           <input type="hidden" name="access_key" value={bookingKey}>
@@ -94,6 +95,7 @@ const hcaptchaKey  = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY      ?? '10000000-
           <p data-i18n="booking.contact.desc">This form is not directly managed by Julian. For press, media and general matters, fill in the form and someone from the team will get back to you shortly.</p>
         </div>
 
+        <!-- ⚠️ id="form-contact" is used by chatbot.ts to submit — do not rename -->
         <form class="contact-form" id="form-contact">
           <!-- Web3Forms config -->
           <input type="hidden" name="access_key" value={contactKey}>

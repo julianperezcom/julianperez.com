@@ -35,3 +35,9 @@ public/           # Static assets, gallery images
 - Single-page site with section-based navigation
 - Content fetched from Sanity at build/request time
 - Gallery images served from `public/gallery/`
+
+## Knowledge Graph
+`graphify-out/graph.json` contains the codebase knowledge graph (src/ + sanity/, 127 nodes, 13 communities).
+Use it via `graphify query "<question>"` to answer architectural questions before reading files directly.
+Key communities: UI Sections & Layout · Chatbot & Booking Flow · Sanity CMS Schemas · Sanity Data Fetching · Gallery & Filesystem · Events Section · Hero Video Player · Navigation · Bandcamp · Resident Advisor · Bandsintown · Revalidation API.
+⚠️ `id="form-booking"` and `id="form-contact"` in BookingSection.astro are used by chatbot.ts — do not rename.
