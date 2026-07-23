@@ -93,10 +93,14 @@
     acceptBtn.addEventListener('click', () => {
       localStorage.setItem(COOKIE_KEY, 'accepted')
       banner!.style.display = 'none'
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' })
+      }
     })
     rejectBtn.addEventListener('click', () => {
       localStorage.setItem(COOKIE_KEY, 'rejected')
       banner!.style.display = 'none'
+      // GA4 continues in cookieless modelling mode — no update needed
     })
   })()
 </script>

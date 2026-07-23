@@ -247,13 +247,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=143923866325111&ev=PageView&noscript=1" /></noscript>
 
-  <!-- Google Analytics GA4 -->
+  <!-- Google Analytics GA4 with Consent Mode v2 -->
+  <!-- Consent defaults to denied; GA4 runs in cookieless modelling mode regardless -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-624EM29GNS" is:inline></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Default: denied — GA4 still fires but stores no cookies (GDPR compliant)
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      wait_for_update: 500,
+    });
     gtag('js', new Date());
     gtag('config', 'G-624EM29GNS');
+    // If user already accepted in a previous session, grant immediately
+    if (localStorage.getItem('cookie_consent') === 'accepted') {
+      gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' });
+    }
   </script>
 
   <!-- Vercel Analytics -->
