@@ -1,7 +1,17 @@
 ---
 import manifest from '../../data/gallery-manifest.json';
-const FLYERS: string[] = manifest.flyers;
-const DMT: string[] = manifest.doingmything;
+
+function shuffle(arr: string[]): string[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const FLYERS = shuffle(manifest.flyers.filter(f => f.trim() !== ''));
+const DMT = shuffle(manifest.doingmything.filter(f => f.trim() !== ''));
 ---
 
 <!-- GALLERY -->
@@ -15,42 +25,32 @@ const DMT: string[] = manifest.doingmything;
     </div>
   </div>
 
-  <!-- FLYERS — populated by JS -->
-  <div id="gallery-flyers" class="gallery-grid"></div>
+  <div id="gallery-flyers" class="gallery-grid">
+    {FLYERS.map(f => (
+      <div class="gallery-item">
+        <img src={`/gallery/flyers/${encodeURIComponent(f)}`} loading="lazy" alt="" />
+        <div class="gallery-overlay"></div>
+      </div>
+    ))}
+  </div>
 
-  <!-- DOING MY THING — populated by JS -->
-  <div id="gallery-dmt" class="gallery-grid" style="display:none;"></div>
+  <div id="gallery-dmt" class="gallery-grid" style="display:none;">
+    {DMT.map(f => (
+      <div class="gallery-item">
+        <img src={`/gallery/doingmything/${encodeURIComponent(f)}`} loading="lazy" alt="" />
+        <div class="gallery-overlay"></div>
+      </div>
+    ))}
+  </div>
 
   <div style="height: 96px;"></div>
 </div>
 
-<script define:vars={{ FLYERS, DMT }}>
-  const GALLERY_BASE = 'gallery/';
-
-  function buildGallery(container, files, subfolder) {
-    const base = GALLERY_BASE + subfolder + '/';
-    container.innerHTML = files.map(f =>
-      `<div class="gallery-item"><img src="${base}${encodeURIComponent(f)}" loading="lazy" alt=""><div class="gallery-overlay"></div></div>`
-    ).join('');
-  }
-
-  function shuffle(arr) {
-    const a = [...arr]
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]]
-    }
-    return a
-  }
-
-  buildGallery(document.getElementById('gallery-flyers'), shuffle(FLYERS), 'flyers');
-  buildGallery(document.getElementById('gallery-dmt'), shuffle(DMT), 'doingmything');
-
+<script is:inline>
   function switchGallery(tab, btn) {
     document.querySelectorAll('#gallery .music-tabs .tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('gallery-flyers').style.display = tab === 'flyers' ? '' : 'none';
     document.getElementById('gallery-dmt').style.display = tab === 'dmt' ? '' : 'none';
   }
-  (window as any).switchGallery = switchGallery
 </script>
