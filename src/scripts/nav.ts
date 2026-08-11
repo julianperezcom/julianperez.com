@@ -1,5 +1,5 @@
 // src/scripts/nav.ts
-const SECTIONS = ['discography','music','events','gallery','store','links','press','booking'] as const
+const SECTIONS = ['discography','music','events','gallery','store','links','press','booking','biography'] as const
 type Section = typeof SECTIONS[number] | 'home'
 
 function muteHero() {

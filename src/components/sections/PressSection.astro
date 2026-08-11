@@ -124,25 +124,18 @@ function bioToHtml(html: string): string {
 <div class="press-section" id="press">
   <div class="section-wrap">
     <div class="section-eyebrow" data-i18n="press.eyebrow">Press</div>
-    <div class="press-grid">
-      <div>
-        <h2 class="section-title" style="margin-bottom:24px;color:#C8C7C3;">Bio</h2>
-        <div class="press-bio" data-show-lang="en" set:html={bioToHtml(bio?.content ?? staticBio)} />
-        <div class="press-bio" data-show-lang="es" style="display:none;" set:html={bioToHtml(staticBioES)} />
-      </div>
-      <div>
-        <h2 class="section-title" style="margin-bottom:24px;color:#C8C7C3;">Press Kit</h2>
-        <div class="press-assets">
-          {displayAssets.map((asset: any) => (
-            <div class="press-asset">
-              <div>
-                <div class="press-asset-name" data-i18n={asset.nameKey ?? ''}>{asset.name ?? asset.title}</div>
-                <div class="press-asset-meta">{asset.meta ?? asset.fileInfo ?? ''}</div>
-              </div>
-              <a href={asset.url ?? asset.file?.asset?.url ?? '#'} class="press-download" target="_blank" rel="noopener" data-i18n="press.download">Download</a>
+    <div>
+      <h2 class="section-title" style="margin-bottom:24px;color:#C8C7C3;">Press Kit</h2>
+      <div class="press-assets">
+        {displayAssets.map((asset: any) => (
+          <div class="press-asset">
+            <div>
+              <div class="press-asset-name" data-i18n={asset.nameKey ?? ''}>{asset.name ?? asset.title}</div>
+              <div class="press-asset-meta">{asset.meta ?? asset.fileInfo ?? ''}</div>
             </div>
-          ))}
-        </div>
+            <a href={asset.url ?? asset.file?.asset?.url ?? '#'} class="press-download" target="_blank" rel="noopener" data-i18n="press.download">Download</a>
+          </div>
+        ))}
       </div>
     </div>
 
@@ -174,7 +167,6 @@ function bioToHtml(html: string): string {
 
     <div class="press-deep-links">
       <a href="/press">Full press archive &amp; coverage →</a>
-      <a href="/bio">Full biography →</a>
     </div>
   </div>
 </div>
@@ -184,7 +176,7 @@ function bioToHtml(html: string): string {
   .press-section .section-eyebrow { color: #888; }
   .press-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 80px;
     align-items: start;
   }
