@@ -1,6 +1,10 @@
 ---
+interface Props {
+  alwaysVisible?: boolean;
+}
+const { alwaysVisible = false } = Astro.props;
 ---
-<footer id="site-footer" style="display:none;">
+<footer id="site-footer" style={alwaysVisible ? "display:grid;" : "display:none;"}>
   <div class="foot-logo">Julian Perez</div>
   <div class="foot-copy">© 2026 Julian Perez</div>
   <nav class="foot-links" aria-label="Additional pages">
