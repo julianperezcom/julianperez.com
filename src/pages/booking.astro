@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const bookingKey = import.meta.env.PUBLIC_WEB3FORMS_BOOKING_KEY ?? '';
+---
+<BaseLayout
+  title="Book Julian Perez — DJ & Producer | Booking Inquiries"
+  description="Book Julian Perez for your event. Techno, House and Minimal DJ based in Spain, resident at Underground Ibiza. Performed in 50+ countries and 150 cities worldwide."
+>
+  <main style="max-width: 960px; margin: 0 auto; padding: 80px 24px 120px;">
+
+    <div class="section-eyebrow">Booking</div>
+    <h1 class="section-title" style="margin-bottom: 8px;">Julian Perez</h1>
+    <p style="font-size: 1.125rem; color: #888; margin-bottom: 64px; letter-spacing: 0.02em;">
+      DJ &amp; Producer · House · Techno · Minimal · Ibiza Underground Resident
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 64px;">
+      {[
+        ["50+", "Countries"],
+        ["150+", "Cities"],
+        ["30+", "Years active"],
+      ].map(([num, label]) => (
+        <div style="background: #1a1a1a; padding: 32px 24px; text-align: center;">
+          <div style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; color: var(--fg);">{num}</div>
+          <div style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-top: 4px;">{label}</div>
+        </div>
+      ))}
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-bottom: 80px;">
+      <div style="font-size: 0.95rem; line-height: 1.8; color: var(--fg); display: flex; flex-direction: column; gap: 1.25rem;">
+        <p>Julian Perez developed his connection to electronic music in the early 1990s, shaped by the House and Techno scenes emerging from the US, the UK, and Northwestern Europe. Genres such as techno, EBM, and New Beat played a key role in defining his sound, which has evolved with patience, discernment, and a deep respect for the culture. Over time, he became known as a versatile DJ whose approach favors long-term vision over immediacy.</p>
+        <p>In 2010, he released his first record, marking the beginning of a steadily built career. Two years later, he founded Fathers &amp; Sons Productions (2012), a vinyl-only label that hosted showcases in more than twelve countries within its first year. Alongside his own imprints, his music has appeared on Cocoon Recordings, Raum..Musik, and Subwax Bcn.</p>
+        <p>In parallel, Julian founded Girada Unlimited, which gained strong underground support. Its tenth release was his second album, Break-Even (2021). A defining chapter closed in 2016 with his solo album Solemnity, a double-vinyl work; the label was relaunched in 2023 with renewed vision.</p>
+      </div>
+      <div style="font-size: 0.95rem; line-height: 1.8; color: var(--fg); display: flex; flex-direction: column; gap: 1.25rem;">
+        <p>Throughout his career, Julian has performed in more than 50 countries and over 150 cities. Festivals include Amsterdam Dance Event, Outline Festival, Sunwaves, Epizode, The BPM Festival, Sónar off week, Kazantip, and Winter Music Conference.</p>
+        <p>His club appearances span Rex Club (Paris), Fabric (London), Womb (Tokyo), and Robert Johnson (Frankfurt). In Ibiza, he is a regular presence at Underground, hosting his own nights each summer season, and has appeared at ENTER. at Space and Cocoon Ibiza.</p>
+        <p>Nominated for Best Artist at the Vicious Music Awards (2012, 2013) and Best Newcomer at the DJ Awards (2016). Author of the debut book INTERFASE: The Infinite Set (2026).</p>
+      </div>
+    </div>
+
+    <div style="background: #111; padding: 48px; max-width: 600px;">
+      <h2 style="font-size: 1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 32px; color: var(--fg);">Booking Inquiry</h2>
+      <form action="https://api.web3forms.com/submit" method="POST"
+            style="display: flex; flex-direction: column; gap: 20px;">
+        <input type="hidden" name="access_key" value={bookingKey} />
+        <input type="hidden" name="subject" value="Booking Inquiry — julianperez.com/booking" />
+        <input type="hidden" name="redirect" value="https://julianperez.com/booking?sent=true" />
+
+        <div>
+          <label style="display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; color: #888;">Name *</label>
+          <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid #333; background: #000; color: var(--fg); font-size: 0.9rem; box-sizing: border-box;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; color: #888;">Email *</label>
+          <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #333; background: #000; color: var(--fg); font-size: 0.9rem; box-sizing: border-box;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; color: #888;">Event / Venue</label>
+          <input type="text" name="event" style="width: 100%; padding: 12px; border: 1px solid #333; background: #000; color: var(--fg); font-size: 0.9rem; box-sizing: border-box;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; color: #888;">Date</label>
+          <input type="text" name="date" placeholder="DD/MM/YYYY" style="width: 100%; padding: 12px; border: 1px solid #333; background: #000; color: var(--fg); font-size: 0.9rem; box-sizing: border-box;" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; color: #888;">Message</label>
+          <textarea name="message" rows="4" style="width: 100%; padding: 12px; border: 1px solid #333; background: #000; color: var(--fg); font-size: 0.9rem; box-sizing: border-box; resize: vertical;"></textarea>
+        </div>
+        <button type="submit"
+                style="padding: 14px 32px; background: var(--fg); color: var(--bg); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; align-self: flex-start;">
+          Send Inquiry
+        </button>
+      </form>
+    </div>
+
+  </main>
+</BaseLayout>

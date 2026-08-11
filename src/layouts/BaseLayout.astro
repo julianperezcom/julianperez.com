@@ -1,4 +1,13 @@
 ---
+import { fetchUpcomingEvents } from '../lib/bandsintown'
+
+let upcomingEvents: import('../lib/bandsintown').BITEvent[] = []
+try {
+  upcomingEvents = await fetchUpcomingEvents()
+} catch {
+  upcomingEvents = []
+}
+
 interface Props {
   title?: string;
   description?: string;
@@ -28,6 +37,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href={canonicalURL} />
+
+  <!-- hreflang: same URL serves EN and ES via client-side JS -->
+  <link rel="alternate" hreflang="en" href="https://julianperez.com/" />
+  <link rel="alternate" hreflang="es" href="https://julianperez.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://julianperez.com/" />
+
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="/og-image.jpg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content={ogType} />
@@ -63,10 +80,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Julian Perez",
+    "disambiguatingDescription": "Electronic music DJ and record producer from Spain, active since the early 1990s. Not to be confused with any athlete of the same name.",
     "alternateName": ["Julian Perez DJ", "Julián Pérez"],
     "url": "https://julianperez.com",
     "image": "https://julianperez.com/og-image.jpg",
-    "description": "Julian Perez is a DJ and electronic music producer based in Spain, resident at Underground Ibiza. Active since the early 1990s in the House, Techno and Minimal scenes. Founder of vinyl labels Fathers & Sons Productions (2012) and Girada Unlimited. Has performed in over 50 countries and 150 cities, appeared at festivals including Amsterdam Dance Event, Sunwaves, Epizode, The BPM Festival and Outline Festival, and at clubs such as Rex Club (Paris), Fabric (London), Womb (Tokyo) and Robert Johnson (Frankfurt). Nominated Best Artist at Vicious Music Awards (2012, 2013) and Best Newcomer at DJ Awards (2016). Author of the book INTERFASE: The Infinite Set (2026).",
+    "description": "Julian Perez is a DJ and electronic music producer based in Spain who developed his connection to electronic music in the early 1990s, shaped by House, Techno, EBM and New Beat scenes. He is resident at Underground Ibiza, founder of vinyl labels Fathers & Sons Productions (2012) and Girada Unlimited, and has performed in over 50 countries and 150 cities, appearing at Amsterdam Dance Event, Sunwaves, Epizode, BPM Festival and Outline Festival, and at clubs including Rex Club (Paris), Fabric (London), Womb (Tokyo) and Robert Johnson (Frankfurt). He released two studio albums — Solemnity (2016) and Break-Even (2021) — and published his debut book INTERFASE: The Infinite Set in 2026. Nominated Best Artist at Vicious Music Awards (2012, 2013) and Best Newcomer at DJ Awards (2016).",
     "jobTitle": "DJ, Producer, Record Label Owner",
     "knowsAbout": ["Techno", "House", "Minimal Techno", "EBM", "New Beat", "Electronic Music", "Vinyl DJing", "Music Production", "Record Label Management"],
     "nationality": { "@type": "Country", "name": "Spain" },
@@ -135,6 +153,60 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "https://www.discogs.com/artist/54394"
     ]
   })} />
+
+  <!-- Structured data — Book -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "INTERFASE: The Infinite Set",
+    "alternativeHeadline": "INTERFASE: La sesión infinita",
+    "author": {
+      "@type": "Person",
+      "name": "Julian Perez",
+      "url": "https://julianperez.com"
+    },
+    "datePublished": "2026",
+    "inLanguage": ["en", "es"],
+    "description": "Debut book by Julian Perez expanding on the ideas and experiences that shaped his path as a DJ and electronic music producer, offering an unfiltered view into his creative process.",
+    "about": { "@type": "Thing", "name": "Electronic Music, DJing, Music Production" }
+  })} />
+
+  <!-- Structured data — WebSite -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Julian Perez",
+    "url": "https://julianperez.com",
+    "description": "Official website of Julian Perez, DJ and electronic music producer.",
+    "author": { "@type": "Person", "name": "Julian Perez" }
+  })} />
+
+  <!-- Structured data — MusicEvents (upcoming gigs) -->
+  {upcomingEvents.slice(0, 10).map(event => (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MusicEvent",
+      "name": event.title,
+      "startDate": event.datetime,
+      "location": {
+        "@type": "Place",
+        "name": event.venue.name,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": event.venue.city,
+          "addressCountry": event.venue.country
+        }
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Julian Perez",
+        "url": "https://julianperez.com"
+      },
+      "url": event.url,
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+    })} />
+  ))}
 
   <!-- Structured data — FAQ -->
   <script type="application/ld+json" set:html={JSON.stringify({

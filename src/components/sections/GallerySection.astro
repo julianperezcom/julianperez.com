@@ -28,7 +28,7 @@ const DMT = shuffle(manifest.doingmything.filter(f => f.trim() !== ''));
   <div id="gallery-flyers" class="gallery-grid">
     {FLYERS.map(f => (
       <div class="gallery-item">
-        <img src={`/gallery/flyers/${encodeURIComponent(f)}`} alt="" />
+        <img src={`/gallery/flyers/${encodeURIComponent(f)}`} loading="lazy" alt="" />
         <div class="gallery-overlay"></div>
       </div>
     ))}
@@ -37,7 +37,7 @@ const DMT = shuffle(manifest.doingmything.filter(f => f.trim() !== ''));
   <div id="gallery-dmt" class="gallery-grid" style="display:none;">
     {DMT.map(f => (
       <div class="gallery-item">
-        <img src={`/gallery/doingmything/${encodeURIComponent(f)}`} alt="" />
+        <img src={`/gallery/doingmything/${encodeURIComponent(f)}`} loading="lazy" alt="" />
         <div class="gallery-overlay"></div>
       </div>
     ))}

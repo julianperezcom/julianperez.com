@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getReleases } from '../lib/sanity';
+
+let releases: any[] = [];
+try {
+  releases = await getReleases();
+} catch {
+  releases = [];
+}
+
+const albums      = releases.filter((r: any) => r.releaseType === 'LP');
+const eps         = releases.filter((r: any) => r.releaseType === 'EP');
+const singles     = releases.filter((r: any) => r.releaseType === 'Single');
+const remixes     = releases.filter((r: any) => r.releaseType === 'Remix');
+const appearances = releases.filter((r: any) => r.releaseType === 'Appearance');
+
+const releaseSchemas = releases
+  .filter((r: any) => ['LP', 'EP', 'Single'].includes(r.releaseType))
+  .map((r: any) => ({
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": r.title,
+    "byArtist": { "@type": "Person", "name": "Julian Perez", "url": "https://julianperez.com" },
+    "datePublished": String(r.year),
+    "recordLabel": r.label,
+  }));
+---
+<BaseLayout
+  title="Julian Perez — Discography | Albums, EPs & Singles"
+  description="Full discography of Julian Perez. Albums: Solemnity (2016) and Break-Even (2021). Releases on Fathers & Sons Productions, Girada Unlimited, Cocoon Recordings, Raum..Musik, and Subwax Bcn."
+>
+  {releaseSchemas.map(schema => (
+    <script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
+
+  <main style="max-width: 1100px; margin: 0 auto; padding: 80px 24px 120px;">
+    <div class="section-eyebrow">Music</div>
+    <h1 class="section-title" style="margin-bottom: 64px;">Discography</h1>
+
+    {albums.length > 0 && (
+      <section style="margin-bottom: 72px;">
+        <h2 style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 32px; border-bottom: 1px solid #333; padding-bottom: 12px;">Albums</h2>
+        <div class="discog-list">
+          {albums.map((r: any) => (
+            <div class="discog-list-row">
+              <div class="discog-list-year">{r.year}</div>
+              <div class="discog-list-title">{r.title}</div>
+              <div class="discog-list-label">{r.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {eps.length > 0 && (
+      <section style="margin-bottom: 72px;">
+        <h2 style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 32px; border-bottom: 1px solid #333; padding-bottom: 12px;">EPs</h2>
+        <div class="discog-list">
+          {eps.map((r: any) => (
+            <div class="discog-list-row">
+              <div class="discog-list-year">{r.year}</div>
+              <div class="discog-list-title">{r.title}</div>
+              <div class="discog-list-label">{r.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {singles.length > 0 && (
+      <section style="margin-bottom: 72px;">
+        <h2 style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 32px; border-bottom: 1px solid #333; padding-bottom: 12px;">Singles</h2>
+        <div class="discog-list">
+          {singles.map((r: any) => (
+            <div class="discog-list-row">
+              <div class="discog-list-year">{r.year}</div>
+              <div class="discog-list-title">{r.title}</div>
+              <div class="discog-list-label">{r.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {remixes.length > 0 && (
+      <section style="margin-bottom: 72px;">
+        <h2 style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 32px; border-bottom: 1px solid #333; padding-bottom: 12px;">Remixes</h2>
+        <div class="discog-list">
+          {remixes.map((r: any) => (
+            <div class="discog-list-row">
+              <div class="discog-list-year">{r.year}</div>
+              <div class="discog-list-title">{r.title}</div>
+              <div class="discog-list-label">{r.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {appearances.length > 0 && (
+      <section>
+        <h2 style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 32px; border-bottom: 1px solid #333; padding-bottom: 12px;">Appearances</h2>
+        <div class="discog-list">
+          {appearances.map((r: any) => (
+            <div class="discog-list-row">
+              <div class="discog-list-year">{r.year}</div>
+              <div class="discog-list-title">{r.title}</div>
+              <div class="discog-list-label">{r.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>

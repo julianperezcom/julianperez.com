@@ -31,7 +31,18 @@ export function showSection(id: Section) {
     if (hero) hero.style.display = 'block'
   } else {
     const el = document.getElementById(id)
-    if (el) el.style.display = 'block'
+    if (el) {
+      el.style.display = 'block'
+      if (id === 'gallery') {
+        el.querySelectorAll<HTMLImageElement>('img[loading="lazy"]').forEach(img => {
+          if (!img.complete) {
+            const src = img.src
+            img.src = ''
+            img.src = src
+          }
+        })
+      }
+    }
     if (footer) footer.style.display = 'grid'
     document.querySelectorAll(`[data-s="${id}"]`).forEach(a => a.classList.add('nav-active'))
   }
