@@ -6,8 +6,8 @@
     <a href="/privacy" id="cookie-link">Privacy Policy</a>
   </p>
   <div class="cookie-actions">
-    <button id="cookie-accept">Accept</button>
-    <button id="cookie-reject">Reject</button>
+    <button id="cookie-essential">Essential only</button>
+    <button id="cookie-accept">Accept all</button>
   </div>
 </div>
 
@@ -54,7 +54,7 @@
     transition: opacity 0.2s;
   }
   #cookie-accept { background: #fff; color: #0E0E0E; }
-  #cookie-reject { background: transparent; color: #666; border: 1px solid #333 !important; }
+  #cookie-essential { background: transparent; color: #666; border: 1px solid #333 !important; }
   .cookie-actions button:hover { opacity: 0.75; }
   @media (max-width: 600px) {
     #cookie-banner { flex-direction: column; align-items: flex-start; bottom: 0; left: 0; right: 0; max-width: 100%; }
@@ -66,41 +66,39 @@
     const COOKIE_KEY = 'cookie_consent'
     const banner = document.getElementById('cookie-banner')!
     const acceptBtn = document.getElementById('cookie-accept')!
-    const rejectBtn = document.getElementById('cookie-reject')!
+    const essentialBtn = document.getElementById('cookie-essential')!
     const text = document.getElementById('cookie-text')!
-    const link = document.getElementById('cookie-link')!
 
-    // i18n
     function updateText() {
       const lang = (window as any).__lang__ || 'en'
       if (lang === 'es') {
-        text.innerHTML = 'Este sitio utiliza cookies para ofrecerte la mejor experiencia. <a href="/privacy" id="cookie-link" style="color:#fff;font-weight:600;">Política de privacidad</a>'
-        acceptBtn.textContent = 'Aceptar'
-        rejectBtn.textContent = 'Rechazar'
+        text.innerHTML = 'Este sitio utiliza cookies para ofrecerte la mejor experiencia. <a href="/privacy" style="color:#fff;font-weight:600;">Política de privacidad</a>'
+        acceptBtn.textContent = 'Aceptar todo'
+        essentialBtn.textContent = 'Solo esenciales'
       } else {
         text.innerHTML = 'This website uses cookies to ensure you get the best experience. <a href="/privacy" style="color:#fff;font-weight:600;">Privacy Policy</a>'
-        acceptBtn.textContent = 'Accept'
-        rejectBtn.textContent = 'Reject'
+        acceptBtn.textContent = 'Accept all'
+        essentialBtn.textContent = 'Essential only'
       }
     }
 
     if (!localStorage.getItem(COOKIE_KEY)) {
-      banner!.style.display = 'flex'
+      banner.style.display = 'flex'
       updateText()
       document.addEventListener('langchange', updateText)
     }
 
     acceptBtn.addEventListener('click', () => {
       localStorage.setItem(COOKIE_KEY, 'accepted')
-      banner!.style.display = 'none'
+      banner.style.display = 'none'
       if (typeof gtag === 'function') {
         gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' })
       }
     })
-    rejectBtn.addEventListener('click', () => {
-      localStorage.setItem(COOKIE_KEY, 'rejected')
-      banner!.style.display = 'none'
-      // GA4 continues in cookieless modelling mode — no update needed
+
+    essentialBtn.addEventListener('click', () => {
+      localStorage.setItem(COOKIE_KEY, 'essential')
+      banner.style.display = 'none'
     })
   })()
 </script>
