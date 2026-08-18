@@ -36,6 +36,36 @@ await Promise.all(
   })
 )
 const ytSets = sets.filter((s: any) => s.youtubeUrl)
+
+// ── Girada Un Limited playlists (hardcoded) ──
+const giradaPlaylists = [
+  { videoId: 'z_TM8D7bSD0', listId: 'OLAK5uy_mcRGa_qYz5JO44OkhueB4cZh65x357R_A' },
+  { videoId: '4Fa3NV7Losg', listId: 'OLAK5uy_khnZmgc12Q-Nm8uMidXKz5R9pjw0sfvNo' },
+  { videoId: 'VcfBolXvabM', listId: 'OLAK5uy_lmkunHtqrGunGn-Y0Tn2AZurHs9547LRU' },
+]
+
+async function getYtTitle(videoId: string): Promise<string> {
+  try {
+    const res = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`)
+    if (!res.ok) return ''
+    const d: any = await res.json()
+    return d.title ?? ''
+  } catch { return '' }
+}
+
+const giradaWithTitles = await Promise.all(
+  giradaPlaylists.map(async (p) => ({ ...p, title: await getYtTitle(p.videoId) }))
+)
+
+const fathersPlaylists = [
+  { videoId: 'dU_EVEyb97A', listId: 'OLAK5uy_knwwmiVud6AVJDmX9TyRxmmW_umnLFC-4' },
+  { videoId: '8Mg0Z-KW5-U', listId: 'OLAK5uy_mYp3c0SC9LwzBM_7gLOkYnJBWyD9sWeQk' },
+  { videoId: 'rysolgeRa_k', listId: null },
+]
+
+const fathersWithTitles = await Promise.all(
+  fathersPlaylists.map(async (p) => ({ ...p, title: await getYtTitle(p.videoId) }))
+)
 ---
 
 <div id="music">
@@ -156,6 +186,44 @@ const ytSets = sets.filter((s: any) => s.youtubeUrl)
         ))}
       </div>
       {tracks.length === 0 && <div class="empty-state" data-i18n="music.coming_soon">Coming soon</div>}
+
+      <p class="tab-source-label" style="margin-top:48px;">
+        <span class="dot yt">●</span> YouTube · Fathers &amp; Sons Productions
+        <a href="https://www.youtube.com/@FathersAndSonsProductions/releases"
+           target="_blank" rel="noopener noreferrer" class="source-link">Ver canal ↗</a>
+      </p>
+      <div class="video-grid">
+        {fathersWithTitles.map((p) => (
+          <div class="video-card">
+            <div class="video-thumb yt-thumb"
+              data-src={p.listId
+                ? `https://www.youtube.com/embed/videoseries?list=${p.listId}&autoplay=1`
+                : `https://www.youtube.com/embed/${p.videoId}?autoplay=1`}
+              style={`background-image:url(https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg)`}>
+              <div class="play-btn"><span class="yt-play">▶</span></div>
+            </div>
+            <div class="video-title">{p.title}</div>
+          </div>
+        ))}
+      </div>
+
+      <p class="tab-source-label" style="margin-top:48px;">
+        <span class="dot yt">●</span> YouTube · Girada Un Limited
+        <a href="https://www.youtube.com/@GiradaUnLimited/releases"
+           target="_blank" rel="noopener noreferrer" class="source-link">Ver canal ↗</a>
+      </p>
+      <div class="video-grid">
+        {giradaWithTitles.map((p) => (
+          <div class="video-card">
+            <div class="video-thumb yt-thumb"
+              data-src={`https://www.youtube.com/embed/videoseries?list=${p.listId}&autoplay=1`}
+              style={`background-image:url(https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg)`}>
+              <div class="play-btn"><span class="yt-play">▶</span></div>
+            </div>
+            <div class="video-title">{p.title}</div>
+          </div>
+        ))}
+      </div>
     </div>
 
   </div>
