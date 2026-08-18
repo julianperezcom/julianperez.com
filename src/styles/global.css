@@ -956,8 +956,8 @@ footer {
   .video-caption { bottom: 24px; right: 20px; font-size: 0.55rem; }
   .hero-dots { bottom: 24px; left: 20px; }
 
-  /* Section wrap */
-  .section-wrap { padding: 64px 20px; }
+  /* Section wrap — extra top padding to clear the fixed 64px header */
+  .section-wrap { padding: 88px 20px 64px; }
 
   /* Tabs */
   .tab-btn { padding: 12px 20px 12px 0; font-size: 0.65rem; }
@@ -1031,7 +1031,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .section-wrap { padding: 56px 16px; }
+  .section-wrap { padding: 88px 16px 56px; }
   .discog-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
   .social-grid { grid-template-columns: 1fr; }
 }
