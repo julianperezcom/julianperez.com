@@ -628,6 +628,144 @@ export const pressArticles: PressArticle[] = [
 `,
   },
   {
+    slug: 'pulse-radio-2012-pulse-loves-julian-perez',
+    title: 'Pulse Loves… Julian Perez',
+    publication: 'Pulse Radio',
+    date: 'September 24, 2012',
+    dateISO: '2012-09-24',
+    category: 'interview',
+    excerpt: 'One of Spain\'s hardest working DJs, Julian Perez talks about playing records at home, his eclectic set approach, VIVa Warriors, Fathers & Sons Productions, and his love of travel. Includes an exclusive mix.',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p>Julian Perez is one of Spain's hardest working DJs and has earned himself a place amongst the rising elite of the global house music scene. With tracks on VIVa, Leftroom, 1Trax and his own vinyl imprint Fathers &amp; Sons, Julian has earned his place as a figure to keep firmly focused on. Playing gigs for VIVa Warriors at Sankeys Ibiza, and many more, Julian's 2012 has been the stuff of legend as he looks towards another storming 12 months. For our 'Pulse Loves…' feature today, we explore the different aspects and elements of the Spaniard, championing his love for a house party, eclectic DJing style and what he gets up to when he's not immersed in dance music culture.</p>
+
+<h3>Pulse loves: DJs that come from the grassroots level. Do you often find yourself playing at home?</h3>
+<p>Years ago, I was playing records nearly every day, buying as much music as I could and looking forward to the weekend to buy and try the newly purchased. I'm still keeping that feeling. I'm always excited when I get some new vinyls and head straight on my decks to listen to those little pieces. With digital files it's not that exciting, so now I'm trying to spend most of the time working in the studio making music. I feel very comfortable now on it, so it's time to create and leave the DJing for the gigs.</p>
+<p>By the way, if you join me at my house we can arrange a party. Last week we made one with a few friends — The Martinez Bros, Jamie, Seth, Dan, Shonky and René were all hanging out with us. So much fun!</p>
+
+<h3>Pulse loves: eclecticism in sets. What are your surprise tunes in your set?</h3>
+<p>My sets are very like that — you have only one hour to write your own story with not many tracks. Personally I like to play all the styles I love in the set, starting from very soft tunes to warm up, going more groovy showing up a bit of party, and going a little bit more down to finish. I don't like very linear sets; I need to make my story with the mood I have. The surprise tunes in my set are the unreleased tracks from me, from people on my label, from friends, and very occasionally some old stuff.</p>
+
+<h3>Pulse loves: varied music style and a variety of outlets. What are the benefits of releasing across different labels?</h3>
+<p>My sound is very open and depends on many things. My sound is always changing and going between house and tech house — all my tracks sound like me in a different way. So when I have some new tracks and a label is interested, it's another good and fun part, because you go with your sound into a new label which has its own artists and personal sound, and now your tracks are bringing a new and different touch. I don't make specific music for any label; I just make the music I feel in every moment, and then the right label is always there in the right place.</p>
+
+<h3>Pulse loves: other things than dance music. What are your hobbies?</h3>
+<p>The last two years were a little crazy and I didn't do much of what I really love — travelling. For me that means going with my best friends to new countries with a backpack, no plans, no return date, no responsibilities, seeing what's out there, listening to other kinds of music, meeting new people and learning all the time from others. For me this is the most awesome thing in life. I do less of this now because I'm more busy touring (which is also travelling, but in a very different way), but I hope to combine it more in the future.</p>
+
+<h3>Pulse loves: those finding new ways to share music. Tell us about Fathers &amp; Sons Productions.</h3>
+<p>Fathers &amp; Sons is a vinyl-only imprint I run with my friends out of Ibiza. Everything is limited edition and strictly vinyl. The idea is to build a catalogue that means something — not just releases, but a story. So far we've had very positive reactions from DJs and press, and every record has sold out. That response means a lot and gives us motivation to keep going the right way.</p>
+<p>We're not in a rush. We take our time to choose artists and tracks carefully. What we care about is the music and nothing else.</p>
+`,
+  },
+  {
+    slug: 'djmag-latinoamerica-2013-entrevista-exclusiva',
+    title: 'Entrevista Exclusiva: Julián Pérez',
+    publication: 'DJ Mag Latinoamérica',
+    date: 'March 25, 2013',
+    dateISO: '2013-03-25',
+    category: 'interview',
+    excerpt: 'DJ Mag Latinoamérica speaks to Julián Pérez about his breakthrough summer of 2012, the story behind VIVa Warriors, growing up listening to Valencia\'s electronic music scene, and the philosophy behind Fathers & Sons Productions.',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p><em>"Todo se ha dado en el momento que tenía que surgir, eligiendo el camino difícil en lugar de contar sólo con la suerte o la ayuda."</em></p>
+
+<p>El boom de Julián Pérez se dio el pasado verano europeo cuando su remix de "The Night Train" pegó fuerte en todos los clubes de Ibiza. Hoy, cosechando sus esfuerzos, charló en exclusiva con DJ Mag Latinoamérica acerca del camino que lo llevó hacia donde está, su presente y los proyectos que tiene con su propio sello "Fathers &amp; Sons".</p>
+
+<h3>¿Cuándo empezaste con la música electrónica?</h3>
+<p>Con la música electrónica empecé desde muy niño. No es lo normal pero donde yo vivía, entrando los 90's, había un movimiento fuerte de electrónica y, al ser un grupo grande de amigos de diferentes edades, los mayores siempre influían en nosotros y todos nos copiaban cintas que les grababan en los clubs y se difundían entre los amigos casi tanto como ahora un mp3. Empezaba a escucharse mucho dance europeo y, conforme iban entrando los 90's, llegaba el techno de Detroit y house. Mucho house americano y soul. Creo que, en cuanto a electrónica se refiere, tengo influencias de muchos estilos. Algo que se puede, a veces, ver reflejado en mis sesiones y producciones.</p>
+
+<h3>¿Cómo se dio tu llegada a Ibiza alrededor del año 2006?</h3>
+<p>La primera vez que pisé Ibiza fue en 2003. Estaba de vacaciones y, desde entonces, nunca estuve conforme con la vida que llevaba. Me di cuenta que me estaba perdiendo algo y, aunque tardé en decidirme, sentí que debía dejarlo todo y empezar de nuevo con base en la isla. Me alegro mucho de haber tomado esa decisión porque me cambió la forma de ver las cosas y, gracias a eso, he evolucionado en lo que realmente me gusta.</p>
+
+<h3>¿Cómo llegaste a VIVa Music? ¿Por qué crees que te convertiste en un "Warrior"?</h3>
+<p>Llegué como suele pasar todo en la vida... En el momento menos esperado se dieron varias circunstancias al mismo tiempo. Entrando en Sankeys Ibiza, cruzando la sala principal de camino a la sala donde debía tocar a los pocos minutos, escuché uno de mis tracks. Vi a lo lejos a Steve Lawler pinchándolo con la sala a reventar. Era el cierre de verano 2012. Me acerqué a saludar a Steve, presentarme y a darle las gracias por pincharlo. Me dijo que quería firmarlo para VIVa pero era tarde — había sido editado poco antes por Leftroom.</p>
+<p>Cuando Steve acabó de tocar en su sala vino donde yo estaba tocando y se quedó durante todo mi set. A los pocos días me llamó por teléfono para invitarme a un VIVa Music showcase en Ámsterdam para el ADE (Amsterdam Dance Event). Él estaba empezando a darle forma al concepto de Warriors con artistas emergentes y artistas invitados más conocidos y, en cuanto me propuso la idea de entrar en su proyecto, me convenció rápido.</p>
+
+<h3>¿Qué significa ser un VIVa Warrior?</h3>
+<p>Significa formar parte de un grupo que se ha seleccionado a base de grandes productores y DJs ya consagrados como son Steve Lawler, Onur Özer, Sascha Dive, Mandy, Derrick Carter, Kevin Saunderson, Steve Bug... Referentes para mí durante años, que siempre he visto muy de lejos y con los que ahora estoy involucrado y compartiendo cabina en diferentes shows por todo el mundo. Es algo grande para mí y me motiva cada día para estar a la altura.</p>
+
+<h3>¿Cuéntanos sobre Fathers &amp; Sons Productions?</h3>
+<p>Fathers &amp; Sons Productions nació con la primera referencia en el mes de abril de 2012, junto con mis dos amigos. Hemos creado algo increíble que está teniendo más repercusión de la esperada. El concepto es sencillo: sello en vinilo, música que nos gusta a nosotros, sin prisas, sin modas. Lo que salga de aquí tiene que tener un sentido y una calidad.</p>
+
+<h3>Sobre tu verano de 2012 y el remix de "The Night Train"...</h3>
+<p>Este verano han surgido muchas cosas a la vez que me han hecho dar un gran cambio, sobre todo personal. Me he dado cuenta de que todo el trabajo de estos dos últimos años ha tenido un sentido y ahora es cuando lo estoy viendo y disfrutando. Algunos de los tracks, remixes y colaboraciones que hice ese verano también lograron que mi nombre sonara más que anteriormente. Todo se dio en el momento que tenía que surgir, eligiendo el camino difícil en lugar de contar sólo con la suerte o la ayuda. Es el trabajo constante lo que al final da resultados.</p>
+`,
+  },
+  {
+    slug: 'vicious-magazine-2013-no33-idoneidad-emprendedora',
+    title: 'Julián Pérez — Idoneidad Emprendedora',
+    publication: 'Vicious Magazine Nº33',
+    date: 'May 23, 2013',
+    dateISO: '2013-05-23',
+    category: 'interview',
+    excerpt: 'Vicious Magazine profiles Julián Pérez on his love of vinyl, the story of The Night Train remix, Loco Dice playing it live in Amnesia Ibiza, his Berlin period, and the philosophy behind Fathers & Sons Productions.',
+    sourceNote: 'Printed in Vicious Magazine Nº33, May 2013. Archived locally.',
+    content: `
+<p>Julián Pérez habla con Vicious Magazine sobre sus influencias, su amor por el vinilo, el nacimiento de Fathers &amp; Sons Productions, y el momento que lo cambió todo: el verano de 2012 en Ibiza.</p>
+
+<h3>Todo el mundo habla en sus biografías de Detroit o Chicago. ¿Qué destacarías de cada una de estas ciudades?</h3>
+<p>La gente de mi generación y algo mayor, relacionada con la electrónica underground de principios de los 80 y 90's, probablemente habrán tenido influencias de estas dos ciudades. El Chicago de los 80 tuvo su momento con gente como Frankie Knuckles, Ron Hardy, que entre Chicago y Nueva York comenzaron con un sonido independiente. Introdujeron las cajas de ritmos Roland TR-808, TR-909 y demás — en mi opinión marcan un antes y un después del house, de hecho hoy en día las seguimos utilizando. Surgieron sellos como Trax Records, Epic, House Jam, International House, Emotive, House Nation... Aún sigo comprando discos de ese house siempre que tengo oportunidad. Todd Terry, Marshall Jefferson, DJ Pierre — hay muchas influencias ahí.</p>
+<p>Siempre me he considerado más de house que de techno de Detroit, cuando empiezo a hablar de ello me viene a la cabeza gente como Derrick May, Kevin Saunderson, Juan Atkins, Carl Craig... Sellos como Metroplex, KMS, etc. Ellos empezaron esto y crearon un movimiento también social antes de llegar Jeff Mills, Robert Hood y Mike Banks con Underground Resistance y su revolución. Hawtin y Acquaviva llegaron algo más tarde con sus sellos e innovando hacia algo más minimalista.</p>
+
+<h3>¿Qué es eso de "Fathers &amp; Sons"?</h3>
+<p>Fathers &amp; Sons es un sello discográfico con un sonido que abarca varios géneros. Intentamos con él transmitir un poco de nosotros además de música; poco a poco se está creando algo mucho más grande que un simple sello discográfico, y no me refiero a en sentido comercial. Esto no va de ventas.</p>
+<p>Desde house, deep house, tech house, hasta techno... Hay solamente cinco referencias en el mercado y cada una de ellas se diferencia en estilo con las demás, teniendo "algo" en común. La música que editamos es desde un punto de vista muy personal y subjetivo en cada momento.</p>
+
+<h3>¿Cuándo decidiste que querías remezclar un track tan particular como el viejo himno "The Night Train"?</h3>
+<blockquote>"Realmente no me costó mucho decidirme. Estaba escuchando tracks antiguos para buscar algo en lo que inspirarme esa tarde y en cuanto empecé a escucharlo ya me imaginé mi versión y lo visualicé en la pista, concretamente en la pista de Amnesia Ibiza. Cuando trabajo en un track de pista me resulta útil imaginarlo sonando en uno de los clubs o fiestas donde pienso que encajaría. Esta vez fue real, ya que a las pocas horas de meterlo en el sampler y trabajar un poco con él, Loco Dice lo estaba pinchando en Amnesia Ibiza. Así que la intuición fue correcta."</blockquote>
+
+<h3>¿Y tu música en general?</h3>
+<p>Mi música va cambiando constantemente a un ritmo que no puedo controlar. A principios de año, viviendo en Berlín, he estado trabajando en algo muy diferente y nuevo para mí. Cada cambio en mi vida me influye mucho a la hora de evolucionar el sonido y llevarlo por un lado u otro.</p>
+
+<h3>¿A qué le llamarías "buena música"?</h3>
+<p>No voy a decir lo típico de que no hay música buena o mala, que depende de cuando la escuches y de gustos. Para mí la música tiene que ser "musical", tiene que tener un sentido, transmitir emociones, hacerte sentir placer, viajar, hacerte bailar, ponerte los pelos de punta. Tiene que darse al menos un par de esas condiciones para que yo la considere buena música.</p>
+`,
+  },
+  {
+    slug: 'meoko-2016-solemnity-review',
+    title: 'Julian Perez — SOLEMNITY (Review)',
+    publication: 'MEOKO',
+    date: 'October 20, 2016',
+    dateISO: '2016-10-20',
+    category: 'review',
+    excerpt: 'MEOKO reviews Julian Perez\'s debut album Solemnity — the twelfth and final release on Fathers & Sons Productions — calling it a testament to his deep-rooted talent and years of dedication.',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p>Founded in 2012, Ibiza-based imprint Fathers &amp; Sons has always been a label that takes time, care and attention to release quality music. Never rushing a release, Fathers &amp; Sons play by their own rules and have produced a catalogue which echoes the label's vision to release music from the heart. The label's message is clear: "that we are in all this together, that we can learn and care from the fathers to the sons and vice versa" — an ethos which is hard to find amongst other labels within the electronic music scene.</p>
+
+<p>This is why it is with great sadness that <em>Solemnity</em> (FAS012), from founder Julian Perez, will be the label's final release. Having decided that the project's creative journey must now come to an end, the Fathers &amp; Sons label boss has chosen to close this chapter and move onto projects new in order to stay true to the ever-growing ideas which have developed since starting the label four years ago.</p>
+
+<p>After what will now be the twelfth release on the imprint — which represents creativity and freedom of musical expression — <em>Solemnity</em> perfectly signifies the label's final chapter. The two-part vinyl release marks Julian Perez's debut album on his Fathers and Sons imprint.</p>
+
+<p><em>Solemnity</em> communicates Perez's signature sound and showcases his more experimental side through a track list that represents total musical expression. Tracks such as "Ain't That The Truth", "Interfluide" and "Peace In The Darkness" are glorious soundscapes of beautifully produced sound, which take the listener on an ambient journey. To juxtapose this, Perez delivers "The Unspoken Thing", "Unusual Sense" and "Alog" — upbeat driving tracks that you can expect to hear on the dance floor.</p>
+
+<p>The release itself communicates Perez's years of dedication and skilful artistry, and in essence showcases the purpose of the Fathers and Sons project. <em>Solemnity</em> should be listened to completely from start to finish, as words cannot do it enough justice.</p>
+
+<p>Although this marks the end of an era for the Fathers and Sons label, it does in fact act as a reminder of Perez's deep-rooted talent and how much more the Spanish producer has to give.</p>
+`,
+  },
+  {
+    slug: 'crazyjack-2017-solemnity-lp-review',
+    title: 'Julian Perez — Solemnity LP',
+    publication: 'CrazyJack',
+    date: 'January 18, 2017',
+    dateISO: '2017-01-18',
+    category: 'review',
+    excerpt: 'French music site CrazyJack reviews Julian Perez\'s debut LP Solemnity on Fathers and Sons Productions, praising its ambient depth, groovy micro-house and club weapons across eleven tracks on four sides of vinyl.',
+    sourceNote: 'Original published on crazyjack.fr, January 2017.',
+    content: `
+<p><em>Label: Fathers and Sons · Format: Vinyle · Cat: FAS012</em></p>
+
+<p>Julian Perez régale les oreilles sur son label Fathers and Sons. Anatomie d'un chef-d'œuvre.</p>
+
+<p>Tout en douceur, le premier track "Ain't That The Truth" nous fait d'emblée plonger dans l'atmosphère ambient et légèrement dub de l'artiste. "Xless" monte en régime avec une rythmique plus sèche et relevée : la micro-house si puissante de Julian se dévoile. "The Unspoken Thing" est un hymne de groove que l'on a déjà entendu maintes fois en club. Un pur régal, le track met tout le monde d'accord.</p>
+
+<p>Face B, "Unusual Sense" se déploie en nappes mystiques pour un résultat cosmique tandis que "That Stuck TDK", plus métallique, joue la prise de risque. Pour clore la face, une vague ambient d'une justesse absolue se déploie avec "Interfluide".</p>
+
+<p>Groove épais, rythmique micro et synthés envoûtants — "Alog" montre encore que Julian est le meilleur à ce jeu-là, tandis que "War Melody Dreamer" est davantage acidulé mais toujours aussi ciselé. Doté d'une basse lourde et puissante, "Sending Forth" se construit pas à pas, note à note, dans une perfection qui doit plus à l'épuration qu'à la complexité. Dans un registre plus déstructuré, "Recognition!" sème le trouble chez l'auditeur perdu entre des mesures atypiques. Enfin, "Peace In The Darkness" clôt l'album comme il avait commencé : dans un calme maîtrisé avec brio, enveloppé dans une atmosphère dont notre artiste a bien le secret.</p>
+`,
+  },
+  {
     slug: 'mixmag-io-2016-ya-veryu-v-nastoyashchikh',
     title: '"I Believe in Real and Sincere People" — Interview',
     publication: 'Mixmag Russia (mixmag.io)',
