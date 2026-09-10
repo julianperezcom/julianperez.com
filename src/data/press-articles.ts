@@ -61,6 +61,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>If you were to play at a location that wasn't a club, festival, or usual party location, where would it be and why?</h3>
 <p>"There's nowhere like home!"</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/meoko-2014-full.png" alt="Original article — MEOKO, August 2014" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -86,6 +91,11 @@ export const pressArticles: PressArticle[] = [
 <p>After the ending of Perez's much loved label Fathers &amp; Sons Productions last year — one of the most influential labels of the past decade — it is great to see the Spanish artist begin a fresh and inspiring new project. However, let us be honest, we all knew it would not be long before we heard that name again.</p>
 
 <p><em>Words by Zac More, MEOKO</em></p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/meoko-2017-full.png" alt="Original article — MEOKO, August 2017" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -146,6 +156,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>What's the next release we can look forward to from Fathers & Sons?</h3>
 <p>We are already on it. Every release is not revealed until the day we announce it. However I can advance that FAS006 will be a project with various artists. This one brings old school sounds back to the label — it's a deep and groovy release, 100% Fathers and Sons sound.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/rhythmatic-2013-full.png" alt="Original article — Rhythmatic, July 2013" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -186,6 +201,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>¿Qué recordás de tus anteriores experiencias en Argentina?</h3>
 <blockquote>"La última vez estuve en febrero y fue increíble. Fueron tres gigs en tres días muy intensos. ¡Ah, la gente lo vive de verdad!"</blockquote>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/buenos-aliens-2015-full.png" alt="Original article — Buenos Aliens, September 2015" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -224,6 +244,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>Where are some of your favourite crate digging spots?</h3>
 <p>Technique in Tokyo, Gramaphone Records in Chicago, Spacehall in Berlin, Vinyl Pimp in London, A-1 in New York, Subwax and Discos Paradiso in Barcelona — to name a few.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/pulseradio-2016-full.png" alt="Original article — Pulse Radio Asia, June 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -257,6 +282,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>You've spoken before about Ibiza as a unique ecosystem. How has it shaped you as an artist?</h3>
 <p>Ibiza in the summer is like a non-stop masterclass — you are in touch with the people you respect most, in the studio during the day, on the terrace at night. The access to so many different kinds of music happening at the same time in one small island is unique. It also teaches you who you are, because the competition is high and you either find your identity or you get lost following others.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/reckon-2016-full.png" alt="Original article — Reckon Music & Events, January 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -288,6 +318,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>5. Music, Right Here, Right Now</h3>
 <blockquote>"The music scene right now is growing so fast, it has become very popular and with new artists growing up quick, it's not always just about the talent like it used to be, but about the political interests on the scene, management companies, et cetera. Luckily there is an amount of true artists out there doing a great job — and hopefully more every time. The bigger obstacles to overcome now? Our own ego."</blockquote>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/brag-sydney-2016-full.png" alt="Original article — Brag Magazine, Sydney, June 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -309,6 +344,11 @@ export const pressArticles: PressArticle[] = [
 <p>The article also referenced his work with <strong>Fathers & Sons Productions</strong>, his strictly vinyl-only label founded in 2012 in Valencia, Spain, which had by that point established itself as one of the more respected underground imprints of its generation — with support from Ricardo Villalobos, Zip, Sonja Moonear, Margaret Dygas and Cassy.</p>
 
 <p>Perez's inclusion in the Mixmag feature cemented his transition from respected underground figure to internationally recognised artist, following a summer that included residency appearances, festival bookings across Europe, and the continued growth of Fathers & Sons into its third year of releases.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/mixmag-2014-full.png" alt="Original article — Mixmag, October 2014" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -346,6 +386,11 @@ export const pressArticles: PressArticle[] = [
 <h3>¿Cómo ves el surgimiento del talento electrónico en Latinoamérica? ¿Qué recomendarías a los nuevos talentos?</h3>
 <p>Tengo buenos amigos latinoamericanos con los que tengo el gusto de compartir cabina cada vez que estoy por sus países de origen. Hay mucho talento y muchas ganas de hacer las cosas bien pero a veces las fronteras limitan sus carreras como artistas. Me alegra ver a muchos de ellos por el otro lado del charco llevando y compartiendo su música con ilusión.</p>
 <blockquote>"A los que aún no se han decidido a hacerlo, siempre les animo a que vivan la experiencia y salgan a luchar por lo que creen. Aprender y compartir viajando es un privilegio."</blockquote>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/midi-peru-2016-full.png" alt="Original article — MIDI Perú, August 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -374,6 +419,11 @@ export const pressArticles: PressArticle[] = [
 <h3>¿Cómo llevás adelante la curaduría de tu sello?</h3>
 <p>Siempre hemos estado abiertos a artistas que comparten nuestra filosofía y que nos aportan algo más que música. Todos nos hemos ido haciendo amigos con el paso del tiempo y vamos creciendo juntos haciendo camino. Los artistas de F&S tienen sus proyectos paralelos pero siempre esos tienen algo en común con nosotros.</p>
 <blockquote>"No todos los seguidores de F&S conocen personalmente a cada uno de los artistas, pero escuchando todas las referencias te puedes dar cuenta de que hay algo que siempre se relaciona entre sí. Como he dicho antes, todo vuelve al origen."</blockquote>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/vos-argentina-2015-full.png" alt="Original article — VOS Argentina, September 2015" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -397,6 +447,11 @@ export const pressArticles: PressArticle[] = [
 <p>The article presented Perez as an artist who carefully selects his performances, remaining studio-focused between bookings and avoiding the saturation trap that affects many touring DJs. His labels — <strong>Fathers & Sons Productions</strong> and the newer <strong>Girada Unlimited</strong> — were highlighted as expressions of that same discipline: releasing only when something is genuinely ready, never to fill a schedule.</p>
 
 <p>Rotterdam's promoters noted that "their city was not to be underestimated" — a sentiment that resonated with Perez's own approach to discovering new audiences: arriving without assumptions, reading the room from the first record.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/trommel-2018-day-in-the-life-full.png" alt="Original article — Trommel Music, July 2018" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -496,6 +551,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>How do you handle things when something goes wrong in the middle of a set?</h3>
 <p>Problems with sound systems and setups still bother me most these days. Bad quality monitoring, incorrectly set up DJ booths on top of the subs or tables that aren't stable enough for spinning records are the most common problems.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/ibiza-voice-2018-full.png" alt="Original article — Ibiza Voice, February 2018" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -540,6 +600,11 @@ export const pressArticles: PressArticle[] = [
 <h3>What do you like more and less of your work?</h3>
 <p>I like to play around, I like the connection with the dancefloor, meet new people, traveling, visiting new places — it's something that I wouldn't be able to stop doing.</p>
 <p>Things I don't like instead are spending a lot of time alone between trips, sleeping less or nothing, at some point it is heavy, maybe you want to have a healthy routine, do some sport, eat at right times, but sometimes it is not possible and sometimes I do not like it. But for me the game is worth the candle, good things compensate for bad things. When I get booked somewhere for an event I like taking a few extra days to visit the places where I go.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/clubber-confession-2017-full.png" alt="Original article — Clubber Confession, May 2017" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -587,6 +652,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>Can you tell us something about the scene in Ibiza? Underground or commercial?</h3>
 <p>Ibiza itself is commercial — truthfully there is no underground scene there. But if you're talking about a classic party with normal prices, where promoters aren't only thinking about making money and people come who simply want to enjoy the music rather than watch famous DJs they don't even know — you can find those. But not on billboards or flyers. Those are definitely not underground.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/techno-cz-2014-full.png" alt="Original article — Techno.cz, April 2014" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -625,6 +695,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>Will we hear your live set soon?</h3>
 <p>It has always interested me, but at the same time I love playing from records — the diversity it gives depending on your mood, the audience and so on. A live set has to be more or less planned, and several events with a live performance means producing a large amount of music to keep the performance and material fresh. Actually, working on a live performance with another artist seems more interesting and satisfying. Why not?</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/muno-pl-2019-full.png" alt="Original article — muno.pl, May 2019" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -634,6 +709,8 @@ export const pressArticles: PressArticle[] = [
     date: 'September 24, 2012',
     dateISO: '2012-09-24',
     category: 'interview',
+    image: '/press/pulse-radio-2012.jpg',
+    imageAlt: 'Pulse Loves… Julian Perez — Pulse Radio, September 2012',
     excerpt: 'One of Spain\'s hardest working DJs, Julian Perez talks about playing records at home, his eclectic set approach, VIVa Warriors, Fathers & Sons Productions, and his love of travel. Includes an exclusive mix.',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -655,6 +732,11 @@ export const pressArticles: PressArticle[] = [
 <h3>Pulse loves: those finding new ways to share music. Tell us about Fathers &amp; Sons Productions.</h3>
 <p>Fathers &amp; Sons is a vinyl-only imprint I run with my friends out of Ibiza. Everything is limited edition and strictly vinyl. The idea is to build a catalogue that means something — not just releases, but a story. So far we've had very positive reactions from DJs and press, and every record has sold out. That response means a lot and gives us motivation to keep going the right way.</p>
 <p>We're not in a rush. We take our time to choose artists and tracks carefully. What we care about is the music and nothing else.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/pulse-radio-2012-full.png" alt="Original article — Pulse Radio, September 2012" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -664,6 +746,8 @@ export const pressArticles: PressArticle[] = [
     date: 'March 25, 2013',
     dateISO: '2013-03-25',
     category: 'interview',
+    image: '/press/djmag-latinoamerica-2013.jpg',
+    imageAlt: 'DJ Mag Latinoamérica — Entrevista Exclusiva: Julián Pérez, marzo 2013',
     excerpt: 'DJ Mag Latinoamérica speaks to Julián Pérez about his breakthrough summer of 2012, the story behind VIVa Warriors, growing up listening to Valencia\'s electronic music scene, and the philosophy behind Fathers & Sons Productions.',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -689,6 +773,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>Sobre tu verano de 2012 y el remix de "The Night Train"...</h3>
 <p>Este verano han surgido muchas cosas a la vez que me han hecho dar un gran cambio, sobre todo personal. Me he dado cuenta de que todo el trabajo de estos dos últimos años ha tenido un sentido y ahora es cuando lo estoy viendo y disfrutando. Algunos de los tracks, remixes y colaboraciones que hice ese verano también lograron que mi nombre sonara más que anteriormente. Todo se dio en el momento que tenía que surgir, eligiendo el camino difícil en lugar de contar sólo con la suerte o la ayuda. Es el trabajo constante lo que al final da resultados.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/djmag-latinoamerica-2013-full.png" alt="Original article — DJ Mag Latinoamérica, March 2013" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -698,27 +787,89 @@ export const pressArticles: PressArticle[] = [
     date: 'May 23, 2013',
     dateISO: '2013-05-23',
     category: 'interview',
-    excerpt: 'Vicious Magazine profiles Julián Pérez on his love of vinyl, the story of The Night Train remix, Loco Dice playing it live in Amnesia Ibiza, his Berlin period, and the philosophy behind Fathers & Sons Productions.',
-    sourceNote: 'Printed in Vicious Magazine Nº33, May 2013. Archived locally.',
+    image: '/press/vicious-magazine-2013.png',
+    imageAlt: 'Vicious Magazine Nº33 — Julián Pérez, Idoneidad Emprendedora, mayo 2013',
+    excerpt: 'Vicious Magazine perfila a Julián Pérez: su amor por el vinilo, el nacimiento de Fathers & Sons, el remix de "The Night Train" que Loco Dice pinchó en Amnesia Ibiza, y su residencia en Sankeys con VIVa Warriors.',
+    sourceNote: 'Publicado en Vicious Magazine Nº33, mayo 2013. Entrevista por Rosa Santos. Archivado localmente.',
     content: `
-<p>Julián Pérez habla con Vicious Magazine sobre sus influencias, su amor por el vinilo, el nacimiento de Fathers &amp; Sons Productions, y el momento que lo cambió todo: el verano de 2012 en Ibiza.</p>
+<p><em>El sonido de algunos de los míticos como MK, Todd Terry, Carl Craig, Chez Damier o Paul Johnson fue una fuente de inspiración para este artista con sede en Ibiza. Un amante de 12", de lo melódico, del buen hacer, de un sonido bonito, de lo humano, lo legal y lo que tiene alma. Emprendedor a su vez, apostó por crear e invertir parte de su vida en lo que más le gusta, de ahí nació "Fathers &amp; Sons", su nuevo proyecto. Una verdadera mezcla de negocio y placer.</em></p>
+<p><em>Entrevista: Rosa Santos · Vicious Magazine Nº33, junio 2013</em></p>
 
-<h3>Todo el mundo habla en sus biografías de Detroit o Chicago. ¿Qué destacarías de cada una de estas ciudades?</h3>
+<h3>Todo el mundo habla en sus biografías de Detroit o Chicago. ¿Qué destacarías de cada una de estas ciudades? ¿Alguna como favorita?</h3>
 <p>La gente de mi generación y algo mayor, relacionada con la electrónica underground de principios de los 80 y 90's, probablemente habrán tenido influencias de estas dos ciudades. El Chicago de los 80 tuvo su momento con gente como Frankie Knuckles, Ron Hardy, que entre Chicago y Nueva York comenzaron con un sonido independiente. Introdujeron las cajas de ritmos Roland TR-808, TR-909 y demás — en mi opinión marcan un antes y un después del house, de hecho hoy en día las seguimos utilizando. Surgieron sellos como Trax Records, Epic, House Jam, International House, Emotive, House Nation... Aún sigo comprando discos de ese house siempre que tengo oportunidad. Todd Terry, Marshall Jefferson, DJ Pierre — hay muchas influencias ahí.</p>
-<p>Siempre me he considerado más de house que de techno de Detroit, cuando empiezo a hablar de ello me viene a la cabeza gente como Derrick May, Kevin Saunderson, Juan Atkins, Carl Craig... Sellos como Metroplex, KMS, etc. Ellos empezaron esto y crearon un movimiento también social antes de llegar Jeff Mills, Robert Hood y Mike Banks con Underground Resistance y su revolución. Hawtin y Acquaviva llegaron algo más tarde con sus sellos e innovando hacia algo más minimalista.</p>
+<p>Siempre me he considerado más de house que de techno de Detroit. Cuando empiezo a hablar de ello me viene a la cabeza gente como Derrick May, Kevin Saunderson, Juan Atkins, Carl Craig... Sellos como Metroplex, KMS, etc. Ellos empezaron esto y crearon un movimiento también social antes de llegar Jeff Mills, Robert Hood y Mike Banks con Underground Resistance y su revolución. Hawtin y Acquaviva llegaron algo más tarde con sus sellos e innovando hacia algo más minimalista. Hay mucho que contar, algún día profundizaremos más en esto.</p>
+<p>No me considero un purista del techno Detroit ni mucho menos, pero tengo mucha influencia de este sonido y creo que, aparte de las grandes fábricas de automóviles americanas, es lo que más se puede destacar de esa ciudad para nosotros.</p>
+
+<h3>¿Hacia dónde crees que viajan ahora las tendencias en música? ¿Qué características tendrá el sonido del futuro?</h3>
+<p>Pienso que por mucha música experimental que nos empeñemos en crear, las bases están creadas desde hace décadas y todas las nuevas modas, tanto musicales como en otros ámbitos, no son más que rescatar lo que ya existe y darle unas vueltas, reinventarlo en cierto modo.</p>
+
+<h3>¿Cuándo decidiste que tu vida sería "entre vinilos"?</h3>
+<p>Creo que no es algo que haya decidido de un día para otro. He tenido temporadas en las que ha sido mi obsesión, otras en las que no pude seguir comprando porque mi bolsillo no me lo permitía y tuve otras prioridades. Últimamente he conseguido un término medio para mantenerme al día con lo que realmente me gusta comprar y coleccionar. Ahora tengo discos repartidos entre casa de mis padres, casas de amigos, en la mía... En este momento puedo decirte que sí, estoy viendo que mi vida va a ser entre vinilos y llevándolos a cuestas por todos lados.</p>
 
 <h3>¿Qué es eso de "Fathers &amp; Sons"?</h3>
 <p>Fathers &amp; Sons es un sello discográfico con un sonido que abarca varios géneros. Intentamos con él transmitir un poco de nosotros además de música; poco a poco se está creando algo mucho más grande que un simple sello discográfico, y no me refiero a en sentido comercial. Esto no va de ventas.</p>
+
+<h3>¿Entre qué estilos navega este sello?</h3>
 <p>Desde house, deep house, tech house, hasta techno... Hay solamente cinco referencias en el mercado y cada una de ellas se diferencia en estilo con las demás, teniendo "algo" en común. La música que editamos es desde un punto de vista muy personal y subjetivo en cada momento.</p>
 
-<h3>¿Cuándo decidiste que querías remezclar un track tan particular como el viejo himno "The Night Train"?</h3>
-<blockquote>"Realmente no me costó mucho decidirme. Estaba escuchando tracks antiguos para buscar algo en lo que inspirarme esa tarde y en cuanto empecé a escucharlo ya me imaginé mi versión y lo visualicé en la pista, concretamente en la pista de Amnesia Ibiza. Cuando trabajo en un track de pista me resulta útil imaginarlo sonando en uno de los clubs o fiestas donde pienso que encajaría. Esta vez fue real, ya que a las pocas horas de meterlo en el sampler y trabajar un poco con él, Loco Dice lo estaba pinchando en Amnesia Ibiza. Así que la intuición fue correcta."</blockquote>
+<h3>¿Hasta dónde quieres llegar con él?</h3>
+<p>Quiero disfrutar con él siempre, igual que lo hago ahora. Llegar poco a poco a más gente y seguir compartiéndolo con artistas y amigos que quieren formar parte de ello — mantener esto es ya una buena meta.</p>
 
-<h3>¿Y tu música en general?</h3>
+<h3>¿Y tu música?</h3>
 <p>Mi música va cambiando constantemente a un ritmo que no puedo controlar. A principios de año, viviendo en Berlín, he estado trabajando en algo muy diferente y nuevo para mí. Cada cambio en mi vida me influye mucho a la hora de evolucionar el sonido y llevarlo por un lado u otro.</p>
 
 <h3>¿A qué le llamarías "buena música"?</h3>
 <p>No voy a decir lo típico de que no hay música buena o mala, que depende de cuando la escuches y de gustos. Para mí la música tiene que ser "musical", tiene que tener un sentido, transmitir emociones, hacerte sentir placer, viajar, hacerte bailar, ponerte los pelos de punta. Tiene que darse al menos un par de esas condiciones para que yo la considere buena música.</p>
+
+<h3>¿Cuándo decidiste que querías remezclar un track tan particular como el viejo himno "The Night Train"?</h3>
+<p>Realmente no me costó mucho decidirme. Estaba escuchando tracks antiguos para buscar algo en lo que inspirarme esa tarde y en cuanto empecé a escucharlo ya me imaginé mi versión y lo visualicé en la pista, concretamente en la pista de Amnesia Ibiza. Cuando trabajo en un track de pista me resulta útil imaginarlo sonando en uno de los clubs o fiestas donde pienso que encajaría. Esta vez fue real, ya que a las pocas horas de meterlo en el sampler y trabajar un poco con él, Loco Dice lo estaba pinchando en la terraza y yo en el centro de la pista. Es curioso como sucedió todo ese día, ¿no?</p>
+
+<h3>Ahora estás viajando mucho con el tour. ¿En qué país has disfrutado más?</h3>
+<p>No llevamos ni la mitad de los 12 shows del tour y hasta ahora han sido todos increíbles. Aún me estoy recuperando del último en Moscú — esa ciudad ha sido un descubrimiento para mí este año, va en cabeza.</p>
+
+<h3>¿Qué significa Ibiza para ti?</h3>
+<p>Significa todo. Fue el lugar que cambió mi vida desde que puse un pie en ella hace ya diez años. He vivido momentos buenísimos, otros no tanto. He conocido muchas personas, algunas entraron y salieron de mi vida en su paso por la isla dejándome buenos recuerdos y otras se han convertido en mis mejores amigos.</p>
+<p>He podido ver la isla desde muchos puntos de vista y en diferentes situaciones; se puede decir que he crecido en ella como persona y siempre he conseguido disfrutarla año tras año. Mis proyectos e ilusiones se están haciendo realidad desde Ibiza y por mucho que viaje no hay lugar que me haga sentir mejor. Siempre me sentiré atraído por esta isla, cuestión de energías.</p>
+
+<h3>¿Qué opinas de la escena española?</h3>
+<p>La escena española es muy pequeña comparada con otras épocas y no creo que esté pasando por su mejor momento. Sí es verdad que últimamente hay muchos españoles emergentes con talento — los últimos meses he tenido la oportunidad de conocer a varios de ellos. Si nos apoyásemos más entre nosotros se nos escucharía mucho más fuera. Talento no falta.</p>
+
+<h3>¿Crees que el mercado en nuestro país crecerá algún día como el de Alemania?</h3>
+<p>En la península hay gente haciendo cosas muy buenas y apostando por ello, pero hay muchos factores que lo limitan y no dejan crecer el mercado underground — y somos entre otras cosas nosotros mismos. En Alemania la gente tiene cultura por la electrónica de calidad, acoge a artistas que se interesan por ella, por el arte de vanguardia. Incluso hay clubs donde te preguntan la programación del día y si no la sabes no te dejan entrar. España tendría que cambiar mucho socialmente para ponerse a la altura.</p>
+
+<h3>¿Qué opinas del fenómeno "Mamá, quiero ser DJ"?</h3>
+<p>Me da vergüenza ajena. Es un fenómeno que nace a raíz de la ignorancia de un público y que fomenta un "entretenimiento" barato y pobre, sin esfuerzo ni trabajo profesional por estos "DJs del pueblo", lo que está arruinando la escena electrónica de los países que lo promueven y su cultura en general. Ellos juegan en otra liga, aunque indirectamente estemos relacionados por el término DJ.</p>
+<p>Esos que promueven este tipo de eventos no piensan en las consecuencias que esto está teniendo y tendrá en un futuro, ridiculizando cada vez más a un DJ. Su único propósito es lucrarse mientras puedan — ellos son los responsables directos de todo esto.</p>
+
+<h3>¿Cómo se presenta el Sónar?</h3>
+<p>Mejor que nunca. Hacemos una de las fiestas de las que más se está hablando últimamente. Ha sido sorprendente para nosotros el conseguir algo así con un sello que sólo publica en vinilo con ediciones limitadas, con un año recién cumplido desde nuestra primera release y sin ser grandes promotores. Todo está viniendo sin buscarlo, pese a que muchos no creían en este concepto por no ser un sello digital y limitarnos a un público que para muchos compra un formato obsoleto. Nosotros no lo creemos así.</p>
+<p>Va a ser una buena semana. La fiesta Return, la del día anterior a la nuestra, va a ser una de las grandes de este año con grandes artistas que no se dejan ver desde hace tiempo por Sónar. Nuevos lugares que van a sorprender, fiestas open air, iremos de un lado para otro durante toda esa semana.</p>
+
+<h3>Háblanos de tu fiesta y de la elección de los DJs que tienen cabida en ella.</h3>
+<p>Cuando planteamos los doce shows a primeros de año no teníamos ni idea de lo que haríamos en la semana del Sónar — dejamos ese evento un poco en el aire. Poco a poco fuimos contactando amigos y artistas que apoyan el sello y con los que tenemos buena relación para ver si podíamos contar con ellos. Cuando encontramos el lugar no tardamos mucho en decidirnos. Creo que no podíamos haber hecho mejor elección de DJs.</p>
+
+<h3>Tu festival preferido:</h3>
+<p>No sé si la semana del Sónar cuenta como festival, pero si es así me quedo con ella. No el Sónar en sí, todo lo que se prepara en Barcelona esa semana. Me encanta todo lo que dure más de dos días en ciudades con clima de verano y amigos por todas partes. Voy a ir por primera vez al festival de Kazantip este año en agosto — quién sabe, puede que cuando vuelva sea el favorito.</p>
+
+<h3>Proyectos futuros...</h3>
+<p>Tengo muchos proyectos en mente a desarrollar, unos saldrán, otros se quedarán en ideas. De momento me voy poniendo las metas a corto plazo para ir cumpliéndolas y me va bien.</p>
+<p>En cuanto a producciones, incluiré un track en el próximo sampler de VIVa MUSiC, "VIVa Family 100 release", previsto para finales de mayo, junto con otros artistas del sello. Otro track sale también en un sampler por el sello Savor Music, junto con artistas como Franco Cinelli, G-Man, John Dimas, Julien Sandre, Marcman, Martinez, Bodeler, Felipe Venegas, Jorge Savoretti, Ernesto Ferreyra, Kasper, entre otros.</p>
+<p>Por el sello Recycle Records se publicará en vinilo un 12" con dos tracks que hice algún tiempo atrás, algo deep y house en una tirada limitada. También estoy trabajando en un EP para Fathers &amp; Sons — mi sonido pero algo diferente a lo anterior. Lo iré preparando y espero tenerlo listo para final de verano.</p>
+
+<h3>Un line up para tu fiesta privada de cumpleaños perfecta:</h3>
+<p>El line up que tenemos en la fiesta de Off Sónar.</p>
+
+<h3>¿Día o noche?</h3>
+<p>Día, normalmente.</p>
+
+<h3>El club en el que has crecido:</h3>
+<p>Puede que el club donde he pasado más tiempo durante los últimos años sea DC10 Ibiza. Ya hace más de diez años que me dejo ver por allí — siempre es divertido.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/vicious-magazine-2013.png" alt="Vicious Magazine Nº33 — Página 1" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+<img src="/press/vicious-magazine-2013-p2.png" alt="Vicious Magazine Nº33 — Página 2" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -728,6 +879,8 @@ export const pressArticles: PressArticle[] = [
     date: 'October 20, 2016',
     dateISO: '2016-10-20',
     category: 'review',
+    image: '/press/meoko-2016-solemnity-review.jpg',
+    imageAlt: 'MEOKO — Julian Perez SOLEMNITY Review, October 2016',
     excerpt: 'MEOKO reviews Julian Perez\'s debut album Solemnity — the twelfth and final release on Fathers & Sons Productions — calling it a testament to his deep-rooted talent and years of dedication.',
     sourceNote: 'Original no longer online. Archived locally.',
     content: `
@@ -742,6 +895,11 @@ export const pressArticles: PressArticle[] = [
 <p>The release itself communicates Perez's years of dedication and skilful artistry, and in essence showcases the purpose of the Fathers and Sons project. <em>Solemnity</em> should be listened to completely from start to finish, as words cannot do it enough justice.</p>
 
 <p>Although this marks the end of an era for the Fathers and Sons label, it does in fact act as a reminder of Perez's deep-rooted talent and how much more the Spanish producer has to give.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/meoko-2016-solemnity-full.png" alt="Original article — MEOKO, October 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -751,6 +909,8 @@ export const pressArticles: PressArticle[] = [
     date: 'January 18, 2017',
     dateISO: '2017-01-18',
     category: 'review',
+    image: '/press/crazyjack-2017-solemnity.jpg',
+    imageAlt: 'CrazyJack — Julian Perez Solemnity LP review, January 2017',
     excerpt: 'French music site CrazyJack reviews Julian Perez\'s debut LP Solemnity on Fathers and Sons Productions, praising its ambient depth, groovy micro-house and club weapons across eleven tracks on four sides of vinyl.',
     sourceNote: 'Original published on crazyjack.fr, January 2017.',
     content: `
@@ -763,6 +923,457 @@ export const pressArticles: PressArticle[] = [
 <p>Face B, "Unusual Sense" se déploie en nappes mystiques pour un résultat cosmique tandis que "That Stuck TDK", plus métallique, joue la prise de risque. Pour clore la face, une vague ambient d'une justesse absolue se déploie avec "Interfluide".</p>
 
 <p>Groove épais, rythmique micro et synthés envoûtants — "Alog" montre encore que Julian est le meilleur à ce jeu-là, tandis que "War Melody Dreamer" est davantage acidulé mais toujours aussi ciselé. Doté d'une basse lourde et puissante, "Sending Forth" se construit pas à pas, note à note, dans une perfection qui doit plus à l'épuration qu'à la complexité. Dans un registre plus déstructuré, "Recognition!" sème le trouble chez l'auditeur perdu entre des mesures atypiques. Enfin, "Peace In The Darkness" clôt l'album comme il avait commencé : dans un calme maîtrisé avec brio, enveloppé dans une atmosphère dont notre artiste a bien le secret.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/crazyjack-2017-full.png" alt="Original article — CrazyJack, January 2017" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'djmag-es-050-2015-focus-on',
+    title: 'Focus On: Julian Perez — Fathers & Sons Productions',
+    publication: 'DJ Mag ES',
+    date: 'March 2, 2015',
+    dateISO: '2015-03-02',
+    category: 'interview',
+    excerpt: 'DJ Mag ES dedica su sección Focus On al productor ibicenco Julian Perez y su sello Fathers & Sons Productions: el concepto del vinilo exclusivo, la filosofía underground, los planes del sello y una carta blanca sobre el estado de la escena electrónica.',
+    image: '/press/djmag-es-050-2015.jpg',
+    imageAlt: 'DJ Mag ES nº50 — Focus On: Julian Perez, Fathers & Sons Productions, marzo 2015',
+    sourceNote: 'Publicado en DJ Mag ES nº50, marzo 2015. Archivado localmente.',
+    content: `
+<p><em>Texto: Scan Mode. DJ Mag ES nº50, marzo 2015.</em></p>
+
+<p>Desde Ibiza recibimos a uno de nuestros sellos más internacionales y demandados en la actualidad, Fathers &amp; Sons; propiedad del productor Julián Pérez el cual también y paralelamente se ha convertido en uno de nuestros artistas más exportables y venerados por el público tanto ibicenco como por los públicos que buscan sonidos derivados del legado de Ricardo Villalobos y los genios rumanos Rhadoo, Pedro y Raresh.</p>
+
+<p>El sello se ha situado con tan sólo ocho referencias en el mercado en una posición de mérito para aquellos deejays que buscan calidad para sus sesiones sin perder el groove y un punto de exclusividad, y es que las referencias de Fathers &amp; Sons son buscadísimas por los coleccionistas de vinilo y por aquellos seguidores ávidos de conseguir esa "Track ID" por Soundcloud. Por sus filas han pasado productores de renombre como S.A.M. (Samuel-André Madsen), el francés Malin Genie, los rumanos Livio &amp; Roby y el propio Julián Pérez.</p>
+
+<p>De Julián podemos destacar que se ha convertido en un artista imprescindible en los mejores clubes underground de la isla y uno de los referentes en cuanto a House de cuño moderno se refiere, editando trabajos en los principales sellos especializados tanto europeos como mundiales.</p>
+
+<h3>¿Cuál es el concepto y por qué nace Fathers and Sons Productions?</h3>
+<p>Nos propusimos editar música en vinilo para gente que apreciase el formato y que le guste pincharlo y/o coleccionarlo. Al mismo tiempo dar también la oportunidad de unirse a nosotros, a artistas que compartan nuestra manera de hacer las cosas y que encajen con el sonido que nos mueve. El concepto nace de la idea de tener la libertad de sacar toda esa música que muchos sellos tardan tiempo en decidirse por firmar, así como tener nuestros propios plazos, ideas y diferentes proyectos dentro de nuestra marca.</p>
+<p>Quisimos en su momento alejarnos de la masificación de nueva música que estaba saturando el mercado digital y apostar por algo solamente en vinilo, idea que no compartía mucha gente en ese momento, sin embargo nosotros creímos fuertemente en ello desde un principio y sin dudas de ningún tipo.</p>
+<blockquote>El concepto "Because every person has to be the father of someone" significa creer en alguien que tú conoces, guiar, apoyar a un artista que tiene talento y voluntad para hacerle ver hasta dónde puede llegar, y que éste repita entonces la historia con otro/a de la misma o siguiente generación. Dar ese pequeño empujón que a veces marca la diferencia en la vida de una persona.</blockquote>
+
+<h3>¿Es complicado en estos días apostar por el underground?</h3>
+<p>Creo que era mucho más complicado hace décadas cuando empezaba. Siempre es más cómodo declinarse hacia el sonido que la mayoría espera, si tu finalidad es tener más ventas. Lo difícil es apostar por el sonido que realmente sientes, sin que el vender sea el motivo principal ya que si después acabas vendiendo discos todo va mejor y se hace más interesante. Con el underground nadie se hace rico, y los que lo han conseguido es porque han pasado la línea y han dejado de serlo.</p>
+
+<h3>En Barcelona, Berlín o Ámsterdam se nota un incremento en la venta de vinilos. ¿Es rentable un sello de vinilo?</h3>
+<p>Tiene bastantes más gastos y es menos rentable que uno de descargas digitales, por la distribución, los altos costes de prensados y una distribución más limitada. Para que fuese realmente rentable habría que vender varios miles de copias. Ahora el vinilo está muy de moda, sellos y productores sienten la presión de publicar también en vinilo, para no quedarse atrás. También se está saturando un poco el mercado de música electrónica en vinilo y se está volviendo mucho más laborioso dar con buenos discos que realmente merezca la pena comprar, lo que tampoco está del todo mal ya que nos hace dedicar tiempo en conseguir lo que realmente estamos buscando.</p>
+
+<h3>¿Cuáles son los planes a corto-medio plazo para Fathers and Sons?</h3>
+<p>Seguir manteniendo la línea que hemos seguido hasta ahora, sin prisa ni presión por publicar; es nuestra forma de llevar el sello y la gente que nos sigue y compra nuestras referencias así lo respeta. Esperamos tener pronto nuevo material para las siguientes referencias, colaboraciones y proyectos de nuestros artistas y de otros nuevos que seguro que se irán incorporando.</p>
+<p>Tuvimos la idea en la última referencia de nombrar el proyecto como "Fathers And Sons Productions", porque así nadie realmente sabe quién está detrás del proyecto, hasta que lee los créditos en el disco. La idea es que lo comprés si realmente te gusta, sin importarte en un primer momento de quién es. Quizás esto también en algunas futuras ediciones, ya que ha sido muy interesante la reacción de la gente.</p>
+
+<h3>¿Y a nivel personal?</h3>
+<p>Todo está mejor que nunca. Este año ya tenemos previstos bastantes eventos en los que tomaré parte, así como varias colaboraciones en estudio con gente con la que realmente me apetece y me motiva trabajar. Ahora estoy en América desde mediados de enero haciendo un tour — vengo cada año en estas fechas — y cuando regrese a Europa, vuelvo al estudio a ponerme con todo ello. Queda mucho por hacer.</p>
+
+<h3>¿Qué destacarías de la escena actual?</h3>
+<p>El colectivo Slow Life, junto con su sello con el mismo nombre, está ofreciendo algo que merece la pena seguir de cerca. El nuevo live set de Mike Shannon también resulta muy interesante. Concealed Sounds, el nuevo sello de Martín Martínez, algo fino desde Copenhague. Y muy cercano a mí como amigo y parte de la familia, S.A.M. aka Samuel André Madsen, con su sello Delaphine que no se puede pasar por alto. Por recomendar algo para un momento especial: los Rompecorazones de Guti.</p>
+
+<h3>Carta blanca.</h3>
+<blockquote>Quería hablar sobre algo que veo en la esencia del contacto con el público en fiestas y festivales, que ahora se apoyan en un alto porcentaje en el marketing y el personaje del artista, muchas veces por encima de los artistas y de su música en sí. Antes éramos libres y capaces de actuar en eventos en Ibiza o en festivales sin tener que pagar. Solamente hace dos o tres años, la habilidad de descubrir un artista increíble y desconocido, teniendo una oportunidad en un lineup donde nadie sabía quién eras, para de repente convertirte en DJ favorito de primera división pinchando en una playa o en un interminable after por un precio "Underground" era algo posible y real. Creo que se ha convertido en una pelea por ver quién tiene más followers, sin dar una oportunidad a lo auténtico ni por un momento.</blockquote>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/djmag-es-050-spread.png" alt="DJ Mag ES nº50 — páginas 10–11, marzo 2015" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+<img src="/press/djmag-es-050-2015.jpg" alt="DJ Mag ES nº50 — detalle entrevista" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'djmag-es-091-2018-cocinamos-con-julian-perez',
+    title: 'Cocinamos con Julián Pérez (Girada Unlimited)',
+    publication: 'DJ Mag ES',
+    date: 'August 6, 2018',
+    dateISO: '2018-08-06',
+    category: 'feature',
+    excerpt: 'DJ Mag ES ficha a Julián Pérez para su sección "Cocinamos con..." durante la temporada de Ibiza 2018. El productor valenciano comparte su receta de Arroz con Pata — plato típico de Alicante — y habla de su raíces culinarias y musicales.',
+    image: '/press/djmag-es-091-2018.jpg',
+    imageAlt: 'DJ Mag ES nº91 — Cocinamos con Julián Pérez (Girada Unlimited), agosto 2018',
+    sourceNote: 'Publicado en DJ Mag ES nº91, agosto 2018. Archivado localmente.',
+    content: `
+<p><em>DJ Mag ES nº91, agosto 2018. Sección "Cocinamos con..."</em></p>
+
+<p>Durante la temporada de Ibiza 2018, DJ Mag ES fichó a Julián Pérez — bajo el alias de su sello <strong>Girada Unlimited</strong> — para su sección gastronómica "Cocinamos con...", donde artistas de la escena electrónica comparten una receta personal.</p>
+
+<p>Pérez eligió el <strong>Arroz con Pata</strong>, un plato típico de la gastronomía de la ciudad de Alicante. Según él mismo explica en el artículo, la receta la aprendió de su cuñado Marcos: <em>"El arroz es sin lugar a dudas el principal protagonista de la gastronomía de la ciudad de Alicante, de donde también es mi cuñado Marcos, de quien he aprendido la receta de este Arroz con Pata. En Alicante prácticamente podríamos comer cada día del año una especialidad distinta de arroz: seco, caldoso, con marisco, meloso, combinado con verduras, carne o pescado."</em></p>
+
+<p>En el paladar lo describe como <em>"único: una combinación de sabor profundo, natural y sofisticado a la vez que hace sentir una sensación de plenitud y sabor único."</em></p>
+
+<h3>Receta: Arroz con Pata</h3>
+
+<p><strong>Ingredientes (para 4 personas):</strong></p>
+<ul>
+<li>250–300 gr de arroz Badilla x Sollana (2,5 aprox de caldo por 1 de arroz)</li>
+<li>1/2 pata de ternera cocida y troceada</li>
+<li>750–800 ml de caldo</li>
+<li>1/2 chorizo de sarta</li>
+<li>1/2 morcilla</li>
+<li>1 cebolla dulce pequeña</li>
+<li>2 puñados de garbanzos precocidos</li>
+<li>Tomate triturado (1 cuchara sopera por persona)</li>
+<li>Azafrán en hebra tostado y triturado</li>
+<li>2 cucharaditas de pimentón de la vera</li>
+<li>Colorante alimenticio</li>
+<li>Sal, azúcar, pimienta negra en grano, aceite de oliva suave y clavo</li>
+<li>1 diente de ajo (sin grillo)</li>
+<li>Carcasa de pollo, apio, zanahoria... para enriquecer el caldo</li>
+</ul>
+
+<p><em>Podéis ver a Julián Pérez el próximo 26 de septiembre pinchando en Pacha Ibiza.</em></p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/djmag-es-091-2018.jpg" alt="DJ Mag ES nº91 — Cocinamos con Julián Pérez, agosto 2018" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'ra-review-now-after-2016',
+    title: 'Julian Perez – Now, After (Review)',
+    publication: 'Resident Advisor',
+    date: 'March 18, 2016',
+    dateISO: '2016-03-18',
+    category: 'review',
+    image: '/press/ra-review-now-after-2016.jpg',
+    imageAlt: 'Resident Advisor — Julian Perez Now, After review, March 2016',
+    excerpt: 'Resident Advisor reviews Julian Perez\'s debut on Raum...musik — two jacking house tracks built on fat basslines and described as "versatile material suitable for a party\'s final stretch." Rating: 3.5/5.',
+    sourceUrl: 'https://ra.co/reviews/18750',
+    content: `
+<p><em>Label: Raum...musik MUSIK096 · Released: March 2016 · Style: House · Rating: 3.5/5 · Review by Matt Unicomb</em></p>
+
+<p>When it comes to loopy house, nothing beats a fat bassline. Of course, things like a sense of groove and snazzy drums need to be in place, but there's no doubt that killer low-end gets people on the floor. Julian Perez knows all about floor-fillers, having provided Ibiza's Fathers &amp; Sons Productions label with some of its most sought-after 12-inches. (And, considering some of those records have gone for more than €100 just months after release, that's saying something.)</p>
+
+<p><em>Now, After</em>, Perez's first release for the now Berlin-based Raum...musik, features two jacking house tracks, both of which use in-your-face basslines to great effect.</p>
+
+<p>"Clue Me In," the slightly darker B-side, is the pick of the two. It recalls UK producer OCH's 2011 track "Last Chance Saloon," another melancholic roller that puts all the attention on massive bass. Perez's production is more straightforward, the kind of track you can imagine bringing a few tired ravers to their feet for one final hurrah long after they should've gone home.</p>
+
+<p>The title track is more positive, with bright keys and dubby synths. This is a versatile 12-inch that should come in handy during a party's final stretch.</p>
+
+<p><em>Tracklist: A — Now, After / B — Clue Me In</em></p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/ra-review-now-after-2016-full.png" alt="Original review — Resident Advisor, March 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'xlr8r-solemnity-snippets-2016',
+    title: 'Stream Snippets of Julian Perez\'s Debut Album',
+    publication: 'XLR8R',
+    date: 'December 16, 2016',
+    dateISO: '2016-12-16',
+    category: 'news',
+    image: '/press/xlr8r-solemnity-snippets-2016.jpg',
+    imageAlt: 'XLR8R — Stream Snippets of Julian Perez\'s Debut Album, December 2016',
+    excerpt: 'XLR8R announces Julian Perez\'s debut album Solemnity — the twelfth and final release on his Fathers & Sons Productions label, featuring "floating soundscapes, electro-tinged 909 beats, spaced-out club weapons, and deep, dub techno."',
+    sourceUrl: 'https://xlr8r.com/news/stream-snippets-of-julian-perezs-debut-album/',
+    content: `
+<p>Julian Perez's debut album, <em>Solemnity</em>, is set to drop on his Fathers &amp; Sons Productions label and will be the imprint's last release.</p>
+
+<p>The double LP (FAS012) spans eleven tracks across four sides of vinyl, covering what XLR8R describes as "floating soundscapes, electro-tinged 909 beats, spaced-out club weapons, and deep, dub techno." It is the twelfth and final release on the label Perez founded in Ibiza in 2012.</p>
+
+<p>Having built Fathers &amp; Sons into one of the most respected vinyl-only imprints in underground electronic music — with every record selling out within days — Perez chose to close the label at the peak of its influence, with his own debut album as the definitive final statement.</p>
+
+<p><em>Solemnity</em> was available on Perez's Bandcamp and through selected record stores worldwide.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/xlr8r-solemnity-snippets-2016-full.png" alt="Original article — XLR8R, December 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'meoko-2014-pioneers-of-today',
+    title: 'Pioneers of Today',
+    publication: 'MEOKO',
+    date: 'December 2, 2014',
+    dateISO: '2014-12-02',
+    category: 'feature',
+    image: '/press/meoko-2014-pioneers-of-today.jpg',
+    imageAlt: 'MEOKO — Pioneers of Today: Julian Perez, December 2014',
+    excerpt: 'MEOKO names Julian Perez and Fathers & Sons Productions among today\'s dance music pioneers — "the king of limited releases, continuously churning out quality tracks that land in the DJ bags of those quick enough to get a hold of them."',
+    sourceNote: 'Original no longer online. Archived locally.',
+    content: `
+<p>MEOKO's end-of-year feature on contemporary dance music pioneers — those who challenge old concepts, break boundaries and create new avenues — included Julian Perez among a group of artists reshaping the underground scene in 2014.</p>
+
+<p>The feature highlighted his Fathers &amp; Sons Productions label as a standout example of the new breed of artist-run, quality-first imprints redefining how underground music reaches its audience:</p>
+
+<blockquote>"Speaking of EPs that get snatched off the shelves in a split second, Julian Perez's Fathers &amp; Sons Productions — the king of limited releases — continuously churns out quality tracks that land in the DJ bags of those that are quick (or lucky) enough to get a hold of them."</blockquote>
+
+<p>The list of pioneers in the feature included Raresh, Petre Inspirescu, S.A.M., Lazare Hoche, Mandar, Francesco Del Garda and others who were, in MEOKO's assessment, not just producing or playing good quality music, but doing both while running their own forward-thinking labels and events.</p>
+
+<p>The recognition came at the height of Fathers &amp; Sons Productions' most active period — with releases from Livio &amp; Roby, S.A.M., Brian Harden and Perez himself having earned support from Ricardo Villalobos, Zip, Sonja Moonear and The Martinez Brothers.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/meoko-2014-pioneers-full.png" alt="Original article — MEOKO, December 2014" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'ra-japan-japan-tour-2016',
+    title: 'Julian Perez Japan Tour — Nagoya and Tokyo',
+    publication: 'Resident Advisor Japan',
+    date: 'December 2, 2016',
+    dateISO: '2016-12-02',
+    category: 'news',
+    image: '/press/ra-japan-japan-tour-2016.jpg',
+    imageAlt: 'Resident Advisor Japan — Julian Perez Japan Tour, December 2016',
+    excerpt: 'Resident Advisor Japan announces Julian Perez\'s return to Japan after two and a half years — two dates in Nagoya and Tokyo alongside Tresvibes Soundsystem\'s Satoshi Otsuki, coinciding with the release of his debut album Solemnity.',
+    sourceNote: 'Original published in Japanese on ra.co. Archived locally.',
+    content: `
+<p>Ibiza-based artist Julian Perez returned to Japan in December 2016 for his first visit in two and a half years, covering two cities: Nagoya and Tokyo.</p>
+
+<p>The tour coincided with the release of his debut album <em>Solemnity</em> (FAS012) on Fathers &amp; Sons Productions — the label he founded in 2012, known for its subtle, dubby house sound and a catalogue where every release sold out within days of going on sale, some fetching over €100 on the secondary market within months of release.</p>
+
+<p>Both dates featured a b2b with Satoshi Otsuki of Tresvibes Soundsystem, who had also appeared at a Fathers &amp; Sons Productions night at Ibiza Underground that September.</p>
+
+<p><strong>Dates:</strong><br>
+Friday 16 December 2016 — Addition with Julian Perez &amp; Satoshi Otsuki, Mago, Nagoya<br>
+Saturday 17 December 2016 — All Wet, Sankeys TYO, Tokyo</p>
+
+<p>The Japan visit was followed by appearances at Modular Boxing Night in Liverpool (with Rhadoo) and the Epizode Festival in Vietnam on New Year's Eve.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/ra-japan-2016-full.png" alt="Original article — Resident Advisor Japan, December 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'trommel-a-raw-belief-ep-2017',
+    title: 'Julian Perez – A Raw Belief EP',
+    publication: 'Trommel Music',
+    date: 'December 18, 2017',
+    dateISO: '2017-12-18',
+    category: 'premiere',
+    image: '/press/trommel-a-raw-belief-ep-2017.jpg',
+    imageAlt: 'Trommel Music — Julian Perez A Raw Belief EP, December 2017',
+    excerpt: 'Trommel Music spotlights Julian Perez\'s A Raw Belief EP (GIRADA03) on Girada Unlimited — four tracks ranging from hypnotic club-friendly bangers to Detroit-inspired electro cuts. "Future classic on the way here, don\'t snooze!"',
+    sourceUrl: 'https://trommelmusic.com/music/julian-perez-a-raw-belief-ep/',
+    content: `
+<p><em>Artist: Julian Perez · Title: A Raw Belief EP · Label: Girada Unlimited · Catalog Nr.: GIRADA03 · Format: 12″, vinyl only</em></p>
+
+<p>Once again it's the label owner Julian Perez behind the controls, and this EP is carrying all of his usual high quality trademarks. GIRADA03 features 4 tracks ranging in style from hypnotic club-friendly bangers to more Detroit-inspired electro cuts.</p>
+
+<p>Future classic on the way here folk's, don't snooze!</p>
+
+<p>The EP followed Girada Unlimited's debut release <em>Girada Max</em> (GIRADA01), which sold out before its release day, and the second release GIRADA02. With <em>A Raw Belief</em>, Perez's label continued to establish itself as a source of diverse, vinyl-only underground electronics — building on the legacy of Fathers &amp; Sons Productions while pushing into new sonic territory.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/trommel-a-raw-belief-ep-2017.jpg" alt="Original article — Trommel Music, December 2017" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'xlr8r-a-raw-belief-2018',
+    title: 'Julian Perez Drops EP on Girada Unlimited, Shares Snippets',
+    publication: 'XLR8R',
+    date: 'February 22, 2018',
+    dateISO: '2018-02-22',
+    category: 'news',
+    image: '/press/xlr8r-a-raw-belief-2018.jpg',
+    imageAlt: 'XLR8R — Julian Perez Drops EP on Girada Unlimited, February 2018',
+    excerpt: 'XLR8R reports on Julian Perez\'s A Raw Belief EP on Girada Unlimited — four cuts ranging from hypnotic dub-infused house to Detroit-inspired electro, tied together with Perez\'s unmistakable grooves.',
+    sourceUrl: 'https://xlr8r.com/news/julian-perez-drops-ep-on-girada-unlimited/',
+    content: `
+<p><em>By Luke Cheadle — XLR8R, February 22, 2018</em></p>
+
+<p>Julian Perez lands back on his own Girada Unlimited imprint with <em>A Raw Belief</em>.</p>
+
+<p>The EP, which follows two previous outings on the label by Perez, features four cuts that range from hypnotic dub-infused house to more Detroit-inspired electro cuts, all tied together with Perez's unmistakable grooves.</p>
+
+<p>The release continued Girada Unlimited's rapid establishment as one of the underground's most-watched vinyl-only labels — following the sold-out debut <em>Girada Max</em>, which had attracted attention from Ricardo Villalobos and other leading figures in the European underground scene.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/xlr8r-a-raw-belief-2018.jpg" alt="Original article — XLR8R, February 2018" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'trommel-crack-a-joke-girada05-2018',
+    title: 'Premiere: A1 – Julian Perez – Crack a Joke, Have a Smoke [GIRADA05]',
+    publication: 'Trommel Music',
+    date: 'October 3, 2018',
+    dateISO: '2018-10-03',
+    category: 'premiere',
+    image: '/press/trommel-crack-a-joke-girada05-2018.jpg',
+    imageAlt: 'Trommel Music — Premiere: Crack a Joke, Have a Smoke [GIRADA05], October 2018',
+    excerpt: 'Trommel Music premieres the lead track from GIRADA05 — "A master of emotive, functional dance music... Perez\'s arrangement oozes class. Patiently building over nine minutes, tension rises and falls effortlessly."',
+    sourceUrl: 'https://trommelmusic.com/music/premiere/premiere-a1-julian-perez-crack-a-joke-have-a-smoke-girada05/',
+    content: `
+<p><em>By Chris Nicholls — Trommel Music, October 3, 2018</em></p>
+
+<p>Julian Perez returns to his Girada Unlimited imprint for the label's fifth release.</p>
+
+<p>A master of emotive, functional dance music, the distinct sound of Spanish wizard Julian Perez is heard in an instant. The B-side drifts down the after-hours avenue, a soothing synth gliding over a soft 808 pattern in "Mar De Fondo," whilst "Tense Capo" lifts the energy with a buoyant bassline.</p>
+
+<p>Eerie pads shimmer underneath pensive patterns in the A1. Perez's signature crisp hats glide over an elegant 4/4 beat, gently cushioning a dreamy melody.</p>
+
+<p>Perez's arrangement oozes class. Patiently building over nine minutes, tension rises and falls effortlessly. Sharp acid sounds creep in and out of the mix, casting energy away from the core of the track before being swallowed by a gorgeous layer of pads in the break.</p>
+
+<p>The palette of sounds used to carry the track strikes a perfect balance of dancefloor functionality with emotion. Gently easing elements in and out of the mix continually offers new direction to the track, making the nine minutes feel transient.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/trommel-crack-a-joke-girada05-2018.jpg" alt="Original article — Trommel Music, October 2018" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'xlr8r-cure-music-girada-2018',
+    title: 'Premiere: Hear Girada Unlimited\'s Cure Music Debut',
+    publication: 'XLR8R',
+    date: 'November 6, 2018',
+    dateISO: '2018-11-06',
+    category: 'premiere',
+    image: '/press/xlr8r-cure-music-girada-2018.jpg',
+    imageAlt: 'XLR8R — Premiere: Hear Girada Unlimited\'s Cure Music Debut, November 2018',
+    excerpt: 'XLR8R premieres Girada Unlimited\'s release on Cure Music — featuring "Zapatac", a Ricardo Villalobos favourite and staple of his BBC Radio 1 Essential Mix, rooted in tracks played in Valencia\'s legendary Ruta del Bakalao clubs.',
+    sourceUrl: 'https://xlr8r.com/news/premiere-hear-girada-unlimiteds-cure-music-debut/',
+    content: `
+<p><em>By XLR8R Staff — November 6, 2018</em></p>
+
+<p>The seventh release on Cure Music comes from Girada Unlimited, featuring two reworks of previously released and very rare tracks.</p>
+
+<p>"Zapatac," the A1, has proven especially popular with Ricardo Villalobos, becoming one of the staples in his recent sets and included in his BBC Radio 1 Essential Mix. It is a rework of Velodrome's "Capitaz," released in 1988.</p>
+
+<p>Momo Trosman, label head of Cure Music, recalls the effort involved in obtaining clearance: "It took us eight months to get hold of the Velodome guys, namely Krishna Goineau and Jordi Guber. First we tried to contact a label owner that had a connection with Jordi but didn't want to provide us the contact. After that, we did some research and wrote to all the labels that had released something from Liaisons Dangereuses trying to contact Krishna. It was a nightmare, no one answered us and we sent over 15 emails." After a few months, Trosman received a cellphone number and made contact. Jordi eventually said he "loves it."</p>
+
+<p>The identity of Girada Unlimited as Julian Perez's label was confirmed in the article. Perez explained the origin of the tracks in a quote:</p>
+
+<blockquote>"All these tracks were played in my hometown of Valencia in the late '80s and beginning of '90s. I was very young at that time when I was listening to those cassettes recorded in clubs such as Barraca, Chocolate, Spook Factory, ACTV, etc. My older friends were always bringing them from the nights and we were copying the tapes all the time. I haven't got those tapes these days but sometimes I look for sets online from the famous La Ruta del Bakalao. That was without a doubt one of the biggest movements in Spain at that time."</blockquote>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/xlr8r-cure-music-girada-2018.jpg" alt="Original article — XLR8R, November 2018" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'trommel-cure-music-girada-2018',
+    title: 'Mysterious Project Girada Unlimited Unleashes Cure Music 7/x',
+    publication: 'Trommel Music',
+    date: 'November 8, 2018',
+    dateISO: '2018-11-08',
+    category: 'news',
+    image: '/press/trommel-cure-music-girada-2018.jpg',
+    imageAlt: 'Trommel Music — Girada Unlimited Cure Music 7/x, November 2018',
+    excerpt: 'Trommel Music reports on Girada Unlimited\'s Cure Music release — Zapatac, "heavily played by Ricardo Villalobos" and featured in his BBC Radio 1 Essential Mix, with the B-side described as "one of Raresh\'s latest favourites."',
+    sourceUrl: 'https://trommelmusic.com/news/mysterious-project-girada-unlimited-unleash-cure-music-7-x/',
+    content: `
+<p><em>By Trommel — November 8, 2018</em></p>
+
+<p>Cure Music revealed the 7th issue of the Berlin-based imprint, coherent with their Latin American roots. Written and produced by Girada Unlimited, the forthcoming 12″ shows two powerful and dancefloor-oriented tracks, one per side.</p>
+
+<p>Sitting on the A-side, "Zapatac" is a rework of 1988's Velodrome – "Capataz". The track was heavily played by Ricardo Villalobos and found its way into his first solo BBC Radio 1 Essential Mix in September 2018.</p>
+
+<p>On the B-side, one of Raresh's latest favourites — another club-oriented rework and modernisation of a classic production.</p>
+
+<p>The mystery around the production contributed to the hype. Girada Unlimited is the name of Julian Perez's label, and Cure Music is headed by Momo Trosman and Felipe Valenzuela. The record was set to drop the following month via Cure Music.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/trommel-cure-music-girada-2018.jpg" alt="Original article — Trommel Music, November 2018" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'xlr8r-podcast-575-2019',
+    title: 'Podcast 575: Julian Perez',
+    publication: 'XLR8R',
+    date: 'January 8, 2019',
+    dateISO: '2019-01-08',
+    category: 'feature',
+    image: '/press/xlr8r-podcast-575-2019.jpg',
+    imageAlt: 'XLR8R Podcast 575: Julian Perez, January 2019',
+    excerpt: 'XLR8R presents Podcast 575 by Julian Perez — "cerebral groove from the celebrated Spaniard," recorded after returning from Japan. Includes a Q&A on his 2018, Girada Unlimited\'s growth, and upcoming tours in Australia and the US.',
+    sourceUrl: 'https://xlr8r.com/podcasts/podcast-575-julian-perez/',
+    content: `
+<p><em>By XLR8R Staff — January 8, 2019</em></p>
+
+<p>Spanish artist Julian Perez began DJing around the age of 16, particularly influenced by the old-school sounds of Detroit, Chicago and the United Kingdom. A promising reputation around his home town of Valencia eventually saw him relocate to Ibiza, a temporary base from which he's since ventured far and wide, performing regularly across North and South America and Europe, recognised for a fresh and elegant style.</p>
+
+<p>Perez released his first record in 2010 and launched Fathers &amp; Sons Productions, a vinyl-only label, in 2012. To date, every release sold out in the first days of sales. More recently, he launched Girada Unlimited, already garnering much support — including his debut on Cure Music with "Zapatac," one of the standout releases of 2018.</p>
+
+<p>Perez's podcast is reflective of such a stellar reputation. Full of deep sounds, breaks, flying pads and dreamy melodies, it's a cerebral and contemplative mix with a subtle groove from beginning to end. It was recorded after returning from Japan.</p>
+
+<h3>What have you been up to recently?</h3>
+<p>I've been spending some quality family time, working on the last touches of my upcoming music projects and playing really fun gigs. I have to say, the last three months were very thrilling and productive.</p>
+
+<h3>How was 2018 for you, on reflection?</h3>
+<p>Another hectic year for the books. A year of changes for me in many ways. Change is what makes us grow and we have to get the best out of them in order to improve. I'm extremely grateful for what I've achieved until now and how honest my decisions have been made. Being far from what's politically correct ain't always good for business, people say. Time flies, the music scene is constantly evolving, and you want to be rolling with it on your own way. So let's keep moving forward!</p>
+
+<h3>When and where was this mix recorded?</h3>
+<p>It was recorded in my studio, on a cozy night in autumn coming into winter. I was right back from my last tour in Japan. My mind was still there after listening to several hundreds of records that week in different stores around the country. I'm pretty sure that impacted my choice of the kind of mix I wanted to play. I was still feeling the jet lag and my mood was right on point to record it.</p>
+
+<h3>Is there a particular theme or idea behind it?</h3>
+<p>Kind of. I like to express my personal taste while mixing different styles on my podcasts and this one wasn't an exception. You can find a way more moody vibe on this one: deep sounds, breaks, flying pads, and dreamy melodies. It's definitely a mix to listen and get inspired, just like I did while recording it.</p>
+
+<h3>What's next on the horizon?</h3>
+<p>Right now packing bags to fly to the Australian summer for another exciting tour and some other trips afterward — USA, Central and South America, among other shows in Europe. My label Girada Unlimited is going smooth. Record number 06 is coming in the next weeks with a very interesting collaborative project. The label is in a great growing moment.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/xlr8r-podcast-575-2019.jpg" alt="Original article — XLR8R, January 2019" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'trommel-beyond-1214-girada06-2019',
+    title: 'Premiere: B1 – Julian Perez and Franco Cinelli – Beyond 1214 [GIRADA06]',
+    publication: 'Trommel Music',
+    date: 'February 14, 2019',
+    dateISO: '2019-02-14',
+    category: 'premiere',
+    image: '/press/trommel-beyond-1214-girada06-2019.jpg',
+    imageAlt: 'Trommel Music — Premiere: Beyond 1214 [GIRADA06], February 2019',
+    excerpt: 'Trommel Music premieres the B-side of GIRADA06 — Julian Perez and Franco Cinelli\'s collaborative EP. "Beyond 1214" takes a darker direction with a haunting bassline, choppy kicks and electro-tinged snares at "peak-time moments where the night feels as though it\'s succumbing to beautiful anarchy."',
+    sourceUrl: 'https://trommelmusic.com/music/premiere/premiere-b1-julian-perez-and-franco-cinelli-beyond-1214-girada06/',
+    content: `
+<p><em>By Billy Wilkinson — Trommel Music, February 14, 2019</em></p>
+
+<p>Spanish label Girada Unlimited has quickly become a "if you know, you know" type of label since its inception in 2017. Last calendar year only saw two releases from Julian Perez's label, but the Spaniard, along with Argentinian Franco Cinelli, have been hot on the vinyl presses, releasing their collaborative EP.</p>
+
+<p>The emergence of breaks into the world of minimal has been a welcome addition for most, but there's been a lot of copycats as this genre has grown in popularity. Not for Perez though, who you may know for his 4×4 minimal productions but has long been a producer and advocate for broken beats.</p>
+
+<p>This is perfectly showcased in "Beyond 1214" — the title being a possible reference to underground music's fascination with 4×4. The track follows a far darker path than we're used to from this label and Perez himself, with a haunting, spine-chilling bassline which fantastically complements the choppy kick drums and electro-tinged snares. The track feels perfectly fine-tuned to those peak-time moments where the night feels as though it's succumbing to beautiful anarchy.</p>
+
+<p>A-side "Entre M Y 3" offers a serving of what we're more used to from the producer. The 1-2 drum combo has that bouncy Julian Perez sound whilst the snares fuse the danceability of both aspects together. The track has an incredibly eerie, almost horror movie feel to it thanks to the driving yet tormenting bassline.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/trommel-beyond-1214-girada06-2019.jpg" alt="Original article — Trommel Music, February 2019" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
+`,
+  },
+  {
+    slug: 'trommel-052-julian-perez-2019',
+    title: 'Trommel.052 – Julian Perez',
+    publication: 'Trommel Music',
+    date: 'April 11, 2019',
+    dateISO: '2019-04-11',
+    category: 'feature',
+    image: '/press/trommel-052-julian-perez-2019.jpg',
+    imageAlt: 'Trommel Music — Trommel.052: Julian Perez, April 2019',
+    excerpt: 'Trommel Music presents mix 052 by Julian Perez — recorded during his US Tour, ahead of a busy spring and summer schedule including a Berg Audio showcase at Off Barcelona (Sónar week).',
+    sourceUrl: 'https://trommelmusic.com/podcast/trommel-052-julian-perez/',
+    content: `
+<p><em>By Trommel — April 11, 2019</em></p>
+
+<p>From Fathers and Sons Productions to Girada Unlimited, Julian Perez's work has always set the standards. While on his US Tour and with a busy spring and summer schedule — which includes a Berg Audio Off Barcelona showcase during Sónar week — Trommel is extremely happy to present his latest podcast.</p>
+
+<p>The mix reflects Perez's range as a selector: deep, considered, and never predictable. It follows his Trommel mix Trommel.052, his most recent mix for the publication, and comes at a peak moment for Girada Unlimited following the success of GIRADA06 with Franco Cinelli and the Cure Music collaboration that had been anchoring Ricardo Villalobos's sets throughout late 2018.</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/trommel-052-julian-perez-2019.jpg" alt="Original article — Trommel Music, April 2019" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
   {
@@ -806,6 +1417,11 @@ export const pressArticles: PressArticle[] = [
 
 <h3>Five records without which life would be boring?</h3>
 <p>Oh, there are so many! Let me try five different records for different moments: Michael Jackson — Thriller (1982), Aretha Franklin — Amazing Grace (1972), John Coltrane — A Love Supreme (1965), The Cure — Disintegration (1989), Derrick May — Strings of Life (1987).</p>
+
+<figure style="margin:3rem 0 0;border-top:1px solid #eee;padding-top:1.5rem;">
+<p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#ccc;margin-bottom:1rem;">Original article</p>
+<img src="/press/mixmag-io-2016-full.png" alt="Original article — Mixmag Russia, March 2016" style="width:100%;display:block;border:1px solid #f0f0f0;border-radius:2px;margin-bottom:8px;" loading="lazy" />
+</figure>
 `,
   },
 ]
