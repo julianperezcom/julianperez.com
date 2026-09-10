@@ -6,121 +6,478 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="INTERFASE: The Infinite Set es el primer libro de Julián Pérez, DJ y productor español. Un ensayo narrativo sobre música, carrera, identidad y vida en la carretera. Disponible en inglés y español en Amazon. / The debut book by Spanish DJ and producer Julian Perez, available in English and Spanish."
   ogImage="/interfase-cover-en.png"
 >
-  <main style="font-family:sans-serif;color:#111;line-height:1.8;background:#f7f7f5;">
+  <style>
+    .book-page {
+      font-family: sans-serif;
+      color: #111;
+      line-height: 1.8;
+      background: #f7f7f5;
+    }
+    .book-nav {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 1rem 2rem;
+    }
+    .book-nav a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .book-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .book-wrap--narrow {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+
+    /* HERO */
+    .book-hero {
+      background: #fff;
+      padding: 5rem 2rem 0;
+      text-align: center;
+    }
+    .book-hero-meta {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 1.5rem;
+    }
+    .book-hero-title {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin: 0 0 0.3rem;
+    }
+    .book-hero-subtitle {
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      color: #888;
+      font-style: italic;
+      font-weight: 400;
+      margin: 0 0 2.5rem;
+    }
+    .book-hero-btns {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3.5rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      border-radius: 2px;
+    }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: #111;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      border-radius: 2px;
+      border: 1px solid #ccc;
+    }
+    .book-hero-cover {
+      width: 100%;
+      max-width: 860px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 3px 3px 0 0;
+      box-shadow: 0 -4px 40px rgba(0,0,0,0.10);
+    }
+
+    /* BANNER TRIPTYCH */
+    .book-banner {
+      background: #111;
+      padding: 0;
+      line-height: 0;
+    }
+    .book-banner img {
+      width: 100%;
+      display: block;
+    }
+
+    /* LIFESTYLE SPLIT */
+    .book-split {
+      background: #fff;
+      padding: 5rem 2rem;
+    }
+    .book-split-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .book-split-img {
+      width: 100%;
+      display: block;
+      border-radius: 3px;
+    }
+    .book-split-text .eyebrow {
+      margin-bottom: 1.5rem;
+    }
+    .book-split-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.25rem;
+    }
+    .book-split-sub {
+      font-size: 1rem;
+      color: #888;
+      font-style: italic;
+      margin: 0 0 1.5rem;
+    }
+    .book-split-body p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.85;
+      margin: 0 0 1rem;
+    }
+
+    /* INTERIOR PAGE VISUAL */
+    .book-interior {
+      background: #f7f7f5;
+      padding: 5rem 2rem;
+    }
+    .book-interior-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .book-interior img {
+      width: 100%;
+      display: block;
+      border-radius: 3px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    }
+
+    /* QUOTES */
+    .book-quotes {
+      background: #fff;
+      padding: 5rem 2rem;
+    }
+    .book-quotes blockquote {
+      border-left: 3px solid #111;
+      padding: 0 0 0 1.5rem;
+      margin: 0 0 3rem;
+      color: #222;
+    }
+    .book-quotes blockquote p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin: 0;
+      font-style: italic;
+    }
+    .book-quotes blockquote:last-child {
+      margin-bottom: 0;
+    }
+
+    /* REVIEW */
+    .book-review {
+      background: #111;
+      padding: 5rem 2rem;
+    }
+    .book-review .eyebrow {
+      color: #555;
+    }
+    .book-review blockquote {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    .book-review blockquote p {
+      font-size: 1.25rem;
+      line-height: 1.75;
+      font-style: italic;
+      color: #e8e8e4;
+      margin: 0 0 1.5rem;
+    }
+    .book-review cite {
+      font-size: 0.75rem;
+      color: #555;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* EDITIONS */
+    .book-editions {
+      background: #f7f7f5;
+      padding: 5rem 2rem;
+    }
+    .book-editions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 560px;
+    }
+    .edition-card {
+      border: 1px solid #e5e5e3;
+      border-radius: 3px;
+      padding: 1.75rem;
+      text-align: center;
+      background: #fff;
+    }
+    .edition-card img {
+      width: 100%;
+      max-width: 90px;
+      display: block;
+      margin: 0 auto 1.25rem;
+      border-radius: 2px;
+    }
+    .edition-lang {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin: 0 0 0.4rem;
+    }
+    .edition-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin: 0 0 0.2rem;
+      line-height: 1.3;
+    }
+    .edition-isbn {
+      font-size: 0.72rem;
+      color: #bbb;
+      margin: 0 0 1.25rem;
+    }
+    .edition-card a {
+      display: block;
+      text-align: center;
+      background: #111;
+      color: #fff;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.65rem 1rem;
+      border-radius: 2px;
+    }
+
+    /* AUTHOR */
+    .book-author {
+      background: #fff;
+      padding: 5rem 2rem;
+    }
+    .book-author-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .book-author-photo {
+      width: 100%;
+      border-radius: 3px;
+      display: block;
+    }
+    .book-author-text .eyebrow {
+      margin-bottom: 1rem;
+    }
+    .book-author-text p {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: #555;
+      margin: 0 0 1.25rem;
+    }
+    .book-author-text a {
+      font-size: 0.78rem;
+      color: #888;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 2px;
+    }
+
+    @media (max-width: 700px) {
+      .book-split-grid,
+      .book-interior-grid,
+      .book-author-grid {
+        grid-template-columns: 1fr;
+      }
+      .book-split-grid .book-split-img {
+        order: -1;
+      }
+      .book-editions-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .book-hero {
+        padding: 3.5rem 1.5rem 0;
+      }
+    }
+  </style>
+
+  <main class="book-page">
 
     <!-- NAV -->
-    <div style="background:#fff;border-bottom:1px solid #eee;padding:1rem 2rem;">
-      <a href="/" style="color:#888;text-decoration:none;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;">← julianperez.com</a>
+    <div class="book-nav">
+      <a href="/">← julianperez.com</a>
     </div>
 
-    <!-- HERO: portada completa -->
-    <section style="background:#fff;padding:4rem 2rem 3rem;">
-      <div style="max-width:900px;margin:0 auto;">
-        <p style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#aaa;margin-bottom:1.5rem;">Julián Pérez · Primer libro · 2026</p>
-        <img
-          src="/interfase-cover-es.png"
-          alt="INTERFASE: The Infinite Set / La sesión infinita — portada y contraportada del libro de Julián Pérez"
-          style="width:100%;max-width:860px;display:block;border-radius:3px;box-shadow:0 8px 40px rgba(0,0,0,0.12);margin-bottom:2.5rem;"
-        />
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="https://www.amazon.com/dp/8409813726" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;padding:0.85rem 1.75rem;border-radius:2px;">Buy in English — Amazon →</a>
-          <a href="https://www.amazon.com/dp/8409794535" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:#111;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;padding:0.85rem 1.75rem;border-radius:2px;border:1px solid #ccc;">Comprar en español — Amazon →</a>
+    <!-- HERO -->
+    <section class="book-hero">
+      <div class="book-wrap--narrow">
+        <p class="book-hero-meta">Julián Pérez · Primer libro · 2026</p>
+        <h1 class="book-hero-title">INTERFASE</h1>
+        <p class="book-hero-subtitle">The Infinite Set &nbsp;/&nbsp; La sesión infinita</p>
+        <div class="book-hero-btns">
+          <a href="https://www.amazon.com/dp/8409813726" target="_blank" rel="noopener" class="btn-primary">Buy in English — Amazon →</a>
+          <a href="https://www.amazon.com/dp/8409794535" target="_blank" rel="noopener" class="btn-secondary">Comprar en español — Amazon →</a>
+        </div>
+      </div>
+      <img
+        src="/interfase-cover-es.png"
+        alt="INTERFASE: The Infinite Set / La sesión infinita — portada y contraportada del libro de Julián Pérez"
+        class="book-hero-cover"
+      />
+    </section>
+
+    <!-- BANNER TRIPTYCH -->
+    <section class="book-banner">
+      <img src="/book/interfase-banner.jpg" alt="INTERFASE — libro de Julián Pérez" loading="lazy" />
+    </section>
+
+    <!-- ES SPLIT: lifestyle photo + Spanish text -->
+    <section class="book-split">
+      <div class="book-split-grid">
+        <img src="/book/interfase-lifestyle-01.jpg" alt="INTERFASE — Julián Pérez" class="book-split-img" loading="lazy" />
+        <div class="book-split-text">
+          <p class="eyebrow">Español</p>
+          <h2 class="book-split-title">INTERFASE</h2>
+          <p class="book-split-sub">La sesión infinita</p>
+          <div class="book-split-body">
+            <p>Hay etapas que no se pueden contar en orden. Lugares internos que no tienen nombre. Procesos que no siguen un patrón, pero dejan huella.</p>
+            <p>Este libro no está escrito desde la certeza ni desde el éxito, sino desde el tránsito: ese espacio incómodo, fértil y necesario en el que uno ya no es quien era, pero todavía no sabe quién está empezando a ser.</p>
+            <p><em>Interfase</em> no es un manual para triunfar ni una autobiografía al uso. Es un recorrido honesto, íntimo y —a veces— crudo por lo que ocurre cuando la pasión no entiende de atajos ni de garantías. Es un libro sobre música, sí, pero sobre todo sobre la vida: sobre respetar los tiempos, sostener la duda, aceptar los cambios y aprender a pausar.</p>
+            <p>Desde los primeros pasos en la escena <em>underground</em> hasta festivales internacionales, Julián Pérez comparte por primera vez lo que no se ve desde fuera: el desgaste silencioso, la fidelidad al instinto y la belleza de no llegar a ningún sitio, pero de seguir.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT — BILINGUAL -->
-    <section style="padding:4rem 2rem;background:#f7f7f5;">
-      <div style="max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
-
-        <!-- ES -->
+    <!-- EN SPLIT: interior photo + English text -->
+    <section class="book-interior">
+      <div class="book-interior-grid">
         <div>
-          <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#aaa;margin-bottom:1.25rem;">Español</p>
-          <h1 style="font-size:1.6rem;font-weight:700;line-height:1.1;margin:0 0 0.25rem;letter-spacing:-0.01em;">INTERFASE</h1>
-          <p style="font-size:1rem;color:#888;margin:0 0 1.5rem;font-style:italic;">La sesión infinita</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;margin-bottom:1rem;">Hay etapas que no se pueden contar en orden. Lugares internos que no tienen nombre. Procesos que no siguen un patrón, pero dejan huella.</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;margin-bottom:1rem;">Este libro no está escrito desde la certeza ni desde el éxito, sino desde el tránsito: ese espacio incómodo, fértil y necesario en el que uno ya no es quien era, pero todavía no sabe quién está empezando a ser.</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;margin-bottom:1rem;"><em>Interfase</em> no es un manual para triunfar ni una autobiografía al uso. Es un recorrido honesto, íntimo y —a veces— crudo por lo que ocurre cuando la pasión no entiende de atajos ni de garantías. Es un libro sobre música, sí, pero sobre todo sobre la vida: sobre respetar los tiempos, sostener la duda, aceptar los cambios y aprender a pausar.</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;">Desde los primeros pasos en la escena <em>underground</em> hasta festivales internacionales, Julián Pérez comparte por primera vez lo que no se ve desde fuera: el desgaste silencioso, la fidelidad al instinto y la belleza de no llegar a ningún sitio, pero de seguir.</p>
+          <p class="eyebrow">English</p>
+          <h2 class="book-split-title">INTERFASE</h2>
+          <p class="book-split-sub">The Infinite Set</p>
+          <div class="book-split-body">
+            <p><em>INTERFASE</em> is not a success manual, nor a conventional autobiography. It is an honest, intimate — and at times raw — account of what happens when passion has no shortcuts and no guarantees.</p>
+            <p>There are stages that cannot be told in order. Internal places without names. Processes that follow no pattern but leave a mark. This book is written not from certainty or success, but from transit: that uncomfortable, fertile space where you are no longer who you were, but don't yet know who you are becoming.</p>
+            <p>It is a book about music — but above all about life: about respecting timing, holding doubt, accepting change, and learning to pause.</p>
+            <p>From the first steps in the underground scene to international festivals, Julian Perez shares for the first time what is not visible from the outside: the silent exhaustion, the loyalty to instinct, and the strange beauty of not arriving anywhere, but continuing anyway.</p>
+          </div>
         </div>
-
-        <!-- EN -->
-        <div>
-          <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#aaa;margin-bottom:1.25rem;">English</p>
-          <h2 style="font-size:1.6rem;font-weight:700;line-height:1.1;margin:0 0 0.25rem;letter-spacing:-0.01em;">INTERFASE</h2>
-          <p style="font-size:1rem;color:#888;margin:0 0 1.5rem;font-style:italic;">The Infinite Set</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;margin-bottom:1rem;"><em>INTERFASE</em> is not a success manual, nor a conventional autobiography. It is an honest, intimate — and at times raw — account of what happens when passion has no shortcuts and no guarantees.</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;margin-bottom:1rem;">There are stages that cannot be told in order. Internal places without names. Processes that follow no pattern but leave a mark. This book is written not from certainty or success, but from transit: that uncomfortable, fertile space where you are no longer who you were, but don't yet know who you are becoming.</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;margin-bottom:1rem;">It is a book about music — but above all about life: about respecting timing, holding doubt, accepting change, and learning to pause.</p>
-          <p style="font-size:0.95rem;color:#444;line-height:1.8;">From the first steps in the underground scene to international festivals, Julian Perez shares for the first time what is not visible from the outside: the silent exhaustion, the loyalty to instinct, and the strange beauty of not arriving anywhere, but continuing anyway.</p>
-        </div>
-
+        <img src="/book/interfase-interior.jpg" alt="Interior pages of INTERFASE" loading="lazy" />
       </div>
     </section>
 
-    <!-- EXCERPTS -->
-    <section style="padding:4rem 2rem;background:#fff;">
-      <div style="max-width:700px;margin:0 auto;">
-        <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#aaa;margin-bottom:2.5rem;">Del libro · From the book</p>
+    <!-- QUOTES -->
+    <section class="book-quotes">
+      <div class="book-wrap--narrow">
+        <p class="eyebrow">Del libro · From the book</p>
 
-        <blockquote style="border-left:3px solid #111;padding:0 0 0 1.5rem;margin:0 0 3rem;color:#222;">
-          <p style="font-size:1.05rem;line-height:1.85;margin:0;font-style:italic;">"Cuando has sido DJ residente y llevas miles de mezclas encima, cuando has improvisado en mil salas, eso ya está dentro de ti. No lo fuerzas, no lo finges. Es instinto. Ahí es cuando entiendo a Senna. Cuando entras en ese estado en el que no piensas. Solo estás. Y todo fluye."</p>
+        <blockquote>
+          <p>"Cuando has sido DJ residente y llevas miles de mezclas encima, cuando has improvisado en mil salas, eso ya está dentro de ti. No lo fuerzas, no lo finges. Es instinto. Ahí es cuando entiendo a Senna. Cuando entras en ese estado en el que no piensas. Solo estás. Y todo fluye."</p>
         </blockquote>
 
-        <blockquote style="border-left:3px solid #111;padding:0 0 0 1.5rem;margin:0 0 3rem;color:#222;">
-          <p style="font-size:1.05rem;line-height:1.85;margin:0;font-style:italic;">"Aprendí que no quiero llenar una sala si eso implica vaciarme yo. Que prefiero pinchar para veinte personas que entienden lo que hago a estar en un festival enorme forzando algo que no me representa. Ser fiel a lo que uno es no siempre da likes, ni contratos. Pero da paz."</p>
+        <blockquote>
+          <p>"Aprendí que no quiero llenar una sala si eso implica vaciarme yo. Que prefiero pinchar para veinte personas que entienden lo que hago a estar en un festival enorme forzando algo que no me representa. Ser fiel a lo que uno es no siempre da likes, ni contratos. Pero da paz."</p>
         </blockquote>
 
-        <blockquote style="border-left:3px solid #111;padding:0 0 0 1.5rem;margin:0 0 3rem;color:#222;">
-          <p style="font-size:1.05rem;line-height:1.85;margin:0;font-style:italic;">"Nunca olvidaré un bolo en Barcelona en el que me pagaron con una cena. Ni caché, ni contrato, ni nada parecido. Esa noche aprendí más que en muchos otros eventos: cómo montar un set con un equipo destartalado, cómo aguantar cuando nadie te mira. Si no eres capaz de darlo todo en esas condiciones, tampoco lo harás en un festival con diez mil personas."</p>
+        <blockquote>
+          <p>"Nunca olvidaré un bolo en Barcelona en el que me pagaron con una cena. Esa noche aprendí más que en muchos otros eventos: cómo montar un set con un equipo destartalado, cómo aguantar cuando nadie te mira. Si no eres capaz de darlo todo en esas condiciones, tampoco lo harás en un festival con diez mil personas."</p>
         </blockquote>
 
-        <blockquote style="border-left:3px solid #111;padding:0 0 0 1.5rem;margin:0 0 0;color:#222;">
-          <p style="font-size:1.05rem;line-height:1.85;margin:0;font-style:italic;">"Es curioso: cuando dejas de correr detrás de algo, las cosas empiezan a aparecer solas. No porque el universo conspire, sino porque ya no proyectas esa desesperación. Trabajas con más calma. Estás más centrado. Y eso se nota."</p>
+        <blockquote>
+          <p>"Es curioso: cuando dejas de correr detrás de algo, las cosas empiezan a aparecer solas. No porque el universo conspire, sino porque ya no proyectas esa desesperación. Trabajas con más calma. Estás más centrado. Y eso se nota."</p>
         </blockquote>
       </div>
     </section>
 
     <!-- EDITORIAL REVIEW -->
-    <section style="padding:4rem 2rem;background:#f7f7f5;border-top:1px solid #eee;border-bottom:1px solid #eee;">
-      <div style="max-width:700px;margin:0 auto;">
-        <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#aaa;margin-bottom:1.5rem;">Valoración editorial</p>
-        <p style="font-size:1.1rem;line-height:1.85;font-style:italic;color:#333;margin-bottom:1rem;">"Una obra de enorme valor literario por su originalidad, su estilo directo y descarnado, sobrio y sin tapujos. Un magnífico libro armado de una voz propia con mucha fuerza expresiva y belleza poética que no solo nos atrapa por su narrativa concisa, sino que nos hace reflexionar sobre las complejidades de la vida creativa, el éxito y la necesidad de mirar hacia nuestro interior."</p>
-        <p style="font-size:0.78rem;color:#bbb;letter-spacing:0.04em;">— Editorial Letra Minúscula · Informe de lectura, 2025</p>
+    <section class="book-review">
+      <div class="book-wrap--narrow">
+        <p class="eyebrow">Valoración editorial</p>
+        <blockquote>
+          <p>"Una obra de enorme valor literario por su originalidad, su estilo directo y descarnado, sobrio y sin tapujos. Un magnífico libro armado de una voz propia con mucha fuerza expresiva y belleza poética que no solo nos atrapa por su narrativa concisa, sino que nos hace reflexionar sobre las complejidades de la vida creativa, el éxito y la necesidad de mirar hacia nuestro interior."</p>
+          <cite>— Editorial Letra Minúscula · Informe de lectura, 2025</cite>
+        </blockquote>
       </div>
     </section>
 
     <!-- EDITIONS -->
-    <section style="padding:4rem 2rem;background:#fff;">
-      <div style="max-width:860px;margin:0 auto;">
-        <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:#aaa;margin-bottom:2.5rem;">Ediciones · Editions</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:560px;">
+    <section class="book-editions">
+      <div class="book-wrap">
+        <p class="eyebrow">Ediciones · Editions</p>
+        <div class="book-editions-grid">
 
-          <div style="border:1px solid #eee;border-radius:3px;padding:1.75rem;text-align:center;">
-            <img src="/interfase-cover-en.png" alt="INTERFASE: The Infinite Set — English edition" style="width:100%;max-width:100px;display:block;margin:0 auto 1.25rem;border-radius:2px;" />
-            <p style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#bbb;margin:0 0 0.4rem;">English</p>
-            <p style="font-weight:700;font-size:0.9rem;margin:0 0 0.2rem;line-height:1.3;">The Infinite Set</p>
-            <p style="font-size:0.75rem;color:#bbb;margin:0 0 1.25rem;">ISBN 978-8409813728</p>
-            <a href="https://www.amazon.com/dp/8409813726" target="_blank" rel="noopener" style="display:block;text-align:center;background:#111;color:#fff;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:0.65rem 1rem;border-radius:2px;">Amazon →</a>
+          <div class="edition-card">
+            <img src="/interfase-cover-en.png" alt="INTERFASE: The Infinite Set — English edition" />
+            <p class="edition-lang">English</p>
+            <p class="edition-title">The Infinite Set</p>
+            <p class="edition-isbn">ISBN 978-8409813728</p>
+            <a href="https://www.amazon.com/dp/8409813726" target="_blank" rel="noopener">Amazon →</a>
           </div>
 
-          <div style="border:1px solid #eee;border-radius:3px;padding:1.75rem;text-align:center;">
-            <img src="/interfase-cover-es-sq.png" alt="INTERFASE: La sesión infinita — edición en español" style="width:100%;max-width:100px;display:block;margin:0 auto 1.25rem;border-radius:2px;" />
-            <p style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#bbb;margin:0 0 0.4rem;">Español</p>
-            <p style="font-weight:700;font-size:0.9rem;margin:0 0 0.2rem;line-height:1.3;">La sesión infinita</p>
-            <p style="font-size:0.75rem;color:#bbb;margin:0 0 1.25rem;">ISBN 978-8409794539</p>
-            <a href="https://www.amazon.com/dp/8409794535" target="_blank" rel="noopener" style="display:block;text-align:center;background:#111;color:#fff;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:0.65rem 1rem;border-radius:2px;">Amazon →</a>
+          <div class="edition-card">
+            <img src="/interfase-cover-es-sq.png" alt="INTERFASE: La sesión infinita — edición en español" />
+            <p class="edition-lang">Español</p>
+            <p class="edition-title">La sesión infinita</p>
+            <p class="edition-isbn">ISBN 978-8409794539</p>
+            <a href="https://www.amazon.com/dp/8409794535" target="_blank" rel="noopener">Amazon →</a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ABOUT AUTHOR -->
-    <section style="padding:3rem 2rem 4rem;background:#f7f7f5;border-top:1px solid #eee;">
-      <div style="max-width:700px;margin:0 auto;">
-        <p style="font-size:0.95rem;line-height:1.85;color:#666;margin-bottom:1rem;">Julián Pérez es DJ y productor de música electrónica, nacido en Valencia en 1982. Afincado en Ibiza desde 2006, ha actuado en venues y festivales de Europa, Asia, América del Norte y América del Sur, y ha publicado música en Raum...musik, VIVa Music, Leftroom, 1Trax y sus propios sellos Fathers & Sons Productions y Girada Unlimited. <em>INTERFASE</em> es su primer libro.</p>
-        <a href="/" style="font-size:0.78rem;color:#888;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid #ddd;padding-bottom:2px;">← julianperez.com</a>
+    <!-- AUTHOR -->
+    <section class="book-author">
+      <div class="book-author-grid">
+        <img src="/book/interfase-author.jpg" alt="Julián Pérez" class="book-author-photo" loading="lazy" />
+        <div class="book-author-text">
+          <p class="eyebrow">Sobre el autor · About the author</p>
+          <p>Julián Pérez es DJ y productor de música electrónica, nacido en Valencia en 1982. Afincado en Ibiza desde 2006, ha actuado en venues y festivales de Europa, Asia, América del Norte y América del Sur, y ha publicado música en Raum...musik, VIVa Music, Leftroom, 1Trax y sus propios sellos Fathers &amp; Sons Productions y Girada Unlimited.</p>
+          <p><em>INTERFASE</em> es su primer libro. Disponible en inglés y en español.</p>
+          <a href="/">← julianperez.com</a>
+        </div>
       </div>
     </section>
 
