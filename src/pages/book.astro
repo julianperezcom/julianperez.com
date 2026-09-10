@@ -113,13 +113,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     /* BANNER TRIPTYCH */
     .book-banner {
-      background: #111;
-      padding: 0;
-      line-height: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 420px;
+      overflow: hidden;
     }
-    .book-banner img {
+    .book-banner-panel {
+      overflow: hidden;
+    }
+    .book-banner-panel img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
+    }
+    @media (max-width: 600px) {
+      .book-banner {
+        height: 240px;
+      }
     }
 
     /* LIFESTYLE SPLIT */
@@ -368,9 +379,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
 
     <!-- BANNER TRIPTYCH -->
-    <section class="book-banner">
-      <img src="/book/interfase-banner.jpg" alt="INTERFASE — libro de Julián Pérez" loading="lazy" />
-    </section>
+    <div class="book-banner">
+      <div class="book-banner-panel">
+        <img src="/book/interfase-lifestyle-01.jpg" alt="INTERFASE — libro en manos" loading="lazy" />
+      </div>
+      <div class="book-banner-panel">
+        <img src="/book/interfase-interior.jpg" alt="INTERFASE — páginas interiores" loading="lazy" />
+      </div>
+      <div class="book-banner-panel">
+        <img src="/book/interfase-author.jpg" alt="Julián Pérez" loading="lazy" />
+      </div>
+    </div>
 
     <!-- ES SPLIT: lifestyle photo + Spanish text -->
     <section class="book-split">
