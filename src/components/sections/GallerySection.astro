@@ -27,24 +27,50 @@ const DMT = shuffle(manifest.doingmything.filter(f => f.trim() !== ''));
 
   <div id="gallery-flyers" class="gallery-grid">
     {FLYERS.map(f => (
-      <div class="gallery-item">
+      <div class="gallery-item" onclick={`openLightbox('${encodeURIComponent(f)}', 'flyers')`}>
         <img src={`/gallery/flyers/${encodeURIComponent(f)}`} loading="lazy" alt="" />
-        <div class="gallery-overlay"></div>
+        <div class="gallery-overlay"><span class="gallery-zoom-icon">&#x2922;</span></div>
       </div>
     ))}
   </div>
 
   <div id="gallery-dmt" class="gallery-grid" style="display:none;">
     {DMT.map(f => (
-      <div class="gallery-item">
+      <div class="gallery-item" onclick={`openLightbox('${encodeURIComponent(f)}', 'dmt')`}>
         <img src={`/gallery/doingmything/${encodeURIComponent(f)}`} loading="lazy" alt="" />
-        <div class="gallery-overlay"></div>
+        <div class="gallery-overlay"><span class="gallery-zoom-icon">&#x2922;</span></div>
       </div>
     ))}
   </div>
 
   <div style="height: 96px;"></div>
 </div>
+
+<!-- LIGHTBOX -->
+<div id="gallery-lightbox" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.95);display:none;align-items:center;justify-content:center;">
+  <button onclick="closeLightbox()" style="position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;opacity:0.7;">&#x2715;</button>
+  <a id="lb-download" href="" download style="position:absolute;top:1.25rem;left:1.5rem;background:rgba(255,255,255,0.1);color:#fff;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;padding:0.5rem 1rem;border-radius:2px;border:1px solid rgba(255,255,255,0.2);">Download</a>
+  <button onclick="lbNav(-1)" style="position:absolute;left:1rem;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;opacity:0.6;padding:1rem;">&#8249;</button>
+  <button onclick="lbNav(1)" style="position:absolute;right:1rem;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;opacity:0.6;padding:1rem;">&#8250;</button>
+  <img id="lb-img" src="" style="max-width:90vw;max-height:90vh;object-fit:contain;display:block;border-radius:2px;" />
+  <div id="lb-counter" style="position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.4);font-size:0.72rem;letter-spacing:0.1em;"></div>
+</div>
+
+<style>
+  .gallery-item { cursor: pointer; }
+  .gallery-zoom-icon {
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-size:1.5rem;
+    opacity:0;
+    transition:opacity 0.2s;
+    pointer-events:none;
+  }
+  .gallery-item:hover .gallery-zoom-icon { opacity: 1; }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+</style>
 
 <script is:inline>
   function switchGallery(tab, btn) {
@@ -53,4 +79,49 @@ const DMT = shuffle(manifest.doingmything.filter(f => f.trim() !== ''));
     document.getElementById('gallery-flyers').style.display = tab === 'flyers' ? '' : 'none';
     document.getElementById('gallery-dmt').style.display = tab === 'dmt' ? '' : 'none';
   }
+
+  var _lbImages = [];
+  var _lbIndex = 0;
+
+  function openLightbox(filename, tab) {
+    var prefix = tab === 'dmt' ? '/gallery/doingmything/' : '/gallery/flyers/';
+    var grid = document.getElementById(tab === 'dmt' ? 'gallery-dmt' : 'gallery-flyers');
+    _lbImages = Array.from(grid.querySelectorAll('img')).map(function(img) { return img.src; });
+    _lbIndex = _lbImages.findIndex(function(s) { return s.includes(filename); });
+    if (_lbIndex < 0) _lbIndex = 0;
+    var lb = document.getElementById('gallery-lightbox');
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    lbShow();
+  }
+
+  function lbShow() {
+    var src = _lbImages[_lbIndex];
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lb-download').href = src;
+    document.getElementById('lb-download').download = src.split('/').pop();
+    document.getElementById('lb-counter').textContent = (_lbIndex + 1) + ' / ' + _lbImages.length;
+  }
+
+  function lbNav(dir) {
+    _lbIndex = (_lbIndex + dir + _lbImages.length) % _lbImages.length;
+    lbShow();
+  }
+
+  function closeLightbox() {
+    document.getElementById('gallery-lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    var lb = document.getElementById('gallery-lightbox');
+    if (lb.style.display !== 'flex') return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbNav(-1);
+    if (e.key === 'ArrowRight') lbNav(1);
+  });
+
+  document.getElementById('gallery-lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
 </script>
