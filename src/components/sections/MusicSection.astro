@@ -82,8 +82,23 @@ const fathersWithTitles = await Promise.all(
     <!-- ── DJ SETS & PODCASTS ── -->
     <div id="tab-sets">
 
+      <p class="tab-source-label">
+        <span class="dot sc">●</span> SoundCloud
+        <a href="https://soundcloud.com/julianperez/sets/sets-podcasts"
+           target="_blank" rel="noopener noreferrer" class="source-link">Ver playlist ↗</a>
+      </p>
+      <iframe
+        width="100%"
+        height="450"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/julianperez/sets/sets-podcasts&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
+        style="border-radius:3px;"
+      ></iframe>
+
       {ytSets.length > 0 && (
-        <p class="tab-source-label">
+        <p class="tab-source-label" style="margin-top:48px;">
           <span class="dot yt">●</span> YouTube
           <a href="https://www.youtube.com/playlist?list=PLLRxDKy3npviQXeQI5fRtp0FGNKJIfYNN"
              target="_blank" rel="noopener noreferrer" class="source-link">Ver playlist ↗</a>
@@ -105,25 +120,6 @@ const fathersWithTitles = await Promise.all(
           )
         })}
       </div>
-
-      <p class="tab-source-label" style="margin-top:48px;">
-        <span class="dot sc">●</span> SoundCloud
-        <a href="https://soundcloud.com/julianperez/sets/sets-podcasts"
-           target="_blank" rel="noopener noreferrer" class="source-link">Ver playlist ↗</a>
-      </p>
-      <iframe
-        width="100%"
-        height="450"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/julianperez/sets/sets-podcasts&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
-        style="border-radius:3px;"
-      ></iframe>
-
-      {ytSets.length === 0 && (
-        <div class="empty-state" data-i18n="music.coming_soon">Coming soon</div>
-      )}
     </div>
 
     <!-- ── LIVE VIDEOS ── -->
