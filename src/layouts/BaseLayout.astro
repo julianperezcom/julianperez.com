@@ -310,29 +310,39 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="preconnect" href="https://f4.bcbits.com" />
   <link rel="preconnect" href="https://rest.bandsintown.com" />
 
-  <!-- Meta Pixel -->
+  <!-- Consent defaults (GDPR) — must run before GA4 and Pixel load -->
   <script is:inline>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '143923866325111');
-    fbq('track', 'PageView');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var _consent = (function(){ try { return localStorage.getItem('cookie_consent'); } catch(e){ return null; } })();
+    if (_consent === 'accepted') {
+      gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'granted' });
+    } else {
+      gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
+    }
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=143923866325111&ev=PageView&noscript=1" /></noscript>
 
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-624EM29GNS"></script>
   <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-624EM29GNS');
+  </script>
+
+  <!-- Meta Pixel — only load if consent already given (first visit: loaded after accept via cookie banner) -->
+  <script is:inline>
+    if ((function(){ try { return localStorage.getItem('cookie_consent'); } catch(e){ return null; } })() === 'accepted') {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '143923866325111');
+      fbq('track', 'PageView');
+    }
   </script>
 
   <!-- Vercel Analytics -->
@@ -349,8 +359,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   var T={
     en:{
       'nav.music':'Music','nav.discography':'Discography','nav.store':'Store',
-      'nav.events':'Events','nav.gallery':'Gallery','nav.press':'Press',
-      'nav.links':'Links','nav.booking':'Booking',
+      'nav.events':'Events','nav.gallery':'Gallery','nav.biography':'Biography',
+      'nav.press':'Press','nav.links':'Links','nav.booking':'Booking',
       'hero.unmute':'Unmute','hero.mute':'Mute',
       'music.eyebrow':'Music','music.sub':'Mixes, live sets and original productions.',
       'music.tab.sets':'DJ Sets & Podcasts','music.tab.live':'Live Videos','music.tab.tracks':'Tracks',
@@ -406,8 +416,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     },
     es:{
       'nav.music':'Música','nav.discography':'Discografía','nav.store':'Tienda',
-      'nav.events':'Eventos','nav.gallery':'Galería','nav.press':'Prensa',
-      'nav.links':'Links','nav.booking':'Booking',
+      'nav.events':'Eventos','nav.gallery':'Galería','nav.biography':'Biografía',
+      'nav.press':'Prensa','nav.links':'Links','nav.booking':'Booking',
       'hero.unmute':'Activar sonido','hero.mute':'Silenciar',
       'music.eyebrow':'Música','music.sub':'Mixes, directo y producciones originales.',
       'music.tab.sets':'DJ Sets & Podcasts','music.tab.live':'Vídeos en Vivo','music.tab.tracks':'Tracks',

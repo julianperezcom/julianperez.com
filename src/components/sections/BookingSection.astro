@@ -78,8 +78,8 @@ const hcaptchaKey  = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY      ?? '10000000-
           <div class="h-captcha" data-sitekey={hcaptchaKey} id="hcap-booking" style="margin:20px 0 8px;"></div>
 
           <div class="form-check">
-            <input type="checkbox" required>
-            <span><span data-i18n="booking.privacy">I have read and accept the</span> <a href="/privacy" data-i18n="booking.privacy.link">Privacy and Cookie Policy</a></span>
+            <input type="checkbox" id="privacy-booking" required>
+            <label for="privacy-booking"><span data-i18n="booking.privacy">I have read and accept the</span> <a href="/privacy" data-i18n="booking.privacy.link">Privacy and Cookie Policy</a></label>
           </div>
           <button type="submit" id="btn-booking" data-i18n="booking.send_booking">Send Booking Request</button>
         </form>
@@ -115,8 +115,8 @@ const hcaptchaKey  = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY      ?? '10000000-
           <div class="h-captcha" data-sitekey={hcaptchaKey} id="hcap-contact" style="margin:20px 0 8px;"></div>
 
           <div class="form-check">
-            <input type="checkbox" required>
-            <span><span data-i18n="booking.privacy">I have read and accept the</span> <a href="/privacy" data-i18n="booking.privacy.link">Privacy and Cookie Policy</a></span>
+            <input type="checkbox" id="privacy-contact" required>
+            <label for="privacy-contact"><span data-i18n="booking.privacy">I have read and accept the</span> <a href="/privacy" data-i18n="booking.privacy.link">Privacy and Cookie Policy</a></label>
           </div>
           <button type="submit" id="btn-contact" data-i18n="booking.send_message">Send Message</button>
         </form>

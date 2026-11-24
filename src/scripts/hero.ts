@@ -56,14 +56,15 @@ function toggleMute() {
   if (!heroVid) return
 
   heroVid.muted = !heroVid.muted
+  const t = (window as any).__t__ || {}
   if (heroVid.muted) {
-    if (unmuteLabel) unmuteLabel.textContent = 'Activar sonido'
+    if (unmuteLabel) unmuteLabel.textContent = t['hero.unmute'] || 'Unmute'
     if (wave1) (wave1 as HTMLElement).style.display = ''
     if (wave2) (wave2 as HTMLElement).style.display = ''
     if (muteX1) (muteX1 as HTMLElement).style.display = 'none'
     if (muteX2) (muteX2 as HTMLElement).style.display = 'none'
   } else {
-    if (unmuteLabel) unmuteLabel.textContent = 'Silenciar'
+    if (unmuteLabel) unmuteLabel.textContent = t['hero.mute'] || 'Mute'
     if (wave1) (wave1 as HTMLElement).style.display = 'none'
     if (wave2) (wave2 as HTMLElement).style.display = 'none'
     if (muteX1) (muteX1 as HTMLElement).style.display = ''

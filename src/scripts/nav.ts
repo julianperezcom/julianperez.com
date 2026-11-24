@@ -6,7 +6,7 @@ function muteHero() {
   const v = document.getElementById('heroVideo') as HTMLVideoElement | null
   if (v && !v.muted) {
     v.muted = true
-    const btn = document.getElementById('unmuteBtn')
+    const btn = document.getElementById('heroUnmute')
     if (btn) btn.textContent = 'Activar sonido'
   }
 }
