@@ -65,6 +65,18 @@ nav a {
 }
 nav a:last-child { border-right: 1px solid rgba(0,0,0,0.15); }
 nav a:hover { opacity: 1; }
+nav a.nav-booking-cta {
+  background: var(--black);
+  color: #fff;
+  opacity: 1;
+  border-left: none;
+  border-right: none !important;
+  margin-left: 20px;
+  padding: 8px 20px;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+nav a.nav-booking-cta:hover { opacity: 0.75; }
 .header-right {
   display: flex;
   justify-content: flex-end;

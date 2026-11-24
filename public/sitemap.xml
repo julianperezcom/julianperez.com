@@ -7,40 +7,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://julianperez.com/#music</loc>
+    <loc>https://julianperez.com/booking</loc>
     <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://julianperez.com/#discography</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://julianperez.com/#events</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://julianperez.com/#store</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://julianperez.com/#press</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://julianperez.com/#booking</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://julianperez.com/book</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://julianperez.com/epk</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://julianperez.com/bio</loc>

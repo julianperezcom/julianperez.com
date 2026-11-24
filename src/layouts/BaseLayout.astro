@@ -204,7 +204,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       },
       "url": event.url,
       "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      ...(event.offers?.length > 0 && {
+        "offers": event.offers.map((o: { type: string; url: string }) => ({
+          "@type": "Offer",
+          "url": o.url,
+          "availability": "https://schema.org/InStock"
+        }))
+      })
     })} />
   ))}
 

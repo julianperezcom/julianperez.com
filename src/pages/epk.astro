@@ -1,0 +1,413 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Julian Perez — Electronic Press Kit (EPK)"
+  description="Official EPK for Julian Perez. DJ and producer based in Ibiza, Spain. Resident at Underground Ibiza. Bio, press photo, tech rider, music and booking info for promoters."
+  ogImage="/og-image.jpg"
+>
+  <style>
+    * { box-sizing: border-box; }
+
+    .epk {
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    .epk-nav {
+      padding: 1.25rem 2.5rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .epk-nav a { color: #888; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .epk-nav-right { font-size: 0.65rem; color: #bbb; letter-spacing: 0.08em; }
+
+    /* HERO */
+    .epk-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+      border-bottom: 1px solid #eee;
+    }
+    .epk-hero-img {
+      background: #0E0E0E;
+      overflow: hidden;
+    }
+    .epk-hero-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      opacity: 0.85;
+    }
+    .epk-hero-text {
+      padding: 3.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 1px solid #eee;
+    }
+    .epk-eyebrow {
+      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: #bbb; margin-bottom: 1.25rem;
+    }
+    .epk-name {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+      margin: 0 0 0.5rem;
+    }
+    .epk-tagline {
+      font-size: 0.88rem;
+      color: #888;
+      margin: 0 0 2rem;
+    }
+    .epk-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .epk-stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .epk-stat-label {
+      font-size: 0.65rem;
+      color: #999;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .epk-cta-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .epk-btn-primary {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    .epk-btn-secondary {
+      display: inline-block;
+      border: 1px solid #ddd;
+      color: #555;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    /* SECTION */
+    .epk-section { padding: 3.5rem 2.5rem; border-bottom: 1px solid #eee; }
+    .epk-section-title {
+      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: #bbb; margin-bottom: 1.5rem;
+    }
+
+    /* BIO */
+    .epk-bio p {
+      font-size: 0.9rem; line-height: 1.85; color: #444;
+      max-width: 760px; margin: 0 0 1rem;
+    }
+    .epk-bio p:last-child { margin: 0; }
+
+    /* HIGHLIGHTS */
+    .epk-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #eee;
+      border: 1px solid #eee;
+      margin-bottom: 1.5rem;
+    }
+    .epk-highlight {
+      background: #fff;
+      padding: 1.5rem;
+    }
+    .epk-highlight-label {
+      font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #bbb; margin-bottom: 0.5rem;
+    }
+    .epk-highlight-items {
+      font-size: 0.82rem; color: #333; line-height: 1.6;
+    }
+
+    /* MUSIC */
+    .epk-music-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .epk-music-desc { font-size: 0.85rem; color: #555; line-height: 1.75; }
+    .epk-music-links { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 8px; }
+    .epk-music-link {
+      font-size: 0.72rem; color: #111; text-decoration: none;
+      border-bottom: 1px solid #eee; padding-bottom: 8px;
+      display: flex; justify-content: space-between;
+      transition: border-color 0.2s;
+    }
+    .epk-music-link:hover { border-color: #111; }
+
+    /* ASSETS */
+    .epk-assets { display: flex; flex-direction: column; }
+    .epk-asset {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .epk-asset:first-child { padding-top: 0; }
+    .epk-asset-name { font-size: 0.85rem; font-weight: 600; }
+    .epk-asset-meta { font-size: 0.7rem; color: #aaa; margin-top: 2px; }
+    .epk-asset-dl {
+      font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #999; text-decoration: none;
+      border-bottom: 1px solid #ddd; padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .epk-asset-dl:hover { color: #111; border-color: #111; }
+
+    /* CONTACT */
+    .epk-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .epk-contact-block-title {
+      font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: #bbb; margin-bottom: 0.75rem;
+    }
+    .epk-contact-link {
+      font-size: 0.95rem; font-weight: 600; color: #111; text-decoration: none;
+      border-bottom: 2px solid #111; padding-bottom: 1px;
+    }
+    .epk-contact-desc { font-size: 0.8rem; color: #888; margin-top: 0.5rem; line-height: 1.5; }
+
+    /* PROFILES */
+    .epk-profiles {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem;
+    }
+    .epk-profile-link {
+      font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #555; text-decoration: none;
+      border: 1px solid #ddd; padding: 6px 12px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .epk-profile-link:hover { border-color: #111; color: #111; }
+
+    /* FOOTER */
+    .epk-footer {
+      padding: 1.5rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.65rem; color: #bbb; letter-spacing: 0.06em;
+      border-top: 1px solid #eee;
+    }
+    .epk-footer a { color: #bbb; text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .epk-hero { grid-template-columns: 1fr; }
+      .epk-hero-img { height: 260px; }
+      .epk-hero-text { padding: 2rem 1.5rem; border-left: none; border-top: 1px solid #eee; }
+      .epk-highlights { grid-template-columns: 1fr; }
+      .epk-music-row { grid-template-columns: 1fr; }
+      .epk-contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .epk-section { padding: 2.5rem 1.5rem; }
+      .epk-nav { padding: 1rem 1.5rem; }
+      .epk-footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+
+  <div class="epk">
+
+    <nav class="epk-nav">
+      <a href="/">← julianperez.com</a>
+      <span class="epk-nav-right">Electronic Press Kit · 2026</span>
+    </nav>
+
+    <!-- HERO -->
+    <div class="epk-hero">
+      <div class="epk-hero-img">
+        <img src="/og-image.jpg" alt="Julian Perez" />
+      </div>
+      <div class="epk-hero-text">
+        <span class="epk-eyebrow">DJ · Producer · Label Owner</span>
+        <h1 class="epk-name">Julian<br>Perez</h1>
+        <p class="epk-tagline">Ibiza, Spain · Techno · House · Minimal</p>
+        <div class="epk-stats">
+          <div>
+            <div class="epk-stat-num">50+</div>
+            <div class="epk-stat-label">Countries</div>
+          </div>
+          <div>
+            <div class="epk-stat-num">150+</div>
+            <div class="epk-stat-label">Cities</div>
+          </div>
+          <div>
+            <div class="epk-stat-num">2</div>
+            <div class="epk-stat-label">Studio Albums</div>
+          </div>
+          <div>
+            <div class="epk-stat-num">2</div>
+            <div class="epk-stat-label">Record Labels</div>
+          </div>
+        </div>
+        <div class="epk-cta-row">
+          <a href="/booking" class="epk-btn-primary">Book Julian →</a>
+          <a href="/api/bio-pdf?lang=en" class="epk-btn-secondary" target="_blank">Download Bio PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BIO -->
+    <div class="epk-section">
+      <div class="epk-section-title">Biography</div>
+      <div class="epk-bio">
+        <p>Julian Perez developed his connection to electronic music in the early 1990s, shaped by the House and Techno scenes emerging from the US, the UK, and Northwestern Europe — along with genres such as EBM and New Beat. Over more than three decades, his sound has evolved with patience, discernment, and deep respect for the culture.</p>
+        <p>He is the founder of two vinyl labels: <strong>Fathers &amp; Sons Productions</strong> (2012), which sold out every release within days of publication and hosted showcases in over twelve countries in its first year; and <strong>Girada Unlimited</strong>, whose tenth release was his second album, <em>Break-Even</em> (2021). His music has also appeared on Cocoon Recordings, Raum..Musik, VIVa Music, and Subwax Bcn.</p>
+        <p>As a live performer, he has played in more than 50 countries and 150 cities, appearing at Amsterdam Dance Event, Sunwaves, Epizode, BPM Festival, and Outline Festival. Club credits include Rex Club (Paris), Fabric (London), Womb (Tokyo), and Robert Johnson (Frankfurt). He holds a regular summer residency at <strong>Underground Ibiza</strong>.</p>
+        <p>Nominated Best Artist at the Vicious Music Awards (2012, 2013) and Best Newcomer at the DJ Awards (2016). In 2026 he published his debut book, <em>INTERFASE: The Infinite Set</em>.</p>
+      </div>
+      <div style="margin-top:1.5rem; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="/api/bio-pdf?lang=en" target="_blank" class="epk-btn-primary">Bio PDF — English</a>
+        <a href="/api/bio-pdf?lang=es" target="_blank" class="epk-btn-secondary">Bio PDF — Español</a>
+        <a href="/bio" class="epk-btn-secondary">Full Biography →</a>
+      </div>
+    </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="epk-section">
+      <div class="epk-section-title">Key Highlights</div>
+      <div class="epk-highlights">
+        <div class="epk-highlight">
+          <div class="epk-highlight-label">Festivals</div>
+          <div class="epk-highlight-items">Amsterdam Dance Event · Sunwaves · Epizode · BPM Festival · Outline Festival · Sónar · Kazantip · Winter Music Conference</div>
+        </div>
+        <div class="epk-highlight">
+          <div class="epk-highlight-label">Clubs</div>
+          <div class="epk-highlight-items">Rex Club (Paris) · Fabric (London) · Womb (Tokyo) · Robert Johnson (Frankfurt) · Underground (Ibiza) · Space (ENTER.) · Cocoon Ibiza</div>
+        </div>
+        <div class="epk-highlight">
+          <div class="epk-highlight-label">Press & Awards</div>
+          <div class="epk-highlight-items">Resident Advisor · XLR8R · Mixmag · DJ Mag · Trommel Music · Best Artist nom. Vicious Awards (2012, 2013) · Best Newcomer nom. DJ Awards (2016)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MUSIC -->
+    <div class="epk-section">
+      <div class="epk-section-title">Music</div>
+      <div class="epk-music-row">
+        <div>
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/julianperez/sets/sets-podcasts&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+            style="border-radius:2px;"
+          ></iframe>
+        </div>
+        <div>
+          <p class="epk-music-desc">DJ sets, live recordings and original productions spanning three decades of electronic music — from early Techno and House to contemporary Minimal and Deep Techno.</p>
+          <div class="epk-music-links">
+            <a href="https://soundcloud.com/julianperez" target="_blank" rel="noopener" class="epk-music-link">
+              <span>SoundCloud — DJ Sets & Mixes</span><span>↗</span>
+            </a>
+            <a href="https://julianperez.bandcamp.com" target="_blank" rel="noopener" class="epk-music-link">
+              <span>Bandcamp — Releases</span><span>↗</span>
+            </a>
+            <a href="https://open.spotify.com/artist/2pMZw333AGGowD4t65HmuC" target="_blank" rel="noopener" class="epk-music-link">
+              <span>Spotify</span><span>↗</span>
+            </a>
+            <a href="https://ra.co/dj/julianperez" target="_blank" rel="noopener" class="epk-music-link">
+              <span>Resident Advisor Profile</span><span>↗</span>
+            </a>
+            <a href="https://www.youtube.com/@julianperezcom" target="_blank" rel="noopener" class="epk-music-link">
+              <span>YouTube — Live Videos & Sets</span><span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASSETS -->
+    <div class="epk-section">
+      <div class="epk-section-title">Press Assets</div>
+      <div class="epk-assets">
+        <div class="epk-asset">
+          <div>
+            <div class="epk-asset-name">Press Photo — High Resolution</div>
+            <div class="epk-asset-meta">JPG · 8 MB · 4000×5000 px</div>
+          </div>
+          <a href="https://www.dropbox.com/scl/fo/xvbz2q37bjh3466r6cfh2/AHzJnf4gTWRZQo9E0IEYPpU?rlkey=7ez2dp0jenw1q8q6ot1abgs0j&dl=0" target="_blank" rel="noopener" class="epk-asset-dl">Download</a>
+        </div>
+        <div class="epk-asset">
+          <div>
+            <div class="epk-asset-name">Biography — English</div>
+            <div class="epk-asset-meta">PDF · Generated on demand</div>
+          </div>
+          <a href="/api/bio-pdf?lang=en" target="_blank" class="epk-asset-dl">Download</a>
+        </div>
+        <div class="epk-asset">
+          <div>
+            <div class="epk-asset-name">Biografía — Español</div>
+            <div class="epk-asset-meta">PDF · Generado al instante</div>
+          </div>
+          <a href="/api/bio-pdf?lang=es" target="_blank" class="epk-asset-dl">Descargar</a>
+        </div>
+        <div class="epk-asset">
+          <div>
+            <div class="epk-asset-name">Technical / Hospitality Rider</div>
+            <div class="epk-asset-meta">PDF</div>
+          </div>
+          <a href="https://www.dropbox.com/scl/fi/hxj6qwavdyk2l95nnyuoo/Julian_TechnicalRider.pdf?rlkey=mloryg6wxxpstto9lkb40h1i6&dl=0" target="_blank" rel="noopener" class="epk-asset-dl">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="epk-section">
+      <div class="epk-section-title">Contact & Booking</div>
+      <div class="epk-contact-grid">
+        <div>
+          <div class="epk-contact-block-title">Booking Inquiries</div>
+          <a href="/booking" class="epk-contact-link">Booking Form →</a>
+          <p class="epk-contact-desc">Fill in the booking form with event details. Response within 48h.</p>
+        </div>
+        <div>
+          <div class="epk-contact-block-title">Profiles</div>
+          <div class="epk-profiles">
+            <a href="https://ra.co/dj/julianperez" target="_blank" rel="noopener" class="epk-profile-link">Resident Advisor ↗</a>
+            <a href="https://www.instagram.com/julianperez" target="_blank" rel="noopener" class="epk-profile-link">Instagram ↗</a>
+            <a href="https://soundcloud.com/julianperez" target="_blank" rel="noopener" class="epk-profile-link">SoundCloud ↗</a>
+            <a href="https://www.discogs.com/artist/54394" target="_blank" rel="noopener" class="epk-profile-link">Discogs ↗</a>
+            <a href="https://julianperez.bandcamp.com" target="_blank" rel="noopener" class="epk-profile-link">Bandcamp ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="epk-footer">
+      <span>© 2026 Julian Perez · <a href="/">julianperez.com</a></span>
+      <span>julianperez.com/epk</span>
+    </div>
+
+  </div>
+</BaseLayout>

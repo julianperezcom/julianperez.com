@@ -1,0 +1,133 @@
+---
+---
+
+<div class="newsletter-section">
+  <div class="newsletter-wrap">
+    <div class="newsletter-text">
+      <div class="newsletter-eyebrow">Stay updated</div>
+      <p class="newsletter-desc">New dates, releases and news — straight to your inbox. No spam.</p>
+    </div>
+    <form class="newsletter-form" id="form-newsletter">
+      <div class="newsletter-fields">
+        <input type="email" name="email" placeholder="Your email" required class="newsletter-input">
+        <button type="submit" class="newsletter-btn" id="btn-newsletter">Subscribe</button>
+      </div>
+      <p class="newsletter-legal">By subscribing you accept the <a href="/privacy">Privacy Policy</a>.</p>
+    </form>
+  </div>
+</div>
+
+<style>
+  .newsletter-section {
+    background: var(--black);
+    color: var(--white);
+    padding: 56px 52px;
+  }
+  .newsletter-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  .newsletter-eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+  }
+  .newsletter-desc {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    line-height: 1.4;
+  }
+  .newsletter-form { flex-shrink: 0; }
+  .newsletter-fields {
+    display: flex;
+    gap: 0;
+  }
+  .newsletter-input {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-right: none;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 0.82rem;
+    padding: 12px 20px;
+    outline: none;
+    width: 260px;
+    transition: border-color 0.2s;
+  }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.35); }
+  .newsletter-input:focus { border-color: rgba(255,255,255,0.6); }
+  .newsletter-btn {
+    background: var(--white);
+    color: var(--black);
+    border: none;
+    font-family: inherit;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+  }
+  .newsletter-btn:hover:not(:disabled) { opacity: 0.8; }
+  .newsletter-btn:disabled { opacity: 0.4; cursor: default; }
+  .newsletter-legal {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.3);
+    margin-top: 10px;
+  }
+  .newsletter-legal a { color: rgba(255,255,255,0.4); }
+  .newsletter-success {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+    padding: 12px 0;
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-section { padding: 40px 24px; }
+    .newsletter-wrap { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .newsletter-fields { flex-direction: column; gap: 0; }
+    .newsletter-input { width: 100%; border-right: 1px solid rgba(255,255,255,0.25); border-bottom: none; }
+    .newsletter-btn { width: 100%; text-align: center; }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('form-newsletter') as HTMLFormElement | null
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const btn = document.getElementById('btn-newsletter') as HTMLButtonElement
+      const emailInput = form.querySelector('input[type="email"]') as HTMLInputElement
+      btn.disabled = true
+      btn.textContent = '…'
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: emailInput.value }),
+        })
+        const data = await res.json()
+        if (data.success) {
+          form.innerHTML = '<p class="newsletter-success">✓ Subscribed. Talk soon.</p>'
+        } else {
+          throw new Error()
+        }
+      } catch {
+        btn.disabled = false
+        btn.textContent = 'Subscribe'
+      }
+    })
+  }
+</script>
